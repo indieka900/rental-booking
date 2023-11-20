@@ -70,21 +70,28 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         else:
             return self.full_name.split(' ')[0]
         
-        
-class Administrator(CustomUser):
+class Profile(models.Model):
+    user = models.OneToOneField(CustomUser,on_delete=models.CASCADE, unique=True)
+    bio = models.TextField(blank=True, null=True)
+    profile_picture = models.ImageField(upload_to="profile",default="default.png")
+    
+    class Meta:
+        abstract= True      
+class Administrator(Profile):
     pass
+    
   
     def __str__(self):
         return self.user.username
 
 
-class Prospectivetenant(CustomUser):
+class Prospectivetenant(Profile):
     pass
     
     def __str__(self):
         return self.user.username
     
-class Landlord(CustomUser):
+class Landlord(Profile):
     pass
 
     def __str__(self):
