@@ -1,59 +1,38 @@
-{% extends 'base.html' %}
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-info">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body modal-spa">
+                <div class="login-grids">
+                    <div class="login">
+                        <div class="login-left">
+                            <ul>
+                                <li><a class="fb" href="#"><i></i>Facebook</a></li>
+                                <li><a class="goog" href="#"><i></i>Google</a></li>
 
-{% load static %}
+                            </ul>
+                        </div>
+                        <div class="login-right">
+                            <form method="post">
+                                {% csrf_token %}
+                                <h3>Signin with your account </h3>
+                                <input type="text" name="email" id="email" placeholder="Enter your Email" required="">
+                                <input type="password" name="password" id="password" placeholder="Password" value=""
+                                    required="">
+                                <h4><a href="forgot-password.php">Forgot password</a></h4>
 
-{% block content %}
-    <div class="justify-content-center py-5">
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-    <!-- <div class="form-container sign-up">
-        <form>
-            <h1>Create Account</h1>
-            <div class="social-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-            <span>or use your email for registeration</span>
-            
-            <button>Sign Up</button>
-        </form>
-    </div>
-    <div class="form-container sign-in">
-        <form>
-            <h1>Sign In</h1>
-            <div class="social-icons">
-                <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-            <span>or use your email password</span>
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <a href="#">Forget Your Password?</a>
-            <button>Sign In</button>
-        </form>
-    </div>
-    <div class="toggle-container">
-        <div class="toggle">
-            <div class="toggle-panel toggle-left">
-                <h1>Welcome Back!</h1>
-                <p>Enter your personal details to use all of site features</p>
-                <button class="hidden" id="login">Sign In</button>
-            </div>
-            <div class="toggle-panel toggle-right">
-                <h1>Hello, Friend!</h1>
-                <p>Register with your personal details to use all of site features</p>
-                <button class="hidden" id="register">Sign Up</button>
+                                <input type="submit" name="signin" value="SIGNIN">
+                            </form>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a
+                            href="#">Privacy Policy</a></p>
+                </div>
             </div>
         </div>
-    </div> -->
-
-<script src="{% static 'script.js' %}"></script>
-{% endblock %}
+    </div>
+</div>

@@ -18,7 +18,7 @@ from accounts.forms import UserSignUpForm
 class LandLordSignupView(CreateView):
     model = CustomUser
     form_class = UserSignUpForm
-    template_name = "accounts/login.html"
+    template_name = "accounts/sign_up.html"
 
     def get_context_data(self, **kwargs):
         kwargs["user_type"] = "Landlord"
@@ -45,8 +45,7 @@ class LandLordSignupView(CreateView):
                         mail_subject, message, to=[to_email]  
             )  
             email.send()
-
-        return render(self.request, "accounts/sign_alert.html")
+        return render(self.request, "sign_alert.html")
 
 class ProspectivetenantView(CreateView):
     model = CustomUser
@@ -78,7 +77,7 @@ class ProspectivetenantView(CreateView):
                         mail_subject, message, to=[to_email]  
             )  
             email.send()
-            return render(self.request, "sign_alert.html")
+        return render(self.request, "sign_alert.html")
 
 
 def activate(request, uidb64, token):  
