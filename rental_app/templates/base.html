@@ -1,5 +1,7 @@
 {% load static %}
 {% include 'accounts/login.html' %}
+
+
 <!DOCTYPE HTML>
 <html>
 
@@ -25,6 +27,7 @@
     <script>
         new WOW().init();
     </script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
     <!--//end-animate-->
 </head>
 
@@ -36,7 +39,7 @@
                 <li class="hm"><a href="{% url 'accounts:home' %}"><i class="fa fa-home"></i></a></li>
                 <li class="prnt"><a href="#">My Profile</a></li>
                 <li class="prnt"><a href="#">Change Password</a></li>
-                <li class="prnt"><a href="#">My Tour History</a></li>
+                <li class="prnt"><a href="{% url 'rentals:landlords-rooms' %}">My History</a></li>
                 <li class="prnt"><a href="#">Issue Tickets</a></li>
             </ul>
             <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
@@ -46,6 +49,10 @@
             </ul>
             <div class="clearfix"></div>
         </div>
+
+        
+
+
     </div>
     {% else %}
     <div class="top-header">
@@ -85,14 +92,60 @@
             <div class="clearfix"></div>
         </div>
     </div>
-    <div class="banner">
+
+    <!--- footer-btm ---->
+    <div class="footer-btm wow fadeInLeft animated" data-wow-delay=".5s">
         <div class="container">
-            <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
-                style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS - Tourism Management System
-            </h1>
+            <div class="navigation">
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                        <nav class="cl-effect-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="{% url 'accounts:home' %}">Home</a></li>
+                                <li><a href="page.php?type=aboutus">About</a></li>
+                                <li><a href="{% url 'rentals:rooms' %}">Vaccant Rooms</a></li>
+                                <li><a href="page.php?type=privacy">Privacy Policy</a></li>
+                                <li><a href="page.php?type=terms">Terms of Use</a></li>
+                                <li><a href="page.php?type=contact">Contact Us</a></li>
+                                {% if user.is_authenticated %}
+                                <li>Need Help?<a href="#" data-toggle="modal" data-target="#myModal3"> / Write Us </a>
+                                </li>
+                                {% else %}
+                                <li><a href="enquiry.php"> Enquiry </a> </li>
+                                {% endif %}
+                                <div class="clearfix"></div>
+
+                            </ul>
+                        </nav>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div>
+
+            <div class="clearfix"></div>
         </div>
     </div>
-    <!-- Main content with form -->
+    {% if must %}
+
+        {% else %}
+        <div class="banner-3 ">
+            <div class="container">
+                <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
+                    style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Tourism Management
+                    System</h1>
+            </div>
+        </div>
+        {% endif %}
     {% block content %}
 
     {% endblock %}

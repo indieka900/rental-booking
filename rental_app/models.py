@@ -62,7 +62,19 @@ class Rooms(models.Model):
         verbose_name_plural = 'rooms'
         get_latest_by = 'date_updated'
         ordering = ['-date_updated']
-        
-
+    
+class Booking_History(models.Model):
+    user = models.ForeignKey(Prospectivetenant, verbose_name=_("Tenant"), on_delete=models.CASCADE)
+    room = models.ForeignKey(Rooms, verbose_name=_("Room"), on_delete=models.SET("Room was removed/deleted"))
+    date_booked = models.DateTimeField(_("Date Booked"), auto_now=False)
+    
+    def __str__(self):
+        return self.user.user.username
+    
+    class Meta:
+        verbose_name = 'Booking History'
+        verbose_name_plural = 'Booking Histories'
+        get_latest_by = 'date_booked'
+        ordering = ['-date_booked']
         
 # Create your models here.

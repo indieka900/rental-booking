@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="privacy">
+    <div class="container">
+        <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s"
+            style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">My Tour History</h3>
+        <form name="chngpwd" method="post" onSubmit="return valid();">
+            <table border="1" width="100%">
+                <tr align="center">
+                    <th>#</th>
+                    <th>Booking Id</th>
+                    <th>Room Name</th>
+                    <th>Status</th>
+                    <th>Booking Date</th>
+                    <th>Action</th>
+                </tr>
+                {% for in %}
+
+                {% endfor %}
+                <tr align="center">
+                    <td></td>
+                    <td>#BK</td>
+                    <td>
+                        <a href="package-details.php?pkgid=<?php echo htmlentities($result->pkgid);?>">
+                            <?php echo htmlentities($result->packagename);?>
+                        </a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+            </table>
+
+            </p>
+        </form>
+
+
+    </div>
+</div>
+{% endblock content %}

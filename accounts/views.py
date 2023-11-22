@@ -1,17 +1,14 @@
-import datetime
 
+from accounts.confirmation_email import send_activation_email
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from accounts.models import CustomUser,Landlord, Prospectivetenant
 from django.views.generic import CreateView
-from django.contrib.sites.shortcuts import get_current_site  
-from django.utils.encoding import force_bytes, force_str  
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode  
-from django.template.loader import render_to_string
+from django.utils.encoding import force_str  
+from django.utils.http import urlsafe_base64_decode 
 from accounts.tokens import account_activation_token
-from django.core.mail import EmailMessage
 from accounts.forms import UserSignUpForm 
 from rental_app.models import Rooms
 from django.contrib.auth import authenticate, login, logout
@@ -36,21 +33,8 @@ class LandLordSignupView(CreateView):
             elif user.role == "Prospective tenant":
                 Prospectivetenant.objects.create(user=user)
                 
-                
-            current_site = get_current_site(self.request)  
-            mail_subject = 'Verify your account'  
-            message = render_to_string('acc_active.html', {  
-                'user': user,  
-                'domain': current_site.domain,  
-                'time': datetime.date.today().year,
-                'uid':urlsafe_base64_encode(force_bytes(user.pk)),  
-                'token':account_activation_token.make_token(user),  
-            })  
-            to_email = form.cleaned_data.get('email')  
-            email = EmailMessage(  
-                        mail_subject, message, to=[to_email]  
-            )  
-            email.send()
+            send_activation_email(user,self.request)
+            
         return render(self.request, "accounts/sign_alert.html")
 
 
@@ -73,6 +57,7 @@ def activate(request, uidb64, token):
     
 def home(request):
     rooms = Rooms.objects.all().order_by('?')[:4]
+    is_must = True
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
@@ -95,6 +80,7 @@ def home(request):
             return redirect('/')
     context = {
         'rooms' : rooms,
+        'must' : is_must,
     }
     return render(request, 'app/index.html', context)   
     
