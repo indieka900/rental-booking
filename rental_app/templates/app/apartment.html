@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="selectroom">
+    <div class="container">
+                <form name="book" method="post">
+                    <div class="selectroom_top">
+                        <div class="col-md-4 selectroom_left wow fadeInLeft animated" data-wow-delay=".5s">
+                            <img src="/media/{{ apartment.image }}" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-8 selectroom_right wow fadeInRight animated" data-wow-delay=".5s">
+                            <h2>{{apartment.apartment_name}} Appartment</h2>
+                            <p class="dow">#{{room.room_number}}</p>
+                            <p><b>Room Type :</b> {{room.room_type}}</p>
+                            <p><b>Package Location :</b> {{room.apartment.location}}</p>
+                            <p><b>Free Features</b> {{room.apartment.facilities}}</p>
+                            <div class="clearfix"></div>
+                            <div class="grand">
+                                <p>Rent Per Month</p>
+                                <h3>{{room.rent}}</h3>
+                            </div>
+                        </div>
+                        <a href="{% url 'rentals:apartment' room.apartment.id %}" class="view">{{room.apartment.apartment_name}}'s Details</a>
+                        <div class="clearfix"></div>
+                    </div>
+                </form>
+    </div>
+</div>
+{% endblock %}

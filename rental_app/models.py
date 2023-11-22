@@ -22,6 +22,12 @@ class Apartments(models.Model):
         
 class Rooms(models.Model):
     
+    charged_choices = (
+        ("Per Hour", "Per Hour"),
+        ("Per Day","Per Day"),
+        ("Per Month", "Per Month")
+    )
+    
     Room_type_choices = (
         ("Singe room", "Singe room"),
         ("Bedsitter", "Bedsitter"),
@@ -44,6 +50,7 @@ class Rooms(models.Model):
     room_type = models.CharField(_("Room Type"), max_length=40, choices=Room_type_choices)
     booked = models.BooleanField(_("Booked"), default=False)
     rent = models.PositiveIntegerField(_("Rent per Month"), default= 0)
+    rate = models.CharField(_("Charged Per"), max_length=50, choices=charged_choices, default="Per Month")
     image = models.ImageField(_("Room image"), upload_to='Rooms', default= 'default.png')
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(_("Date Updates"), auto_now=True)
@@ -53,6 +60,8 @@ class Rooms(models.Model):
     class Meta:
         verbose_name = 'room'
         verbose_name_plural = 'rooms'
+        get_latest_by = 'date_updated'
+        ordering = ['-date_updated']
         
 
         

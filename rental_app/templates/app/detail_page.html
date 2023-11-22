@@ -16,12 +16,11 @@
                             <p><b>Free Features</b> {{room.apartment.facilities}}</p>
                             <div class="clearfix"></div>
                             <div class="grand">
-                                <p>Rent Per Month</p>
+                                <p>Rent {{room.rate}}</p>
                                 <h3>{{room.rent}}</h3>
                             </div>
                         </div>
-                        <h3>Package Details</h3>
-                        <p style="padding-top: 1%">Posted on--{{room.date_updated|date}}, Room size of {{room.size}} {{room.room_number}}</p>
+                        <a href="{% url 'rentals:apartment' room.apartment.id %}" class="view">{{room.apartment.apartment_name}}'s Details</a>
                         <div class="clearfix"></div>
                     </div>
                     <div class="selectroom_top">
@@ -48,8 +47,7 @@
 
                     </div>
                 </form>
-        <?php }
-        } ?>
+        
 
 
     </div>
