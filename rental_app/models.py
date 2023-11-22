@@ -66,7 +66,8 @@ class Rooms(models.Model):
 class Booking_History(models.Model):
     user = models.ForeignKey(Prospectivetenant, verbose_name=_("Tenant"), on_delete=models.CASCADE)
     room = models.ForeignKey(Rooms, verbose_name=_("Room"), on_delete=models.SET("Room was removed/deleted"))
-    date_booked = models.DateTimeField(_("Date Booked"), auto_now=False)
+    date_booked = models.DateTimeField(_("Date Booked"), auto_now=True)
+
     
     def __str__(self):
         return self.user.user.username

@@ -1,0 +1,23 @@
+{% autoescape off %} 
+
+Room Booking System,
+
+Dear {{tenant}},
+
+We are delighted to confirm your booking for {{room.room_number}} at {{owner.username}}'s property. Your booking details are as follows:
+
+Room: {{room.room_number}}
+Apartment name : {{room.apartment.apartment_name}}
+Price: {{room.rent}} {{room.rate}}
+Owner contacts: {{owner.phone}} or {{owner.email}}
+Location: {{room.apartment.location}}
+Book Time: {{time}}
+
+In the meantime, please feel free to contact the landlord if you have any questions or concerns.
+
+Thank you for choosing our platform for your accommodation needs. We look forward to making your stay a memorable one.
+
+Sincerely,
+RMS
+ 
+{% endautoescape %}  

@@ -56,7 +56,7 @@ def activate(request, uidb64, token):
     
     
 def home(request):
-    rooms = Rooms.objects.all().order_by('?')[:4]
+    rooms = Rooms.objects.filter(booked=False).order_by('?')[:3]
     is_must = True
     if request.method == 'POST':
         email = request.POST.get('email')

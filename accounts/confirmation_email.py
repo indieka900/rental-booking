@@ -11,10 +11,12 @@ from accounts.tokens import account_activation_token
 def send_booking_confirmation_email(tenant, room, request):
     # Send email to the user who booked the room (tenant)
     tenant_subject = 'Booking Confirmation'
-    tenant_message = render_to_string('booking_confirmation_tenant.html', {
+    tenant_message = render_to_string('app/booking_confirmation.html', {
         'tenant': tenant.user.username,
+        'owner': room.apartment.landlord.user,
         'room': room,
-        'domain': get_current_site(request).domain,
+        # 'domain': get_current_site(request).domain,
+        'time': datetime.date.today(),
     })
     tenant_email = EmailMessage(
         tenant_subject, tenant_message, to=[tenant.user.email]
@@ -23,10 +25,12 @@ def send_booking_confirmation_email(tenant, room, request):
 
     # Send email to the owner of the room
     owner_subject = 'New Booking Notification'
-    owner_message = render_to_string('booking_notification_owner.html', {
-        'tenant': tenant.user.username,
+    owner_message = render_to_string('app/booking_notification.html', {
+        'tenant': tenant.user,
+        'owner': room.apartment.landlord.user.username,
         'room': room,
-        'domain': get_current_site(request).domain,
+        # 'domain': get_current_site(request).domain,
+        'time': datetime.date.today(),
     })
     owner_email = EmailMessage(
         owner_subject, owner_message, to=[room.apartment.landlord.user.email]

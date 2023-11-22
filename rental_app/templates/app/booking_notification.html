@@ -1,0 +1,17 @@
+{% autoescape off %} 
+
+Dear {{owner}},
+
+We are pleased to inform you that your room has been booked by {{tenant.username}}. The booking details are as follows:
+
+Room: {{room.room_number}}
+Apartment name : {{room.apartment.apartment_name}}
+Tenant contacts: {{tenant.phone}} or {{tenant.email}}
+Book Time: {{time}}
+Please review the booking details and confirm your acceptance by replying to this email. If you have any questions or concerns, please do not hesitate to contact us.
+
+Thank you for your time and consideration.
+
+Sincerely,
+TMS
+{% endautoescape %}  
