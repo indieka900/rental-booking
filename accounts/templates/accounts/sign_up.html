@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
-    <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+	<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
 	<title>Document</title>
 </head>
 
@@ -37,13 +37,20 @@
 
 										{{ form.as_p }}
 
+										<label for="user_type">Account Type:</label>
+										<select name="user_type" id="user_type">
+											<option value="Prospective tenant">Prospective tenant</option>
+											<option value="Landlord">Landlord</option>
+										</select>
+
 										<input type="submit" name="submit" id="submit" value="CREATE ACCOUNT">
 									</form>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 							<p>By logging in you agree to our <a href="page.php?type=terms">Terms and Conditions</a> and
-								<a href="page.php?type=privacy">Privacy Policy</a></p>
+								<a href="page.php?type=privacy">Privacy Policy</a>
+							</p>
 						</div>
 					</div>
 				</section>

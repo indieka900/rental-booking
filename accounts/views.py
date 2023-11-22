@@ -1,6 +1,6 @@
 import datetime
 
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth import get_user_model
@@ -13,6 +13,8 @@ from django.template.loader import render_to_string
 from accounts.tokens import account_activation_token
 from django.core.mail import EmailMessage
 from accounts.forms import UserSignUpForm 
+from rental_app.models import Rooms
+from django.contrib.auth import authenticate, login, logout
 
 
 class LandLordSignupView(CreateView):
@@ -27,10 +29,14 @@ class LandLordSignupView(CreateView):
     def form_valid(self, form):
         if form.is_valid():
             user = form.save(commit=False)
-            user.role = "Landlord"
+            user.role = self.request.POST.get('user_type')
             user.save()
-            landlord = Landlord(user=user)
-            landlord.save()
+            if user.role == "Landlord":
+                Landlord.objects.create(user=user)
+            elif user.role == "Prospective tenant":
+                Prospectivetenant.objects.create(user=user)
+                
+                
             current_site = get_current_site(self.request)  
             mail_subject = 'Verify your account'  
             message = render_to_string('acc_active.html', {  
@@ -47,37 +53,6 @@ class LandLordSignupView(CreateView):
             email.send()
         return render(self.request, "sign_alert.html")
 
-class ProspectivetenantView(CreateView):
-    model = CustomUser
-    form_class = UserSignUpForm
-    template_name = "accounts/login.html"
-
-    def get_context_data(self, **kwargs):
-        kwargs["user_type"] = "Prospective tenant"
-        return super().get_context_data(**kwargs)
-
-    def form_valid(self, form):
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.role = "Prospective tenant"
-            user.save()
-            tenant = Prospectivetenant(user=user)
-            tenant.save()
-            current_site = get_current_site(self.request)  
-            mail_subject = 'Verify your account'  
-            message = render_to_string('accounts/acc_active.html', {  
-                'user': user,  
-                'time': datetime.date.today().year,
-                'domain': current_site.domain,  
-                'uid':urlsafe_base64_encode(force_bytes(user.pk)),  
-                'token':account_activation_token.make_token(user),  
-            })  
-            to_email = form.cleaned_data.get('email')  
-            email = EmailMessage(  
-                        mail_subject, message, to=[to_email]  
-            )  
-            email.send()
-        return render(self.request, "sign_alert.html")
 
 
 def activate(request, uidb64, token):  
@@ -94,5 +69,36 @@ def activate(request, uidb64, token):
         return HttpResponse('Thank you for your email confirmation. Now you can login your account.')  
     else:  
         return HttpResponse('Activation link is invalid!')
-
+    
+    
+def home(request):
+    rooms = Rooms.objects.all().order_by('?')
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        try:
+            user= CustomUser.objects.get(email=email)
+        except CustomUser.DoesNotExist:
+            messages.error(request, 'email does not exist!') 
+        user = authenticate(request, email=email, password=password)
+        
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                messages.success(request, 'Logged in succesfully')
+                return redirect('/')
+            else:
+                messages.error(request, 'Please activate your account')
+                return redirect('/') 
+        else:
+            messages.error(request, 'email or password does not exist')
+            return redirect('/')
+    context = {
+        'rooms' : rooms,
+    }
+    return render(request, 'app/index.html', context)   
+    
+def log_out(request):
+    logout(request)
+    return redirect('/')
 # Create your views here.

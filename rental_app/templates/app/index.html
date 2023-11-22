@@ -62,10 +62,41 @@
 <div class="container">
     <div class="holiday">
 
-        <h3>Package List</h3>
+        <h3>Vacants List</h3>
 
-
-        <div><a href="#" class="view">View More Packages</a></div>
+        {% for room in rooms %}
+        <div class="rom-btm">
+            <div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
+                <img src="/media/{{ room.image }}" class="img-responsive"
+                    alt="">
+            </div>
+            <div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
+                <h4>Room Name:
+                    {{room.room_number}}
+                </h4>
+                <h6>Room Type :
+                    {{room.room_type}}
+                </h6>
+                <p><b>Appartment Location :</b>
+                    {{room.apartment.location}}
+                </p>
+                <p><b>Facilities : </b>
+                    {{room.apartment.facilities}}
+                </p>
+            </div>
+            <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
+                <h5>KSH
+                    {{room.rent}}
+                </h5>
+                <a href="#"
+                    class="view">Details</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        {% empty %}
+        <h3> No room available </h3>
+        {% endfor %}
+        <div><a href="#" class="view">View More Vacants</a></div>
     </div>
     <div class="clearfix"></div>
 </div>

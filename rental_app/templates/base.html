@@ -33,7 +33,7 @@
     <div class="top-header">
         <div class="container">
             <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
-                <li class="hm"><a href="{% url 'rentals:home' %}"><i class="fa fa-home"></i></a></li>
+                <li class="hm"><a href="{% url 'accounts:home' %}"><i class="fa fa-home"></i></a></li>
                 <li class="prnt"><a href="#">My Profile</a></li>
                 <li class="prnt"><a href="#">Change Password</a></li>
                 <li class="prnt"><a href="#">My Tour History</a></li>
@@ -41,8 +41,8 @@
             </ul>
             <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
                 <li class="tol">Welcome :</li>
-                <li class="sig">{{ user.username }}</li>
-                <li class="sigi"><a href="#">Logout</a></li>
+                <li class="sig">@{{ user.username }}</li>
+                <li class="sigi"><a href="{% url 'accounts:logout' %}"> Logout</a></li>
             </ul>
             <div class="clearfix"></div>
         </div>
@@ -51,12 +51,12 @@
     <div class="top-header">
         <div class="container">
             <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
-                <li class="hm"><a href="{% url 'rentals:home' %}"><i class="fa fa-home"></i></a></li>
+                <li class="hm"><a href="{% url 'accounts:home' %}"><i class="fa fa-home"></i></a></li>
                 <li class="hm"><a href="#">Admin Login</a></li>
             </ul>
             <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
                 <li class="tol">Toll Number : 123-4568790</li>
-                <li class="sig"><a href="{% url 'accounts:signup' %}" >Sign Up</a></li>
+                <li class="sig"><a href="{% url 'accounts:signup' %}">Sign Up</a></li>
                 <li class="sigi"><a href="#" data-toggle="modal" data-target="#myModal4">Sign In</a></li>
             </ul>
             <div class="clearfix"></div>
@@ -67,9 +67,14 @@
     <div class="header">
         <div class="container">
             <div class="logo wow fadeInDown animated" data-wow-delay=".5s">
-                <a href="{% url 'rentals:home' %}">Tourism <span>Management System</span></a>
+                <a href="{% url 'accounts:home' %}">Tourism <span>Management System</span></a>
             </div>
-
+            {% for message in messages %}
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                <strong style="color: #14dd25;">{{message}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
             <div class="lock fadeInDown animated" data-wow-delay=".5s">
                 <li><i class="fa fa-lock"></i></li>
                 <li>
@@ -80,12 +85,7 @@
             <div class="clearfix"></div>
         </div>
     </div>
-    {% for message in messages %}
-      <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-        <strong style="color: #14dd25;">{{message}}</strong> 
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-    {% endfor %}
+
     <!-- Main content with form -->
     {% block content %}
 
