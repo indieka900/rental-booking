@@ -1,8 +1,8 @@
 from django.urls import path
-from rental_app.views import (home2)
+from rental_app.views import (viewRoom)
 
 app_name = 'rentals'
 
 urlpatterns = [
-    path('',home2, name='home')
+    path('room/<id>/',viewRoom, name='room')
 ]

@@ -51,7 +51,7 @@ class LandLordSignupView(CreateView):
                         mail_subject, message, to=[to_email]  
             )  
             email.send()
-        return render(self.request, "sign_alert.html")
+        return render(self.request, "accounts/sign_alert.html")
 
 
 
@@ -72,7 +72,7 @@ def activate(request, uidb64, token):
     
     
 def home(request):
-    rooms = Rooms.objects.all().order_by('?')
+    rooms = Rooms.objects.all().order_by('?')[:4]
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')

@@ -1,8 +1,9 @@
 from django.shortcuts import render
+from rental_app.models import Rooms
 
-def home2(request):
-    
-    return render(request, 'app/index.html')
+def viewRoom(request, id):
+    room = Rooms.objects.get(id=id)
+    return render(request, 'app/detail_page.html',{'room':room})
 
 
 # Create your views here.

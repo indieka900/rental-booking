@@ -1,8 +1,10 @@
 from django.db import models
 from django.utils.translation import gettext as _
+from accounts.models import Landlord,Prospectivetenant
 
 class Apartments(models.Model):
     apartment_name = models.CharField(_("Apartment Name"), max_length=80, unique=True)
+    landlord = models.ForeignKey(Landlord,on_delete=models.CASCADE)
     description = models.TextField(_("Apartment Desciption"))
     facilities = models.TextField(_("General Facilities"),blank=True, null=True)
     image = models.ImageField(_("Appartment image"), upload_to='Appartments', default= 'default.png')
@@ -37,6 +39,7 @@ class Rooms(models.Model):
     
     room_number = models.CharField(_("Room Number"), max_length=50)
     apartment = models.ForeignKey(Apartments, on_delete=models.CASCADE)
+    tenant = models.ForeignKey(Prospectivetenant,on_delete=models.SET_NULL, null=True, blank=True)
     size = models.CharField(_("Room Size"), max_length=30)
     room_type = models.CharField(_("Room Type"), max_length=40, choices=Room_type_choices)
     booked = models.BooleanField(_("Booked"), default=False)
@@ -50,5 +53,7 @@ class Rooms(models.Model):
     class Meta:
         verbose_name = 'room'
         verbose_name_plural = 'rooms'
+        
+
         
 # Create your models here.
