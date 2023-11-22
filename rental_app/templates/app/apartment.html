@@ -10,17 +10,18 @@
                         </div>
                         <div class="col-md-8 selectroom_right wow fadeInRight animated" data-wow-delay=".5s">
                             <h2>{{apartment.apartment_name}} Appartment</h2>
-                            <p class="dow">#{{room.room_number}}</p>
-                            <p><b>Room Type :</b> {{room.room_type}}</p>
-                            <p><b>Package Location :</b> {{room.apartment.location}}</p>
-                            <p><b>Free Features</b> {{room.apartment.facilities}}</p>
+                            <p class="dow">#{{apartment.location}}</p>
+                            <p><b>Facilities paid for :</b> {{apartment.paid_for}}</p>
+                            <p><b>Description :</b> {{apartment.description}}</p>
+                            <p><b>Free Features</b> {{apartment.facilities}}</p>
                             <div class="clearfix"></div>
                             <div class="grand">
-                                <p>Rent Per Month</p>
-                                <h3>{{room.rent}}</h3>
+                                <h2>Landlord details: </h2>
+                                <p>Name: {{apartment.landlord.user.full_name}}</p>
+                                <p>Email: {{apartment.landlord.user.email}}</p>
+                                <p>Phone_Number: {{apartment.landlord.user.phone}}</p>
                             </div>
                         </div>
-                        <a href="{% url 'rentals:apartment' room.apartment.id %}" class="view">{{room.apartment.apartment_name}}'s Details</a>
                         <div class="clearfix"></div>
                     </div>
                 </form>
