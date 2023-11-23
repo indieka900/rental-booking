@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect
 from accounts.confirmation_email import send_booking_confirmation_email
-from accounts.models import Prospectivetenant
+from accounts.models import Prospectivetenant, Landlord
 from rental_app.models import Rooms, Apartments, Booking_History
-from rental_app.forms import AddRoomForm
+from rental_app.forms import AddRoomForm, AddApartmentForm
 from django.contrib.auth.decorators import login_required
 from accounts.decorators import landlord_required, tenant_required
 from django.db.models import Q
@@ -77,6 +77,23 @@ def add_room(request, id):
             return redirect('/rentals/landlord\'s-rooms/')
     else:
         form = AddRoomForm()
-    return render(request, 'app/add_room.html',{'form':form})
+    return render(request, 'app/add_room.html',{'form':form,'mode':'apartment'})
+
+
+@landlord_required  
+def add_apartment(request):
+    if request.method == 'POST':
+        form = AddApartmentForm(request.POST)
+        if form.is_valid():
+            image = request.FILES['image']
+            form.instance.image = image
+            user_l = Landlord.objects.get(user=request.user)
+            form.instance.landlord = user_l
+            form.save()
+            id = form.instance.id
+            return redirect(f'/rentals/apartment/{id}/')
+    else:
+        form = AddApartmentForm()
+    return render(request, 'app/add_room.html',{'form':form, 'mode':'apartment'})
 
 # Create your views here.

@@ -24,7 +24,8 @@
                         {{room.apartment.location}}
                     </p>
                     <p><b>Appartment Name :</b>
-                        {{room.apartment.apartment_name}}
+                        <a href="{% url 'rentals:apartment' room.apartment.id %}">{{room.apartment.apartment_name}}</a>
+                        
                     </p>
                     <!-- <p><b>Appartment Name :</b>
                         {{room.apartment.landlord.user.username}}

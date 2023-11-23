@@ -43,7 +43,13 @@
                 <li class="prnt"><a
                         href="{% if user.role == 'Prospective tenant' %}{% url 'rentals:booking-history' %}{% else %}{% url 'rentals:landlords-rooms' %}{% endif %}">My
                         History</a></li>
-                <li class="prnt"><a href="#">Issue Tickets</a></li>
+                <li class="prnt">
+                    {% if user.role == 'Landlord' %}
+                        <a href="{% url 'rentals:add-apartment' %}">Add Apartment</a>
+                    {% else %}
+                        <a href="#">XXX</a>
+                    {% endif %}
+                </li>
             </ul>
             <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
                 <li class="tol">Welcome :</li>

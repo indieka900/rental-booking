@@ -25,6 +25,9 @@
 
                 {% if apartment.landlord.user == user %}
                  <a href="{% url 'rentals:add-room' apartment.id %}"
+                    class="view">Update details of this apartment</a>
+
+                 <a href="{% url 'rentals:add-room' apartment.id %}"
                     class="view">Add room to this apartment</a>
                 
                 {% endif %}

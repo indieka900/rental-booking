@@ -7,7 +7,11 @@
             style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Add Room</h3>
         <form name="chngpwd" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            {{form.as_p}}
+            {% if mode == 'apartment' %}
+                {{form.as_p}}
+            {% else %}
+                {{form.as_p}}
+            {% endif %}
             <p style="width: 350px;">
                 <label for="inputZip" class="form-label">Image: </label>
                 <input type="file" class="form-control" id="inputZip" name="image">
