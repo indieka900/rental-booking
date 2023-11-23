@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="privacy">
+    <div class="container">
+        <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s"
+            style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Add Room</h3>
+        <form name="chngpwd" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <p style="width: 350px;">
+                <label for="inputZip" class="form-label">Image: </label>
+                <input type="file" class="form-control" id="inputZip" name="image">
+            </p>
+            <p style="width: 100%;">
+                <button type="submit" name="submit5" class="btn-primary btn">Add</button>
+            </p>
+        </form>
+
+
+    </div>
+</div>
+{% endblock %}

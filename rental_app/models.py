@@ -2,6 +2,7 @@ from django.db import models
 from django.forms import ValidationError
 from django.utils.translation import gettext as _
 from accounts.models import Landlord,Prospectivetenant
+from django.db.models import UniqueConstraint, Q
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
@@ -52,7 +53,7 @@ class Rooms(models.Model):
     size = models.CharField(_("Room Size"), max_length=30)
     room_type = models.CharField(_("Room Type"), max_length=40, choices=Room_type_choices)
     booked = models.BooleanField(_("Booked"), default=False)
-    rent = models.PositiveIntegerField(_("Rent per Month"), default= 0)
+    rent = models.PositiveIntegerField(_("Rent Charged"), default= 0)
     rate = models.CharField(_("Charged Per"), max_length=50, choices=charged_choices, default="Per Month")
     image = models.ImageField(_("Room image"), upload_to='Rooms', default= 'default.png')
     date_created = models.DateTimeField(auto_now_add=True)
@@ -65,6 +66,8 @@ class Rooms(models.Model):
         verbose_name_plural = 'rooms'
         get_latest_by = 'date_updated'
         ordering = ['-date_updated']
+        
+        unique_together = ('room_number', 'apartment')
     
 class Booking_History(models.Model):
     user = models.ForeignKey(Prospectivetenant, verbose_name=_("Tenant"), on_delete=models.CASCADE)

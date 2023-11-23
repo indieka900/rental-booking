@@ -43,18 +43,20 @@
                             {{room.date_updated|timesince}} ago.
                         </p>
                     </div>
-                    <a href="{% url 'rentals:room' room.id %}" class="view">Details</a>
+                    
+                    {% if room.apartment.landlord.user == user %}
+                        <a href="#" class="view">Edit</a>
+                    {% else %}
+                        <a href="{% url 'rentals:room' room.id %}" class="view">Details</a>
+                    {% endif %}
+                        
+                    
 
 
                 </div>
                 <div class="clearfix"></div>
             </div>
             {% endfor %}
-
-
-
-
-
 
         </div>
     </div>

@@ -3,28 +3,34 @@
 {% block content %}
 <div class="selectroom">
     <div class="container">
-                <form name="book" method="post">
-                    <div class="selectroom_top">
-                        <div class="col-md-4 selectroom_left wow fadeInLeft animated" data-wow-delay=".5s">
-                            <img src="/media/{{ apartment.image }}" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-md-8 selectroom_right wow fadeInRight animated" data-wow-delay=".5s">
-                            <h2>{{apartment.apartment_name}} Appartment</h2>
-                            <p class="dow">#{{apartment.location}}</p>
-                            <p><b>Facilities paid for :</b> {{apartment.paid_for}}</p>
-                            <p><b>Description :</b> {{apartment.description}}</p>
-                            <p><b>Free Features</b> {{apartment.facilities}}</p>
-                            <div class="clearfix"></div>
-                            <div class="grand">
-                                <h2>Landlord details: </h2>
-                                <p>Name: {{apartment.landlord.user.full_name}}</p>
-                                <p>Email: {{apartment.landlord.user.email}}</p>
-                                <p>Phone_Number: {{apartment.landlord.user.phone}}</p>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
+        <form name="book" method="post">
+            <div class="selectroom_top">
+                <div class="col-md-4 selectroom_left wow fadeInLeft animated" data-wow-delay=".5s">
+                    <img src="/media/{{ apartment.image }}" class="img-responsive" alt="">
+                </div>
+                <div class="col-md-8 selectroom_right wow fadeInRight animated" data-wow-delay=".5s">
+                    <h2>{{apartment.apartment_name}} Appartment</h2>
+                    <p class="dow">#{{apartment.location}}</p>
+                    <p><b>Facilities paid for :</b> {{apartment.paid_for}}</p>
+                    <p><b>Description :</b> {{apartment.description}}</p>
+                    <p><b>Free Features</b> {{apartment.facilities}}</p>
+                    <div class="clearfix"></div>
+                    <div class="grand">
+                        <h2>Landlord details: </h2>
+                        <p>Name: {{apartment.landlord.user.full_name}}</p>
+                        <p>Email: {{apartment.landlord.user.email}}</p>
+                        <p>Phone_Number: {{apartment.landlord.user.phone}}</p>
                     </div>
-                </form>
+                </div>
+
+                {% if apartment.landlord.user == user %}
+                 <a href="{% url 'rentals:add-room' apartment.id %}"
+                    class="view">Add room to this apartment</a>
+                
+                {% endif %}
+                <div class="clearfix"></div>
+            </div>
+        </form>
     </div>
 </div>
 {% endblock %}

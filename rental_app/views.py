@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from accounts.confirmation_email import send_booking_confirmation_email
 from accounts.models import Prospectivetenant
 from rental_app.models import Rooms, Apartments, Booking_History
+from rental_app.forms import AddRoomForm
 from django.contrib.auth.decorators import login_required
 from accounts.decorators import landlord_required, tenant_required
 from django.db.models import Q
@@ -45,6 +46,7 @@ def viewHistory(request):
     history = Booking_History.objects.filter(user=tenant)
     return render(request, 'app/booking-history.html', {'histories':history})
 
+
 def result(request):
     if request.method == 'GET':
         query = request.GET.get('query')
@@ -62,5 +64,19 @@ def result(request):
             return render(request, 'app/search.html', {'rooms': rooms,'query':query})
 
         return render(request, 'app/search.html')
+
+@landlord_required  
+def add_room(request, id):
+    if request.method == 'POST':
+        form = AddRoomForm(request.POST)
+        if form.is_valid():
+            image = request.FILES['image']
+            form.instance.apartment = Apartments.objects.get(id=id)
+            form.instance.image = image
+            form.save()
+            return redirect('/rentals/landlord\'s-rooms/')
+    else:
+        form = AddRoomForm()
+    return render(request, 'app/add_room.html',{'form':form})
 
 # Create your views here.
