@@ -44,7 +44,7 @@
                         {% endif %}
                     </td>
                     <td>{{history.date_booked}}</td>
-                    <td><a href="#">delete from list</a></td>
+                    <td><a href="{% url 'rentals:delete-booking-history' history.id %}">delete from list</a></td>
 
                 </tr>
                 {% endfor %}

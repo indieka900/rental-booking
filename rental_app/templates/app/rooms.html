@@ -5,7 +5,7 @@
     <div class="container">
 
         <div class="room-bottom">
-            <h3>Vaccant Rooms Available({{ rooms|length }})</h3><p></p>
+            <h3>Vaccant Rooms Available({{ rooms|length }}) {% if query  %} for search `<i>{{query}}</i>` {% endif %} </h3><p></p>
 
 
             {% for room in rooms %}
@@ -47,7 +47,7 @@
                     
                     {% if room.apartment.landlord.user == user %}
                         <a href="{% url 'rentals:update-room' room.id %}" class="view">Edit</a>
-                        <a href="#" class="view" style="background-color: red;">Delete</a>
+                        <a href="{% url 'rentals:delete-room' room.id %}" class="view" style="background-color: red;">Delete</a>
                     {% else %}
                         <a href="{% url 'rentals:room' room.id %}" class="view" >Details</a>
                     {% endif %}

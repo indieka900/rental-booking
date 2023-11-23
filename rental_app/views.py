@@ -67,9 +67,9 @@ def result(request):
                     Q(apartment__location__icontains=query)
                 )
             )
-            return render(request, 'app/search.html', {'rooms': rooms,'query':query})
+            return render(request, 'app/rooms.html', {'rooms': rooms,'query':query})
 
-        return render(request, 'app/search.html')
+        return render(request, 'app/rooms.html')
 
 #add room
 @landlord_required  
@@ -164,6 +164,21 @@ def delete_apartment(request, id):
     else:
         messages.info(request, 'You are not allowed to perform this operation')
         return redirect('/')
+
+#delete booking history
+@login_required(login_url='/')
+def delete_history(request,id):
+    hist = Booking_History.objects.get(id=id)
+    tenant = Prospectivetenant.objects.get(user=request.user)
+    if hist.user == tenant:
+        hist.delete()
+        messages.success(request, 'Deleted succesfully')
+        return redirect('/rentals/booking-history/')
+    
+    else:
+        messages.info(request, 'You are not allowed to perform this operation')
+        return redirect('/')
+    
 
 # Create your views here.
 
