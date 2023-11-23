@@ -36,4 +36,15 @@ def viewRooms_L(request):
     user = request.user
     rooms = Rooms.objects.filter(apartment__landlord__user__id = user.id)
     return render(request, 'app/rooms.html', {'rooms': rooms})
+
+@tenant_required
+def viewHistory(request):
+    user = request.user
+    tenant = Prospectivetenant.objects.get(user=user)
+    history = Booking_History.objects.filter(user=tenant)
+    return render(request, 'app/booking-history.html', {'histories':history})
+
+
+
+    return render(request, 'change_password.html', {'form': form})
 # Create your views here.

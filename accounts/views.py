@@ -1,5 +1,7 @@
 
 from accounts.confirmation_email import send_activation_email
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import messages
@@ -87,4 +89,38 @@ def home(request):
 def log_out(request):
     logout(request)
     return redirect('/')
+
+@login_required(login_url='/')
+def changePassword(request):
+    if request.method == 'POST':
+        user = request.user
+        
+        current_password = request.POST.get('password')
+        new_password = request.POST.get('newpassword')
+        confirm = request.POST.get('confirmpassword')
+        
+        if new_password==confirm:
+            
+
+            # Authenticate the user with the current password
+            auth_user = authenticate(email=user.email, password=current_password)
+
+            if auth_user is not None:
+                # Set the new password
+                user.set_password(new_password)
+                user.save()
+
+                # Update the session to prevent the user from being logged out
+                update_session_auth_hash(request, user)
+
+                messages.success(request, 'Your password was successfully updated!')
+                return redirect('/')  # Redirect to the user's profile or another page
+            else:
+                messages.error(request, 'Invalid current password. Please try again.')
+                
+        else:
+            messages.error(request, 'Password didn\'t match')
+            
+    return render(request, 'accounts/changepassword.html')
+    
 # Create your views here.

@@ -1,6 +1,9 @@
 from django.db import models
+from django.forms import ValidationError
 from django.utils.translation import gettext as _
 from accounts.models import Landlord,Prospectivetenant
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 class Apartments(models.Model):
     apartment_name = models.CharField(_("Apartment Name"), max_length=80, unique=True)
@@ -65,17 +68,39 @@ class Rooms(models.Model):
     
 class Booking_History(models.Model):
     user = models.ForeignKey(Prospectivetenant, verbose_name=_("Tenant"), on_delete=models.CASCADE)
-    room = models.ForeignKey(Rooms, verbose_name=_("Room"), on_delete=models.SET("Room was removed/deleted"))
+    room = models.ForeignKey(Rooms, verbose_name=_("Room"), on_delete=models.SET_NULL, null=True, blank=True)
     date_booked = models.DateTimeField(_("Date Booked"), auto_now=True)
 
     
     def __str__(self):
         return self.user.user.username
     
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        if self.room:
+            self.room.booked = True
+            self.room.save()
+    
+    def clean(self):
+        # Check if the room is booked before allowing the booking
+        if self.room and self.room.booked:
+            raise ValidationError(_("Cannot book a room that is already booked."), code="room_already_booked")
+    
     class Meta:
         verbose_name = 'Booking History'
         verbose_name_plural = 'Booking Histories'
         get_latest_by = 'date_booked'
         ordering = ['-date_booked']
+        
+@receiver(post_save, sender=Prospectivetenant)
+def update_booking_history_on_user_role_change(sender, instance, created, **kwargs):
+    if not created and instance.role != "Prospective tenant":
+        Booking_History.objects.filter(user=instance).delete()
+
+@receiver(post_save, sender=Rooms)
+def update_booking_history_on_room_booking_status_change(sender, instance, created, **kwargs):
+    if not created and instance.booked == False:
+        Booking_History.objects.filter(room=instance).update(room=None)
+
         
 # Create your models here.
