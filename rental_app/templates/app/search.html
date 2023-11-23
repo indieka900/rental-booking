@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="rooms">
+    <div class="container">
+
+        <div class="room-bottom">
+            <h3>Search Result for <i>`{{query}}`</i> ({{ rooms|length }}) </h3><p></p>
+
+
+            {% for room in rooms %}
+            <div class="rom-btm">
+                <div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
+                    <img src="/media/{{ room.image }}" class="img-responsive" alt="">
+                </div>
+                <div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
+                    <h4>Room Name:
+                        {{room.room_number}}
+                    </h4>
+                    <h6>Room Type :
+                        {{room.room_type}}
+                    </h6>
+                    <p><b>Appartment Location :</b>
+                        {{room.apartment.location}}
+                    </p>
+                    <p><b>Appartment Name :</b>
+                        {{room.apartment.apartment_name}}
+                    </p>
+                    <!-- <p><b>Appartment Name :</b>
+                        {{room.apartment.landlord.user.username}}
+                    </p> -->
+
+                    <p><b>Facilities : </b>
+                        {{room.apartment.facilities}}
+                    </p>
+                </div>
+                <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
+                    <h5>KSH
+                        {{ room.rent }}
+                    </h5>
+                    <div class="view">
+                        <p>Last Modified :
+                            {{room.date_updated|timesince}} ago.
+                        </p>
+                    </div>
+                    <a href="{% url 'rentals:room' room.id %}" class="view">Details</a>
+
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            {% endfor %}
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+{% endblock content %}

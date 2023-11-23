@@ -90,8 +90,8 @@
             <div class="lock fadeInDown animated" data-wow-delay=".5s">
                 
                 <li>
-                    <form class="" role="search" style="margin-right: 10px; width: 500px; display: flex; justify-content: space-between; padding-inline: 10px;">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <form method="get" action="{% url 'rentals:result' %}" role="search" style="margin-right: 10px; width: 500px; display: flex; justify-content: space-between; padding-inline: 10px;">
+                        <input class="form-control" type="search" name="query" placeholder="Search Vacant Rooms" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
 
