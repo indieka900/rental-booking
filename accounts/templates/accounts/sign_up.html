@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+	<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="m-5" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<!-- <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">&times;</span></button>
+				</div> -->
+				<section>
+					<div class="modal-body modal-spa">
+						<div class="login-grids">
+							<div class="login">
+								<div class="login-left">
+									<ul>
+										<li><a class="fb" href="#"><i></i>Facebook</a></li>
+										<li><a class="goog" href="#"><i></i>Google</a></li>
+
+									</ul>
+								</div>
+								<div class="login-right">
+									<form name="signup" method="post" action="">
+										{% csrf_token %}
+										<h3>Create your account </h3>
+
+										{{ form.as_p }}
+
+										<label for="user_type">Account Type:</label>
+										<select name="user_type" id="user_type">
+											<option value="Prospective tenant">Prospective tenant</option>
+											<option value="Landlord">Landlord</option>
+										</select>
+
+										<input type="submit" name="submit" id="submit" value="CREATE ACCOUNT">
+									</form>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<p>By logging in you agree to our <a href="page.php?type=terms">Terms and Conditions</a> and
+								<a href="page.php?type=privacy">Privacy Policy</a>
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="privacy">
+    <div class="container">
+        <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s"
+            style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">My Booking History</h3>
+        <form name="chngpwd" method="post" onSubmit="return valid();">
+            <table border="1" width="100%">
+                <tr align="center">
+                    <th>#</th>
+                    <th>Booking Id</th>
+                    <th>Room Name</th>
+                    <th>Status</th>
+                    <th>Booking Date</th>
+                    <th>Action</th>
+                </tr>
+                {% for history in histories %}
+                <tr align="center">
+                    <td>{{forloop.counter}}</td>
+                    <td>#BK{{history.id}}</td>
+                    <td>
+                        
+                        {% if history.room %}
+                            <a href="{% url 'rentals:room' history.room.id %}">
+                            {{history.room.room_number}}
+                        </a>
+                        {% else %}
+                            The room was deleted/removed
+                        {% endif %}
+                            
+                        
+                    </td>
+                    <td>
+                        {% if history.room %}
+                            {% if history.room.booked %}
+                                Booked
+                            {% else %}
+                                Vacant
+                            {% endif %}
+                                
+                        {% else %}
+                            The room was deleted/removed
+                        {% endif %}
+                    </td>
+                    <td>{{history.date_booked}}</td>
+                    <td><a href="{% url 'rentals:delete-booking-history' history.id %}">delete from list</a></td>
+
+                </tr>
+                {% endfor %}
+
+            </table>
+
+            </p>
+        </form>
+
+
+    </div>
+</div>
+{% endblock content %}
