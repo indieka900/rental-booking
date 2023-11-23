@@ -24,11 +24,14 @@
                 </div>
 
                 {% if apartment.landlord.user == user %}
-                 <a href="{% url 'rentals:add-room' apartment.id %}"
+                 <a href="{% url 'rentals:update-apartment' apartment.id %}"
                     class="view">Update details of this apartment</a>
 
                  <a href="{% url 'rentals:add-room' apartment.id %}"
                     class="view">Add room to this apartment</a>
+
+                 <a href="#"
+                    class="view" style="background-color: red;">Delete this apartment</a>
                 
                 {% endif %}
                 <div class="clearfix"></div>

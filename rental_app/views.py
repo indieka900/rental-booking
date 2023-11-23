@@ -2,13 +2,14 @@ from django.shortcuts import render,redirect
 from accounts.confirmation_email import send_booking_confirmation_email
 from accounts.models import Prospectivetenant, Landlord
 from rental_app.models import Rooms, Apartments, Booking_History
-from rental_app.forms import AddRoomForm, AddApartmentForm
+from rental_app.forms import RoomForm, ApartmentForm
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from accounts.decorators import landlord_required, tenant_required
 from django.db.models import Q
 from django.contrib.auth.decorators import permission_required
 
-# @landlord_required
+#veiwing one room, booking it and sending the emails to both tenant and landlord
 def viewRoom(request, id):
     room = Rooms.objects.get(id=id)
     if request.method == 'POST':
@@ -24,21 +25,26 @@ def viewRoom(request, id):
         return render(request, "app/notification.html")
     return render(request, 'app/detail_page.html',{'room':room})
 
+
+#view all rooms
 # @permission_required('user.is_active',login_url='/')
 def viewRooms(request):
     rooms = Rooms.objects.filter(booked=False)
     return render(request, 'app/rooms.html', {'rooms': rooms})
 
+#view one apartment
 def viewApartment(request, id):
     apartment = Apartments.objects.get(id=id)
     return render(request, 'app/apartment.html', {'apartment': apartment})
 
+#view rooms for a specific landlord
 @landlord_required
 def viewRooms_L(request):
     user = request.user
     rooms = Rooms.objects.filter(apartment__landlord__user__id = user.id)
     return render(request, 'app/rooms.html', {'rooms': rooms})
 
+#tenant booking history
 @tenant_required
 def viewHistory(request):
     user = request.user
@@ -46,7 +52,7 @@ def viewHistory(request):
     history = Booking_History.objects.filter(user=tenant)
     return render(request, 'app/booking-history.html', {'histories':history})
 
-
+#search room by different fields
 def result(request):
     if request.method == 'GET':
         query = request.GET.get('query')
@@ -65,35 +71,104 @@ def result(request):
 
         return render(request, 'app/search.html')
 
+#add room
 @landlord_required  
 def add_room(request, id):
     if request.method == 'POST':
-        form = AddRoomForm(request.POST)
+        form = RoomForm(request.POST, request.FILES)
         if form.is_valid():
-            image = request.FILES['image']
             form.instance.apartment = Apartments.objects.get(id=id)
-            form.instance.image = image
             form.save()
-            return redirect('/rentals/landlord\'s-rooms/')
+            id = form.instance.id
+            return redirect(f'/rentals/room/{id}/')
     else:
-        form = AddRoomForm()
-    return render(request, 'app/add_room.html',{'form':form,'mode':'apartment'})
+        form = RoomForm()
+    return render(request, 'app/add_room.html',{'form':form,'mode':'room'})
 
+#update the particular room
+@landlord_required
+def update_room(request, id):
+    room = Rooms.objects.get(id=id)
+    if request.user == room.apartment.landlord.user:
+        if request.method == 'POST':
+            form = RoomForm(request.POST, request.FILES, instance=room)
+            if form.is_valid():
+                form.save()
+                return redirect(f'/rentals/room/{id}/')
+                
+        else:
+            form = RoomForm(instance=room)
+            
+        context = {'form':form, 'mode':'room_u'}
+        return render(request, 'app/add_room.html',context)
+    else:
+        messages.info(request,"You are not allowed to perform this operation")
+        return redirect('/')
 
+#delete room
+def delete_room(request, id):
+    room = Rooms.objects.get(id=id)
+    if request.user == room.apartment.landlord.user:
+        room.delete()
+        messages.info(request, 'Room deleted succesfully')
+        return redirect('/')
+    
+    else:
+        messages.info(request, 'You are not allowed to perform this operation')
+        return redirect('/')
+
+#add apartment
 @landlord_required  
 def add_apartment(request):
     if request.method == 'POST':
-        form = AddApartmentForm(request.POST)
+        form = ApartmentForm(request.POST, request.FILES)
         if form.is_valid():
-            image = request.FILES['image']
-            form.instance.image = image
             user_l = Landlord.objects.get(user=request.user)
             form.instance.landlord = user_l
             form.save()
             id = form.instance.id
             return redirect(f'/rentals/apartment/{id}/')
     else:
-        form = AddApartmentForm()
+        form = ApartmentForm()
     return render(request, 'app/add_room.html',{'form':form, 'mode':'apartment'})
 
+
+#update apartment
+@landlord_required
+def update_apartment(request, id):
+    apartment = Apartments.objects.get(id=id)
+    if request.user == apartment.landlord.user:
+        if request.method == 'POST':
+            form = ApartmentForm(request.POST, request.FILES, instance=apartment)
+            if form.is_valid():
+                form.save()
+                return redirect(f'/rentals/apartment/{id}/')
+        else:
+            form = ApartmentForm(instance=apartment)
+            
+        return render(request, 'app/add_room.html',{'form':form, 'mode':'apartment_u'})
+    else:
+        messages.info(request,"You are not allowed to perform this operation")
+        return redirect('/')
+
+
+#delete apartment
+@landlord_required
+def delete_apartment(request, id):
+    apartment = Apartments.objects.get(id=id)
+    if request.user == apartment.landlord.user:
+        apartment.delete()
+        messages.info(request, 'Apartment deleted succesfully')
+        return redirect('/')
+    
+    else:
+        messages.info(request, 'You are not allowed to perform this operation')
+        return redirect('/')
+
 # Create your views here.
+
+
+'''
+student = Student.objects.get(id=id)
+    student.delete()
+'''

@@ -1,7 +1,7 @@
 from django import forms
 from rental_app.models import Rooms,Apartments
 
-class AddRoomForm(forms.ModelForm):
+class RoomForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field in self.fields:
@@ -9,13 +9,13 @@ class AddRoomForm(forms.ModelForm):
             self.fields[field].widget.attrs.update({'style': 'width: 350px;'})
     class Meta:
         model = Rooms
-        fields = ("room_number", "size", "room_type","rent","rate")
+        fields = ("room_number", "size", "room_type","rent","rate","image")
         
         '''widgets = {
                 'size': forms.TextInput(attrs={'style': 'width: 350px;'}),
             }'''
         
-class AddApartmentForm(forms.ModelForm):
+class ApartmentForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field in self.fields:
@@ -23,7 +23,7 @@ class AddApartmentForm(forms.ModelForm):
             self.fields[field].widget.attrs.update({'style': 'width: 350px;'})
     class Meta:
         model = Apartments
-        fields = ("apartment_name", "description", "facilities","paid_for","location")
+        fields = ("apartment_name", "description", "facilities","paid_for","location","image")
         
        
         

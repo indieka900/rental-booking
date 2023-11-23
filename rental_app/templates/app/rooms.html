@@ -46,9 +46,10 @@
                     </div>
                     
                     {% if room.apartment.landlord.user == user %}
-                        <a href="#" class="view">Edit</a>
+                        <a href="{% url 'rentals:update-room' room.id %}" class="view">Edit</a>
+                        <a href="#" class="view" style="background-color: red;">Delete</a>
                     {% else %}
-                        <a href="{% url 'rentals:room' room.id %}" class="view">Details</a>
+                        <a href="{% url 'rentals:room' room.id %}" class="view" >Details</a>
                     {% endif %}
                         
                     
