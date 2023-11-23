@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+
     <script
         type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
@@ -39,7 +40,9 @@
                 <li class="hm"><a href="{% url 'accounts:home' %}"><i class="fa fa-home"></i></a></li>
                 <li class="prnt"><a href="#">My Profile</a></li>
                 <li class="prnt"><a href="{% url 'accounts:change-password' %}">Change Password</a></li>
-                <li class="prnt"><a href="{% if user.role == 'Prospective tenant' %}{% url 'rentals:booking-history' %}{% else %}{% url 'rentals:landlords-rooms' %}{% endif %}">My History</a></li>
+                <li class="prnt"><a
+                        href="{% if user.role == 'Prospective tenant' %}{% url 'rentals:booking-history' %}{% else %}{% url 'rentals:landlords-rooms' %}{% endif %}">My
+                        History</a></li>
                 <li class="prnt"><a href="#">Issue Tickets</a></li>
             </ul>
             <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
@@ -50,7 +53,7 @@
             <div class="clearfix"></div>
         </div>
 
-        
+
 
 
     </div>
@@ -71,18 +74,29 @@
     </div>
     {% endif %}
 
+    {% for message in messages %}
+    <script>
+        mes = "{{message}}";
+        alert(mes);
+    </script>
+    {% endfor %}
+
     <div class="header">
         <div class="container">
             <div class="logo wow fadeInDown animated" data-wow-delay=".5s">
                 <a href="{% url 'accounts:home' %}">Tourism <span>Management System</span></a>
             </div>
-            {% for message in messages %}
-            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-                <strong style="color: #14dd25;">{{message}}</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            {% endfor %}
+
             <div class="lock fadeInDown animated" data-wow-delay=".5s">
+                
+                <li>
+                    <form class="" role="search" style="margin-right: 10px; width: 500px; display: flex; justify-content: space-between; padding-inline: 10px;">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+
+                </li>
                 <li><i class="fa fa-lock"></i></li>
                 <li>
                     <div class="securetxt">SAFE &amp; SECURE </div>
@@ -108,6 +122,7 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
+
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                         <nav class="cl-effect-1">
@@ -127,6 +142,7 @@
                                 <div class="clearfix"></div>
 
                             </ul>
+
                         </nav>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -137,15 +153,15 @@
     </div>
     {% if must %}
 
-        {% else %}
-        <div class="banner-3 ">
-            <div class="container">
-                <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
-                    style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Tourism Management
-                    System</h1>
-            </div>
+    {% else %}
+    <div class="banner-3 ">
+        <div class="container">
+            <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
+                style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Tourism Management
+                System</h1>
         </div>
-        {% endif %}
+    </div>
+    {% endif %}
     {% block content %}
 
     {% endblock %}

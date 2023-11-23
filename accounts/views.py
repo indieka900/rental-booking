@@ -60,26 +60,7 @@ def activate(request, uidb64, token):
 def home(request):
     rooms = Rooms.objects.filter(booked=False).order_by('?')[:3]
     is_must = True
-    if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        try:
-            user= CustomUser.objects.get(email=email)
-        except CustomUser.DoesNotExist:
-            messages.error(request, 'email does not exist!') 
-        user = authenticate(request, email=email, password=password)
-        
-        if user is not None:
-            if user.is_active:
-                login(request, user)
-                messages.success(request, 'Logged in succesfully')
-                return redirect('/')
-            else:
-                messages.error(request, 'Please activate your account')
-                return redirect('/') 
-        else:
-            messages.error(request, 'email or password does not exist')
-            return redirect('/')
+    
     context = {
         'rooms' : rooms,
         'must' : is_must,
@@ -122,5 +103,30 @@ def changePassword(request):
             messages.error(request, 'Password didn\'t match')
             
     return render(request, 'accounts/changepassword.html')
+
+
+def login_user(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        next_url = request.POST.get('next', '/') 
+        try:
+            user= CustomUser.objects.get(email=email)
+        except CustomUser.DoesNotExist:
+            messages.error(request, 'email does not exist!') 
+        user = authenticate(request, email=email, password=password)
+        
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                messages.success(request, 'Logged in succesfully')
+                return redirect('/')
+            else:
+                messages.error(request, 'Please activate your account')
+                return redirect('/') 
+        else:
+            messages.error(request, 'Incorrect password')
+            return redirect('/')
+    
     
 # Create your views here.

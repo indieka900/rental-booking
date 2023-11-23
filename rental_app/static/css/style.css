@@ -1500,13 +1500,13 @@ button.subbtn:focus, button.subbtn:hover {
     float: left;
     width: 42%;
 }
-.login-right input[type="text"] ,.login-right input[type="password"] {
+.login-right input[type="email"] ,.login-right input[type="password"] {
     width: 100%;
     padding: 10px;
     font-weight: normal;
     background: none;
     border: 1px solid #E6E4E4;
-    color: #D2D1D1;
+    color: #807e7e;
     outline: none;
     font-size: 14px;
     margin-top: 20px;
@@ -4339,7 +4339,7 @@ h4.sing {
 .login-right input[type="submit"] {
     font-size: 12px;
 }
-.login-right input[type="text"], .login-right input[type="password"] {
+.login-right input[type="email"], .login-right input[type="password"] {
     font-size: 12px;
 }
 .login-left ul li {

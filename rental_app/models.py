@@ -102,5 +102,12 @@ def update_booking_history_on_room_booking_status_change(sender, instance, creat
     if not created and instance.booked == False:
         Booking_History.objects.filter(room=instance).update(room=None)
 
+
+class Page(models.Model):
+    type = models.CharField(_("Page Type"), max_length=50)
+    details = models.TextField(_("Page Detail"))
+    
+    def __str__(self):
+        return self.type
         
 # Create your models here.

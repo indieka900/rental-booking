@@ -16,10 +16,11 @@
                             </ul>
                         </div>
                         <div class="login-right">
-                            <form method="post">
+                            <form method="post" action="{% url 'accounts:login' %}">
                                 {% csrf_token %}
                                 <h3>Signin with your account </h3>
-                                <input type="text" name="email" id="email" placeholder="Enter your Email" required="">
+                                <input type="hidden" name="next" value="{{ request.GET.next }}">
+                                <input type="email" name="email" id="email" placeholder="Enter your Email" required="">
                                 <input type="password" name="password" id="password" placeholder="Password" value=""
                                     required="">
                                 <h4><a href="forgot-password.php">Forgot password</a></h4>
