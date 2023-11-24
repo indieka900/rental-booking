@@ -32,7 +32,7 @@ class Rooms(models.Model):
     )
     
     Room_type_choices = (
-        ("Singe room", "Singe room"),
+        ("Single room", "Single room"),
         ("Bedsitter", "Bedsitter"),
         ("Studio", "Studio"),
         ("Go Down", "Go Down"),

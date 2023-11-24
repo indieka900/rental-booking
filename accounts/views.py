@@ -13,6 +13,7 @@ from django.utils.http import urlsafe_base64_decode
 from accounts.tokens import account_activation_token
 from accounts.forms import UserSignUpForm 
 from rental_app.models import Rooms
+from rental_app.views import common_data
 from django.contrib.auth import authenticate, login, logout
 
 
@@ -64,6 +65,7 @@ def home(request):
     context = {
         'rooms' : rooms,
         'must' : is_must,
+        **common_data(),
     }
     return render(request, 'app/index.html', context)   
     
@@ -109,7 +111,6 @@ def login_user(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-        next_url = request.POST.get('next', '/') 
         try:
             user= CustomUser.objects.get(email=email)
         except CustomUser.DoesNotExist:
