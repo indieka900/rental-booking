@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import permission_required
 #common
 def common_data():
     return {
-        'testmonials': Page.objects.all(),
+        'pages': Page.objects.all(),
     }
 
 

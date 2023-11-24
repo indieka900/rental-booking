@@ -134,16 +134,15 @@
                         <nav class="cl-effect-1">
                             <ul class="nav navbar-nav">
                                 <li><a href="{% url 'accounts:home' %}">Home</a></li>
-                                <li><a href="page.php?type=aboutus">About</a></li>
                                 <li><a href="{% url 'rentals:rooms' %}">Vaccant Rooms</a></li>
-                                <li><a href="page.php?type=privacy">Privacy Policy</a></li>
-                                <li><a href="page.php?type=terms">Terms of Use</a></li>
-                                <li><a href="page.php?type=contact">Contact Us</a></li>
+                                {% for page in pages %}
+                                    <li><a href="{% url 'rentals:page' page.id %}">{{page.type}}</a></li>
+                                {% endfor %}
                                 {% if user.is_authenticated %}
                                 <li>Need Help?<a href="#" data-toggle="modal" data-target="#myModal3"> / Write Us </a>
                                 </li>
                                 {% else %}
-                                <li><a href="enquiry.php"> Enquiry </a> </li>
+                                <li><a href="#"> Enquiry </a> </li>
                                 {% endif %}
                                 <div class="clearfix"></div>
 
@@ -163,7 +162,7 @@
     <div class="banner-3 ">
         <div class="container">
             <h1 class="wow zoomIn animated animated" data-wow-delay=".5s"
-                style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">TMS-Room Booking Management
+                style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">RBMS-Room Booking Management
                 System</h1>
         </div>
     </div>

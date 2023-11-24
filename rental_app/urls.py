@@ -2,7 +2,7 @@ from django.urls import path
 from rental_app.views import (viewRoom,viewRooms,
                               viewApartment,viewRooms_L,
                               viewHistory, delete_history, result,
-                              add_room,add_apartment,
+                              add_room,add_apartment,pages,
                               update_apartment,update_room,
                               delete_apartment,delete_room,
                               )
@@ -14,6 +14,7 @@ urlpatterns = [
     path('landlord\'s-rooms/',viewRooms_L, name='landlords-rooms'),
     path('booking-history/', viewHistory, name='booking-history'),
     path('delete-booking-history/<id>/', delete_history, name='delete-booking-history'),
+    path('page/<id>/',pages, name='page'),
     path('room/<id>/',viewRoom, name='room'),
     path('add-room/<id>/',add_room, name='add-room'),
     path('update-room/<id>/',update_room, name='update-room'),
