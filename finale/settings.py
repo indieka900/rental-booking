@@ -29,8 +29,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'phonenumber_field',
+    #installed apps
     'accounts',
     'rental_app',
+    'custom_admin',
+    ###########################
 ]
 
 PHONENUMBER_DB_FORMAT = 'NATIONAL'
