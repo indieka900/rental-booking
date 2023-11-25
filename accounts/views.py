@@ -83,13 +83,9 @@ def changePassword(request):
         confirm = request.POST.get('confirmpassword')
         
         if new_password==confirm:
-            
-
-            # Authenticate the user with the current password
             auth_user = authenticate(email=user.email, password=current_password)
 
             if auth_user is not None:
-                # Set the new password
                 user.set_password(new_password)
                 user.save()
 
@@ -131,18 +127,24 @@ def login_user(request):
 
 @login_required(login_url='/')
 def edit_profile(request):
-    # profile = Profile.objects.get(user=request.user)
+    r_user = CustomUser.objects.get(id=request.user.id)
     if request.user.role == 'Landlord':
-        user = Landlord.objects.get(user=request.user)
+        user = Landlord.objects.get(user=r_user)
     else:
-        user = Prospectivetenant.objects.get(user=request.user)
+        user = Prospectivetenant.objects.get(user=r_user)
     if request.method == 'POST':
-        form = ProfileForm(request.POST, request.FILES, instance=user)
+        form = ProfileForm(request.POST, request.FILES, instance=user, user=r_user)
         if form.is_valid():
+            phone = form.cleaned_data['phone']
+            full_name = form.cleaned_data['full_name']
             form.save()
-            return redirect('/')  # Redirect to the profile page after successful update
+            r_user.phone = phone
+            r_user.full_name = full_name
+            r_user.save()
+            messages.success(request, 'Updated succesfully')
+            return redirect('/')
     else:
-        form = ProfileForm(instance=user)
+        form = ProfileForm(instance=user, user=r_user)
 
     return render(request, 'accounts/change-profile.html', {'form': form})
     

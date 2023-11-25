@@ -1,9 +1,9 @@
 from django import forms
 from accounts.models import CustomUser,Profile
+from phonenumber_field.formfields import PhoneNumberField
 
 class UserSignUpForm(forms.ModelForm):
     email = forms.EmailField(max_length=156, required=True)
-    phone = forms.CharField(max_length=20, required=True)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -44,8 +44,16 @@ class UserSignUpForm(forms.ModelForm):
     
 
 class ProfileForm(forms.ModelForm):
+    
+    phone = PhoneNumberField()
+    full_name = forms.CharField(max_length=50)
+    
     def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)
         super(ProfileForm, self).__init__(*args, **kwargs)
+        if user:
+            self.fields['phone'].initial = user.phone
+            self.fields['full_name'].initial = user.full_name
         for field in self.fields:
             self.fields[field].widget.attrs.update({'class': 'form-control'})
             self.fields[field].widget.attrs.update({'style': 'width: 350px;'})
@@ -53,4 +61,4 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['bio', 'profile_picture']
+        fields = ['phone','bio','profile_picture']
