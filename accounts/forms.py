@@ -1,5 +1,5 @@
 from django import forms
-from accounts.models import CustomUser
+from accounts.models import CustomUser,Profile
 
 class UserSignUpForm(forms.ModelForm):
     email = forms.EmailField(max_length=156, required=True)
@@ -40,3 +40,17 @@ class UserSignUpForm(forms.ModelForm):
             user.save()
 
         return user
+    
+    
+
+class ProfileForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ProfileForm, self).__init__(*args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class': 'form-control'})
+            self.fields[field].widget.attrs.update({'style': 'width: 350px;'})
+        # Set email field as read-only
+
+    class Meta:
+        model = Profile
+        fields = ['bio', 'profile_picture']

@@ -76,11 +76,11 @@ class Profile(models.Model):
     profile_picture = models.ImageField(upload_to="profile",default="default.png")
     
     class Meta:
-        abstract= True      
+        abstract= True  
+            
 class Administrator(Profile):
     pass
     
-  
     def __str__(self):
         return self.user.username
 

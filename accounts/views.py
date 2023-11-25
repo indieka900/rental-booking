@@ -6,12 +6,12 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth import get_user_model
-from accounts.models import CustomUser,Landlord, Prospectivetenant
+from accounts.models import CustomUser,Landlord, Prospectivetenant, Profile
 from django.views.generic import CreateView
 from django.utils.encoding import force_str  
 from django.utils.http import urlsafe_base64_decode 
 from accounts.tokens import account_activation_token
-from accounts.forms import UserSignUpForm 
+from accounts.forms import UserSignUpForm,ProfileForm
 from rental_app.models import Rooms
 from rental_app.views import common_data
 from django.contrib.auth import authenticate, login, logout
@@ -128,6 +128,22 @@ def login_user(request):
         else:
             messages.error(request, 'Incorrect password')
             return redirect('/')
-    
+
+@login_required(login_url='/')
+def edit_profile(request):
+    # profile = Profile.objects.get(user=request.user)
+    if request.user.role == 'Landlord':
+        user = Landlord.objects.get(user=request.user)
+    else:
+        user = Prospectivetenant.objects.get(user=request.user)
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('/')  # Redirect to the profile page after successful update
+    else:
+        form = ProfileForm(instance=user)
+
+    return render(request, 'accounts/change-profile.html', {'form': form})
     
 # Create your views here.

@@ -40,7 +40,7 @@
         <div class="container">
             <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
                 <li class="hm"><a href="{% url 'accounts:home' %}"><i class="fa fa-home"></i></a></li>
-                <li class="prnt"><a href="#">My Profile</a></li>
+                <li class="prnt"><a href="{% url 'accounts:update-profile' %}">My Profile</a></li>
                 <li class="prnt"><a href="{% url 'accounts:change-password' %}">Change Password</a></li>
                 <li class="prnt"><a
                         href="{% if user.role == 'Prospective tenant' %}{% url 'rentals:booking-history' %}{% else %}{% url 'rentals:landlords-rooms' %}{% endif %}">My
