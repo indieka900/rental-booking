@@ -9,7 +9,7 @@ class RoomForm(forms.ModelForm):
             self.fields[field].widget.attrs.update({'style': 'width: 350px;'})
     class Meta:
         model = Rooms
-        fields = ("room_number", "size", "room_type","rent","rate","image")
+        fields = ("room_number","booked", "size", "room_type","rent","rate","image")
         
         '''widgets = {
                 'size': forms.TextInput(attrs={'style': 'width: 350px;'}),

@@ -7,18 +7,21 @@ from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
 from accounts.tokens import account_activation_token
 
-current_time = timezone.localtime(timezone.now())
-new_time = current_time + timezone.timedelta(hours=3)
 
-def send_booking_confirmation_email(tenant, room, request):
+
+def new_time():
+    current_time = timezone.localtime(timezone.now())
+    new_time = current_time + timezone.timedelta(hours=3)
+    return new_time 
+
+def send_booking_confirmation_email(tenant, room):
     # Send email to the user who booked the room (tenant)
     tenant_subject = 'Booking Confirmation'
     tenant_message = render_to_string('app/booking_confirmation.html', {
         'tenant': tenant.user.username,
         'owner': room.apartment.landlord.user,
         'room': room,
-        # 'domain': get_current_site(request).domain,
-        'time': new_time
+        'time': new_time()
     })
     tenant_email = EmailMessage(
         tenant_subject, tenant_message, to=[tenant.user.email]
@@ -31,8 +34,7 @@ def send_booking_confirmation_email(tenant, room, request):
         'tenant': tenant.user,
         'owner': room.apartment.landlord.user.username,
         'room': room,
-        # 'domain': get_current_site(request).domain,
-        'time': new_time,
+        'time': new_time(),
     })
     owner_email = EmailMessage(
         owner_subject, owner_message, to=[room.apartment.landlord.user.email]

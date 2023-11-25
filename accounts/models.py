@@ -39,7 +39,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         validators=[username_validator],
     )
     email = models.EmailField(unique=True)
-    image = models.ImageField(upload_to='uploads/',null=True)
     gender = models.CharField(max_length=10, choices=Gender_choices)
     full_name = models.CharField(max_length=60,default='')
     role = models.CharField(max_length=25, choices=Role_choices, default="Prospective tenant")

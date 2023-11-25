@@ -32,7 +32,7 @@ def viewRoom(request, id):
         real_user = Prospectivetenant.objects.get(user=user)
         booking_history = Booking_History(room=room,user=real_user)
         booking_history.save()
-        send_booking_confirmation_email(real_user,room,request)
+        send_booking_confirmation_email(real_user,room)
         
         room.booked=True
         room.tenant=real_user
