@@ -1,23 +1,23 @@
 
-from accounts.confirmation_email import send_activation_email
+from accounts.confirmation_email import send_activation_email, send_reset_password_email
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth import get_user_model
-from accounts.models import CustomUser,Landlord, Prospectivetenant, Profile
-from django.views.generic import CreateView
+from accounts.models import CustomUser,Landlord, Prospectivetenant
+from django.views.generic import CreateView,View
 from django.utils.encoding import force_str  
 from django.utils.http import urlsafe_base64_decode 
 from accounts.tokens import account_activation_token
-from accounts.forms import UserSignUpForm,ProfileForm
+from accounts.forms import UserSignUpForm,ProfileForm, ForgotPasswordForm
 from rental_app.models import Rooms
 from rental_app.views import common_data
 from django.contrib.auth import authenticate, login, logout
 
 
-class LandLordSignupView(CreateView):
+class SignupView(CreateView):
     model = CustomUser
     form_class = UserSignUpForm
     template_name = "accounts/sign_up.html"
@@ -37,9 +37,34 @@ class LandLordSignupView(CreateView):
                 Prospectivetenant.objects.create(user=user)
                 
             send_activation_email(user,self.request)
+            return redirect('/')
             
         return render(self.request, "accounts/sign_alert.html")
 
+def forgot_password(request):
+    if request.method == 'POST':
+        form = ForgotPasswordForm(request.POST)
+        if form.is_valid():
+            phone = form.cleaned_data['phone']
+            new_password = form.cleaned_data['new_password']
+            email = form.cleaned_data['email']
+
+            try:
+                user = CustomUser.objects.get(email=email, phone=phone)
+                send_reset_password_email(user,request, new_password)
+                
+                return redirect('/')
+
+            except CustomUser.DoesNotExist:
+                messages.error(request, 'User with the provided email and phone does not exist.')
+
+    else:
+        form = ForgotPasswordForm()
+
+    return render(request, 'accounts/forgot-password.html', {'form': form})
+
+        
+    
 
 
 def activate(request, uidb64, token):  
@@ -53,6 +78,23 @@ def activate(request, uidb64, token):
         user.is_active = True  
         user.save()  
         messages.success(request,"Account was Successfully Verified.")
+        return HttpResponse('Thank you for your email confirmation. Now you can login your account.')  
+    else:  
+        return HttpResponse('Activation link is invalid!')
+    
+    
+def reset(request, uidb64, token, password):  
+    User = get_user_model()  
+    try:  
+        uid = force_str(urlsafe_base64_decode(uidb64))  
+        user = User.objects.get(pk=uid)  
+    except(TypeError, ValueError, OverflowError, User.DoesNotExist):  
+        user = None  
+    if user is not None and account_activation_token.check_token(user, token):  
+        user.set_password(password)
+        user.save()
+
+        messages.success(request, 'Password has been updated successfully!')
         return HttpResponse('Thank you for your email confirmation. Now you can login your account.')  
     else:  
         return HttpResponse('Activation link is invalid!')

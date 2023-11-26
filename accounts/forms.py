@@ -19,9 +19,6 @@ class UserSignUpForm(forms.ModelForm):
         label="Password Confirmation",
         widget=forms.PasswordInput)
 
-    
-
-    
 
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')
@@ -62,3 +59,27 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['phone','full_name','bio','profile_picture']
+        
+        
+class ForgotPasswordForm(forms.Form):
+    email = forms.EmailField()
+    phone = PhoneNumberField()
+    new_password = forms.CharField(widget=forms.PasswordInput)
+    confirm_password = forms.CharField(widget=forms.PasswordInput)
+    
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class': 'form-control'})
+            self.fields[field].widget.attrs.update({'style': 'width: 350px;'})
+
+    def clean(self):
+        cleaned_data = super().clean()
+        new_password = cleaned_data.get('new_password')
+        confirm_password = cleaned_data.get('confirm_password')
+
+        if new_password != confirm_password:
+            raise forms.ValidationError("New password and Confirm password do not match!")
+
+        return cleaned_data

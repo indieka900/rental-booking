@@ -59,4 +59,22 @@ def send_activation_email(user,request, email_template='acc_active.html'):
     email.send()
     
     
+def send_reset_password_email(user,request, password, email_template='accounts/reset_pass.html'):
+    current_site = get_current_site(request)  # Use None because there's no request in this context
+    mail_subject = 'Reset Password'
+    message = render_to_string(email_template, {
+        'user': user,
+        'domain': current_site.domain,
+        'pass':password,
+        'time': datetime.date.today().year,
+        'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+        'token': account_activation_token.make_token(user),
+    })
+    to_email = user.email
+    email = EmailMessage(
+        mail_subject, message, to=[to_email]
+    )
+    email.send()
+    
+    
     

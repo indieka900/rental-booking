@@ -1,0 +1,12 @@
+{% autoescape off %} 
+
+Welcome To RBMS,
+
+Hi {{user.username}},
+Click on the link below to complete reseting your password,
+http://{{ domain }}{% url 'accounts:reset' uidb64=uid token=token password=pass %} 
+
+This is an automatically generated email. Please do not reply.
+@{{time}} RBMS | Nairobi
+ 
+{% endautoescape %}  
