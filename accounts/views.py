@@ -137,8 +137,10 @@ def edit_profile(request):
         if form.is_valid():
             phone = form.cleaned_data['phone']
             full_name = form.cleaned_data['full_name']
+            profile_picture = form.cleaned_data['profile_picture']
             form.save()
             r_user.phone = phone
+            r_user.image = profile_picture
             r_user.full_name = full_name
             r_user.save()
             messages.success(request, 'Updated succesfully')

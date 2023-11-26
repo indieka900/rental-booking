@@ -39,11 +39,11 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         validators=[username_validator],
     )
     email = models.EmailField(unique=True)
+    image = models.ImageField(upload_to='Users',null=True)
     gender = models.CharField(max_length=10, choices=Gender_choices)
     full_name = models.CharField(max_length=60,default='')
     role = models.CharField(max_length=25, choices=Role_choices, default="Prospective tenant")
-    phone = PhoneNumberField( unique=True) 
-    # avatar = models.CharField(max_length=500, blank=True, null=True,)
+    phone = PhoneNumberField( unique=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(auto_now_add=True)

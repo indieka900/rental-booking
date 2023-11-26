@@ -94,10 +94,10 @@ class Booking_History(models.Model):
         get_latest_by = 'date_booked'
         ordering = ['-date_booked']
         
-@receiver(post_save, sender=CustomUser)
-def update_booking_history_on_user_role_change(sender, instance, created, **kwargs):
-    if not created and instance.role != "Prospective tenant":
-        Booking_History.objects.filter(user=instance).delete()
+# @receiver(post_save, sender=CustomUser)
+# def update_booking_history_on_user_role_change(sender, instance, created, **kwargs):
+#     if not created and instance.role != "Prospective tenant":
+#         Booking_History.objects.filter(user=instance).delete()
 
 @receiver(post_save, sender=Rooms)
 def update_booking_history_on_room_booking_status_change(sender, instance, created, **kwargs):

@@ -11,7 +11,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Room Booking Management System In Django" />
     <script type="text/javascript">
-        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+        bkLib.onDomLoaded(function () { nicEditors.allTextAreas() });
     </script>
     <script
         type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -30,6 +30,17 @@
     <script>
         new WOW().init();
     </script>
+    <style>
+        .circular-image {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 15px;
+            margin-bottom: 0px;
+            border: 2px solid black;
+            background-size: cover;
+        }
+    </style>
     <script src="{% static 'js/jquery-ui.js' %}"></script>
     <!--//end-animate-->
 </head>
@@ -40,14 +51,16 @@
         <div class="container">
             <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
                 <li class="hm"><a href="{% url 'accounts:home' %}"><i class="fa fa-home"></i></a></li>
-                <li class="prnt"><a href="{% url 'accounts:update-profile' %}">My Profile</a></li>
+                <li class="prnt">
+                    <a href="{% url 'accounts:update-profile' %}">Change Profile</a>
+                </li>
                 <li class="prnt"><a href="{% url 'accounts:change-password' %}">Change Password</a></li>
                 <li class="prnt"><a
                         href="{% if user.role == 'Prospective tenant' %}{% url 'rentals:booking-history' %}{% else %}{% url 'rentals:landlords-rooms' %}{% endif %}">My
                         History</a></li>
                 <li class="prnt">
                     {% if user.role == 'Landlord' %}
-                        <a href="{% url 'rentals:add-apartment' %}">Add Apartment</a>
+                    <a href="{% url 'rentals:add-apartment' %}">Add Apartment</a>
                     {% endif %}
                 </li>
             </ul>
@@ -55,6 +68,17 @@
                 <li class="tol">Welcome :</li>
                 <li class="sig">@{{ user.username }}</li>
                 <li class="sigi"><a href="{% url 'accounts:logout' %}"> Logout</a></li>
+                {% if user.image %}
+                <li class="sigi">
+                    <a href="{% url 'accounts:update-profile' %}">
+                        <div class="circular-image rounded-circle"
+                            style="background-image: url('/media/{{ user.image }}');">
+
+                        </div>
+                    </a>
+                </li>
+                {% endif %}
+
             </ul>
             <div class="clearfix"></div>
         </div>
@@ -94,10 +118,12 @@
             </div>
 
             <div class="lock fadeInDown animated" data-wow-delay=".5s">
-                
+
                 <li>
-                    <form method="get" action="{% url 'rentals:result' %}" role="search" style="margin-right: 10px; width: 460px; display: flex; justify-content: space-between;">
-                        <input class="form-control" type="search" name="query" placeholder="Search Vacant Rooms" aria-label="Search">
+                    <form method="get" action="{% url 'rentals:result' %}" role="search"
+                        style="margin-right: 10px; width: 460px; display: flex; justify-content: space-between;">
+                        <input class="form-control" type="search" name="query" placeholder="Search Vacant Rooms"
+                            aria-label="Search">
                         <button class="btn btn-outline-success" type="submit" style="margin-left: 10px;">Search</button>
                     </form>
 
@@ -136,7 +162,7 @@
                                 <li><a href="{% url 'accounts:home' %}">Home</a></li>
                                 <li><a href="{% url 'rentals:rooms' %}">Vaccant Rooms</a></li>
                                 {% for page in pages %}
-                                    <li><a href="{% url 'rentals:page' page.id %}">{{page.type}}</a></li>
+                                <li><a href="{% url 'rentals:page' page.id %}">{{page.type}}</a></li>
                                 {% endfor %}
                                 {% if user.is_authenticated %}
                                 <li>Need Help?<a href="#" data-toggle="modal" data-target="#myModal3"> / Write Us </a>
@@ -167,6 +193,7 @@
         </div>
     </div>
     {% endif %}
+
     {% block content %}
 
     {% endblock %}
@@ -185,8 +212,10 @@
                 </ul>
             </div>
             <p class="wow zoomIn animated animated" data-wow-delay=".5s"
-                style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">Copyright &copy; <script>document.write(new Date().getFullYear());</script> RBMS . All Rights
-                Reserved </p>
+                style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;">Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> RBMS . All Rights
+                Reserved
+            </p>
         </div>
     </div>
 </body>
