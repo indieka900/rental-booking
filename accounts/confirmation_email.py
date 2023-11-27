@@ -65,7 +65,7 @@ def send_reset_password_email(user,request, password, email_template='accounts/r
     message = render_to_string(email_template, {
         'user': user,
         'domain': current_site.domain,
-        'pass':password,
+        'pass':urlsafe_base64_encode(force_bytes(password)),
         'time': datetime.date.today().year,
         'uid': urlsafe_base64_encode(force_bytes(user.pk)),
         'token': account_activation_token.make_token(user),

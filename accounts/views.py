@@ -16,7 +16,7 @@ from rental_app.models import Rooms
 from rental_app.views import common_data
 from django.contrib.auth import authenticate, login, logout
 
-
+#create new account
 class SignupView(CreateView):
     model = CustomUser
     form_class = UserSignUpForm
@@ -41,6 +41,7 @@ class SignupView(CreateView):
             
         return render(self.request, "accounts/sign_alert.html")
 
+#forgot password functionality
 def forgot_password(request):
     if request.method == 'POST':
         form = ForgotPasswordForm(request.POST)
@@ -52,7 +53,7 @@ def forgot_password(request):
             try:
                 user = CustomUser.objects.get(email=email, phone=phone)
                 send_reset_password_email(user,request, new_password)
-                
+                messages.success(request, 'Check your email for complete password reset')
                 return redirect('/')
 
             except CustomUser.DoesNotExist:
@@ -62,11 +63,9 @@ def forgot_password(request):
         form = ForgotPasswordForm()
 
     return render(request, 'accounts/forgot-password.html', {'form': form})
+   
 
-        
-    
-
-
+#activate your account
 def activate(request, uidb64, token):  
     User = get_user_model()  
     try:  
@@ -82,24 +81,27 @@ def activate(request, uidb64, token):
     else:  
         return HttpResponse('Activation link is invalid!')
     
-    
+
+#reset password   
 def reset(request, uidb64, token, password):  
     User = get_user_model()  
     try:  
-        uid = force_str(urlsafe_base64_decode(uidb64))  
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        pass_word =  force_str(urlsafe_base64_decode(password)) 
         user = User.objects.get(pk=uid)  
     except(TypeError, ValueError, OverflowError, User.DoesNotExist):  
         user = None  
     if user is not None and account_activation_token.check_token(user, token):  
-        user.set_password(password)
+        user.set_password(pass_word)
         user.save()
 
         messages.success(request, 'Password has been updated successfully!')
-        return HttpResponse('Thank you for your email confirmation. Now you can login your account.')  
+        return HttpResponse('Thank you for your email confirmation. password reset succesfully.')  
     else:  
         return HttpResponse('Activation link is invalid!')
     
-    
+
+#display homepage  
 def home(request):
     rooms = Rooms.objects.filter(booked=False).order_by('?')[:3]
     is_must = True
@@ -110,11 +112,13 @@ def home(request):
         **common_data(),
     }
     return render(request, 'app/index.html', context)   
-    
+
+#logout the logged in user   
 def log_out(request):
     logout(request)
     return redirect('/')
 
+#change password functionality
 @login_required(login_url='/')
 def changePassword(request):
     if request.method == 'POST':
@@ -144,7 +148,7 @@ def changePassword(request):
             
     return render(request, 'accounts/changepassword.html')
 
-
+#login user 
 def login_user(request):
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -167,6 +171,7 @@ def login_user(request):
             messages.error(request, 'Incorrect password')
             return redirect('/')
 
+#edit profile
 @login_required(login_url='/')
 def edit_profile(request):
     r_user = CustomUser.objects.get(id=request.user.id)
