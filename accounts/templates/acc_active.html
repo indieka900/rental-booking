@@ -1,12 +1,12 @@
 {% autoescape off %} 
 
-Welcome To GeoHealthLocator,
+Welcome To RBMS,
 
 Hi {{user.username}},
 Click on the link below to verify your account,
 http://{{ domain }}{% url 'accounts:activate' uidb64=uid token=token %} 
 
 This is an automatically generated email. Please do not reply.
-@{{time}} GeoHealthLocator | Voi town
+@{{time}} RBMS | Nairobi
  
 {% endautoescape %}  

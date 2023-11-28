@@ -1,13 +1,28 @@
 from django.shortcuts import render,redirect
 from accounts.confirmation_email import send_booking_confirmation_email
 from accounts.models import Prospectivetenant, Landlord
-from rental_app.models import Rooms, Apartments, Booking_History
+from rental_app.models import Rooms, Apartments, Booking_History,Page
 from rental_app.forms import RoomForm, ApartmentForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from accounts.decorators import landlord_required, tenant_required
 from django.db.models import Q
 from django.contrib.auth.decorators import permission_required
+
+
+#common
+def common_data():
+    return {
+        'pages': Page.objects.all(),
+    }
+
+
+#display pages
+def pages(request, id):
+    page = Page.objects.get(id=id)
+    return render(request, 'app/pages.html', {'page':page,**common_data(),})
+
+
 
 #veiwing one room, booking it and sending the emails to both tenant and landlord
 def viewRoom(request, id):
@@ -17,32 +32,32 @@ def viewRoom(request, id):
         real_user = Prospectivetenant.objects.get(user=user)
         booking_history = Booking_History(room=room,user=real_user)
         booking_history.save()
-        send_booking_confirmation_email(real_user,room,request)
+        send_booking_confirmation_email(real_user,room)
         
         room.booked=True
         room.tenant=real_user
         room.save()
         return render(request, "app/notification.html")
-    return render(request, 'app/detail_page.html',{'room':room})
+    return render(request, 'app/detail_page.html',{'room':room,**common_data(),})
 
 
 #view all rooms
 # @permission_required('user.is_active',login_url='/')
 def viewRooms(request):
     rooms = Rooms.objects.filter(booked=False)
-    return render(request, 'app/rooms.html', {'rooms': rooms})
+    return render(request, 'app/rooms.html', {'rooms': rooms,**common_data(),})
 
 #view one apartment
 def viewApartment(request, id):
     apartment = Apartments.objects.get(id=id)
-    return render(request, 'app/apartment.html', {'apartment': apartment})
+    return render(request, 'app/apartment.html', {'apartment': apartment,**common_data(),})
 
 #view rooms for a specific landlord
 @landlord_required
 def viewRooms_L(request):
     user = request.user
     rooms = Rooms.objects.filter(apartment__landlord__user__id = user.id)
-    return render(request, 'app/rooms.html', {'rooms': rooms})
+    return render(request, 'app/rooms.html', {'rooms': rooms,**common_data(),})
 
 #tenant booking history
 @tenant_required
@@ -50,7 +65,7 @@ def viewHistory(request):
     user = request.user
     tenant = Prospectivetenant.objects.get(user=user)
     history = Booking_History.objects.filter(user=tenant)
-    return render(request, 'app/booking-history.html', {'histories':history})
+    return render(request, 'app/booking-history.html', {'histories':history,**common_data(),})
 
 #search room by different fields
 def result(request):
@@ -67,7 +82,7 @@ def result(request):
                     Q(apartment__location__icontains=query)
                 )
             )
-            return render(request, 'app/rooms.html', {'rooms': rooms,'query':query})
+            return render(request, 'app/rooms.html', {'rooms': rooms,'query':query,**common_data(),})
 
         return render(request, 'app/rooms.html')
 
@@ -83,7 +98,7 @@ def add_room(request, id):
             return redirect(f'/rentals/room/{id}/')
     else:
         form = RoomForm()
-    return render(request, 'app/add_room.html',{'form':form,'mode':'room'})
+    return render(request, 'app/add_room.html',{'form':form,'mode':'room',**common_data(),})
 
 #update the particular room
 @landlord_required
@@ -99,7 +114,7 @@ def update_room(request, id):
         else:
             form = RoomForm(instance=room)
             
-        context = {'form':form, 'mode':'room_u'}
+        context = {'form':form, 'mode':'room_u',**common_data(),}
         return render(request, 'app/add_room.html',context)
     else:
         messages.info(request,"You are not allowed to perform this operation")
@@ -130,7 +145,7 @@ def add_apartment(request):
             return redirect(f'/rentals/apartment/{id}/')
     else:
         form = ApartmentForm()
-    return render(request, 'app/add_room.html',{'form':form, 'mode':'apartment'})
+    return render(request, 'app/add_room.html',{'form':form, 'mode':'apartment',**common_data(),})
 
 
 #update apartment
@@ -146,7 +161,7 @@ def update_apartment(request, id):
         else:
             form = ApartmentForm(instance=apartment)
             
-        return render(request, 'app/add_room.html',{'form':form, 'mode':'apartment_u'})
+        return render(request, 'app/add_room.html',{'form':form, 'mode':'apartment_u',**common_data(),})
     else:
         messages.info(request,"You are not allowed to perform this operation")
         return redirect('/')

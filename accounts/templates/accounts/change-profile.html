@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="privacy">
+    <div class="container">
+        <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s"
+            style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
+            Update Profile
+        </h3>
+        <form name="chngpwd" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p style="width: 350px;">
+                <b>Email Id:</b>
+                <input type="email" class="form-control" name="email" value={{user.email}} id="email" readonly>
+            </p>
+            {{form.as_p}}
+
+            <p style="width: 100%;">
+                <button type="submit" name="submit5" class="btn-primary btn">
+                    Update
+                </button>
+            </p>
+        </form>
+
+
+    </div>
+</div>
+{% endblock %}

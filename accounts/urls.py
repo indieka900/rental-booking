@@ -1,5 +1,9 @@
 from django.urls import path
-from accounts.views import (LandLordSignupView,activate,home,log_out,changePassword,login_user)
+from accounts.views import (
+    SignupView,activate,forgot_password,
+    home,log_out,changePassword,
+    login_user, edit_profile, reset
+)
 
 app_name = 'accounts'
 
@@ -7,7 +11,10 @@ urlpatterns = [
     path('', home, name="home"),
     path('logout/', log_out,name="logout" ),
     path('login_user/', login_user, name="login"),
-    path('signup/',LandLordSignupView.as_view(), name="signup"),
+    path('update-profile/', edit_profile, name='update-profile'),
+    path('forgot-password/', forgot_password, name="forgot-pass"),
+    path('signup/',SignupView.as_view(), name="signup"),
     path('change-password/', changePassword, name="change-password"),
     path('activate/<str:uidb64>/<str:token>/', activate, name='activate'),
+    path('reset/<str:uidb64>/<str:token>/<str:password>/', reset, name='reset'),
 ]

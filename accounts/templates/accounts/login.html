@@ -23,15 +23,15 @@
                                 <input type="email" name="email" id="email" placeholder="Enter your Email" required="">
                                 <input type="password" name="password" id="password" placeholder="Password" value=""
                                     required="">
-                                <h4><a href="forgot-password.php">Forgot password</a></h4>
+                                <h4><a href="{% url 'accounts:forgot-pass' %}">Forgot password</a></h4>
 
                                 <input type="submit" name="signin" value="SIGNIN">
                             </form>
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a
-                            href="#">Privacy Policy</a></p>
+                    <p>By logging in you agree to our <a href="{% url 'rentals:page' 1 %}">Terms and Conditions</a> and <a
+                            href="{% url 'rentals:page' 2 %}">Privacy Policy</a></p>
                 </div>
             </div>
         </div>
