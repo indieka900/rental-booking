@@ -132,6 +132,14 @@ def delete_room(request, id):
         messages.info(request, 'You are not allowed to perform this operation')
         return redirect('/')
 
+#view appartments
+@landlord_required
+def my_appartments(request):
+    landlord = Landlord.objects.get(user=request.user)
+    appartments = Apartments.objects.filter(landlord=landlord)
+    return render(request,'app/apartments.html',{'apartments':appartments})
+
+
 #add apartment
 @landlord_required  
 def add_apartment(request):
