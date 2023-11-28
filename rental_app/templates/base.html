@@ -40,6 +40,10 @@
             border: 2px solid #fdfbfb;
             background-size: cover;
         }
+
+        .active {
+            color: #4CFF00 !important;
+        }
     </style>
     <script src="{% static 'js/jquery-ui.js' %}"></script>
     <!--//end-animate-->
@@ -57,12 +61,16 @@
                 <li class="prnt"><a href="{% url 'accounts:change-password' %}">Change Password</a></li>
                 <li class="prnt"><a
                         href="{% if user.role == 'Prospective tenant' %}{% url 'rentals:booking-history' %}{% else %}{% url 'rentals:landlords-rooms' %}{% endif %}">My
-                        History</a></li>
-                <li class="prnt">
-                    {% if user.role == 'Landlord' %}
-                    <a href="{% url 'rentals:add-apartment' %}">Add Apartment</a>
-                    {% endif %}
+                        History</a>
                 </li>
+                {% if user.role == 'Landlord' %}
+                <li class="prnt">
+                    <a href="{% url 'rentals:add-apartment' %}">Add Apartment</a>
+                </li>
+                <li class="prnt">
+                    <a href="{% url 'rentals:add-apartment' %}">My Apartments</a>
+                </li>
+                {% endif %}
             </ul>
             <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
                 <li class="tol">Welcome :</li>
@@ -159,16 +167,19 @@
                     <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                         <nav class="cl-effect-1">
                             <ul class="nav navbar-nav">
-                                <li><a href="{% url 'accounts:home' %}">Home</a></li>
-                                <li><a href="{% url 'rentals:rooms' %}">Vaccant Rooms</a></li>
+                                <li class="{% if nav == 'home' %} active {% endif %}"><a
+                                        href="{% url 'accounts:home' %}">Home</a></li>
+                                <li class="{% if nav == 'rooms' %} active {% endif %}"><a
+                                        href="{% url 'rentals:rooms' %}">Vaccant Rooms</a></li>
                                 {% for page in pages %}
-                                <li><a href="{% url 'rentals:page' page.id %}">{{page.type}}</a></li>
+                                <li class="{% if nav == page.type %} active {% endif %}"><a
+                                        href="{% url 'rentals:page' page.id %}">{{page.type}}</a></li>
                                 {% endfor %}
                                 {% if user.is_authenticated %}
-                                <li>Need Help?<a href="#" data-toggle="modal" data-target="#myModal3"> / Write Us </a>
-                                </li>
+                                <!-- <li>Need Help?<a href="#" data-toggle="modal" data-target="#myModal3"> / Write Us </a>
+                                </li> -->
                                 {% else %}
-                                <li><a href="#"> Enquiry </a> </li>
+                                <!-- <li><a href="#"> Enquiry </a> </li> -->
                                 {% endif %}
                                 <div class="clearfix"></div>
 

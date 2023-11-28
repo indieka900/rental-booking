@@ -11,16 +11,17 @@ from django.contrib.auth.decorators import permission_required
 
 
 #common
-def common_data():
+def common_data(pageName='not'):
     return {
         'pages': Page.objects.all(),
+        'nav': pageName,
     }
 
 
 #display pages
 def pages(request, id):
     page = Page.objects.get(id=id)
-    return render(request, 'app/pages.html', {'page':page,**common_data(),})
+    return render(request, 'app/pages.html', {'page':page,**common_data(page.type),})
 
 
 
@@ -30,10 +31,9 @@ def viewRoom(request, id):
     if request.method == 'POST':
         user = request.user
         real_user = Prospectivetenant.objects.get(user=user)
+        send_booking_confirmation_email(real_user,room)
         booking_history = Booking_History(room=room,user=real_user)
         booking_history.save()
-        send_booking_confirmation_email(real_user,room)
-        
         room.booked=True
         room.tenant=real_user
         room.save()
@@ -45,7 +45,7 @@ def viewRoom(request, id):
 # @permission_required('user.is_active',login_url='/')
 def viewRooms(request):
     rooms = Rooms.objects.filter(booked=False)
-    return render(request, 'app/rooms.html', {'rooms': rooms,**common_data(),})
+    return render(request, 'app/rooms.html', {'rooms': rooms,**common_data(pageName='rooms'),})
 
 #view one apartment
 def viewApartment(request, id):

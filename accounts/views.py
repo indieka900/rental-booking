@@ -109,7 +109,7 @@ def home(request):
     context = {
         'rooms' : rooms,
         'must' : is_must,
-        **common_data(),
+        **common_data('home'),
     }
     return render(request, 'app/index.html', context)   
 
