@@ -16,6 +16,11 @@ def common_data(pageName='not'):
         'pages': Page.objects.all(),
         'nav': pageName,
     }
+    
+#number of rooms in one apartment
+def rooms_p(apartment):
+    rooms = Rooms.objects.filter(apartment=apartment)
+    return rooms
 
 
 #display pages
@@ -50,7 +55,8 @@ def viewRooms(request):
 #view one apartment
 def viewApartment(request, id):
     apartment = Apartments.objects.get(id=id)
-    return render(request, 'app/apartment.html', {'apartment': apartment,**common_data(),})
+    rooms = rooms_p(apartment)
+    return render(request, 'app/apartment.html', {'apartment': apartment,**common_data(),"length":len(rooms)})
 
 #view rooms for a specific landlord
 @landlord_required
