@@ -42,7 +42,7 @@ def viewRoom(request, id):
         room.booked=True
         room.tenant=real_user
         room.save()
-        return render(request, "app/notification.html")
+        return render(request, "app/notification.html",**common_data(),)
     return render(request, 'app/detail_page.html',{'room':room,**common_data(),})
 
 
@@ -143,7 +143,7 @@ def delete_room(request, id):
 def my_appartments(request):
     landlord = Landlord.objects.get(user=request.user)
     appartments = Apartments.objects.filter(landlord=landlord)
-    return render(request,'app/apartments.html',{'apartments':appartments})
+    return render(request,'app/apartments.html',{'apartments':appartments,**common_data(),})
 
 
 #add apartment

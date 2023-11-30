@@ -62,7 +62,7 @@ def forgot_password(request):
     else:
         form = ForgotPasswordForm()
 
-    return render(request, 'accounts/forgot-password.html', {'form': form})
+    return render(request, 'accounts/forgot-password.html', {'form': form,**common_data(),})
    
 
 #activate your account
@@ -146,7 +146,7 @@ def changePassword(request):
         else:
             messages.error(request, 'Password didn\'t match')
             
-    return render(request, 'accounts/changepassword.html')
+    return render(request, 'accounts/changepassword.html',**common_data(),)
 
 #login user 
 def login_user(request):
@@ -195,6 +195,6 @@ def edit_profile(request):
     else:
         form = ProfileForm(instance=user, user=r_user)
 
-    return render(request, 'accounts/change-profile.html', {'form': form})
+    return render(request, 'accounts/change-profile.html', {'form': form,**common_data(),})
     
 # Create your views here.
