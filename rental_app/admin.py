@@ -1,5 +1,5 @@
 from django.contrib import admin
-from rental_app.models import (Apartments, Rooms, Booking_History,Page)
+from rental_app.models import (Apartments, Rooms, Booking_History,Page,Social_media)
 
 
 
@@ -20,6 +20,7 @@ class ApartmentsAdmin(admin.ModelAdmin):
 
 admin.site.register(Booking_History)
 admin.site.register(Page)
+admin.site.register(Social_media)
 
 
 # Register your models here.

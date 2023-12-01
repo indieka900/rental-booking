@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from accounts.confirmation_email import send_booking_confirmation_email
 from accounts.models import Prospectivetenant, Landlord
-from rental_app.models import Rooms, Apartments, Booking_History,Page
+from rental_app.models import Rooms, Apartments, Booking_History,Page, Social_media
 from rental_app.forms import RoomForm, ApartmentForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -13,6 +13,7 @@ from django.contrib.auth.decorators import permission_required
 #common
 def common_data(pageName='not'):
     return {
+        'medias':Social_media.objects.all(),
         'pages': Page.objects.all(),
         'nav': pageName,
     }
