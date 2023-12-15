@@ -146,7 +146,7 @@ def changePassword(request):
         else:
             messages.error(request, 'Password didn\'t match')
             
-    return render(request, 'accounts/changepassword.html',**common_data(),)
+    return render(request, 'accounts/changepassword.html',{**common_data()},)
 
 #login user 
 def login_user(request):
