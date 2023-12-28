@@ -97,14 +97,14 @@ def result(request):
 @landlord_required  
 def add_room(request, id):
     if request.method == 'POST':
-        form = RoomForm(request.POST, request.FILES)
+        form = RoomForm(id, request.POST,request.FILES)
         if form.is_valid():
             form.instance.apartment = Apartments.objects.get(id=id)
             form.save()
             id = form.instance.id
             return redirect(f'/rentals/room/{id}/')
     else:
-        form = RoomForm()
+        form = RoomForm(id)
     return render(request, 'app/add_room.html',{'form':form,'mode':'room',**common_data(),})
 
 #update the particular room
