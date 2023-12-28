@@ -1,6 +1,8 @@
 from django.contrib import admin
 from rental_app.models import (Apartments, Rooms, Booking_History,Page,Social_media)
-
+from django.urls import reverse
+from django.utils.http import urlencode
+from django.utils.html import format_html
 
 
 @admin.register(Rooms)
@@ -16,7 +18,33 @@ class ApartmentsAdmin(admin.ModelAdmin):
     ordering = ('-date_created',)
     search_fields = ('apartment_name__icontains','location__icontains','landlord__user__username__icontains')
     list_filter = ('date_created','date_updated')
-    list_display = ('apartment_name','location','facilities','description','landlord')
+    list_display = ('apartment_name','location','facilities','description','landlord','view_rooms_link')
+    
+    def view_rooms_link(self, obj):
+        count = obj.rooms_set.count()
+        url = (
+            reverse("admin:rental_app_rooms_changelist")
+            + "?"
+            + urlencode({"apartment__id": f"{obj.id}"})
+        )
+        return format_html('<a href="{}">{}</a>', url, count)
+
+    view_rooms_link.short_description = "Rooms"
+    
+    '''
+    list_display = ("name", "year", "view_students_link")
+
+    def view_students_link(self, obj):
+        count = obj.person_set.count()
+        url = (
+            reverse("admin:core_person_changelist")
+            + "?"
+            + urlencode({"courses__id": f"{obj.id}"})
+        )
+        return format_html('<a href="{}">{} Students</a>', url, count)
+
+    view_students_link.short_description = "Students"
+    '''
 
 admin.site.register(Booking_History)
 admin.site.register(Page)
