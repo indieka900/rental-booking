@@ -1414,6 +1414,114 @@
     }
   },
   {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add CRUD event",
+      "content_type": 15,
+      "codename": "add_crudevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change CRUD event",
+      "content_type": 15,
+      "codename": "change_crudevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete CRUD event",
+      "content_type": 15,
+      "codename": "delete_crudevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view CRUD event",
+      "content_type": 15,
+      "codename": "view_crudevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add login event",
+      "content_type": 16,
+      "codename": "add_loginevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change login event",
+      "content_type": 16,
+      "codename": "change_loginevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete login event",
+      "content_type": 16,
+      "codename": "delete_loginevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view login event",
+      "content_type": 16,
+      "codename": "view_loginevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add request event",
+      "content_type": 17,
+      "codename": "add_requestevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change request event",
+      "content_type": 17,
+      "codename": "change_requestevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete request event",
+      "content_type": 17,
+      "codename": "delete_requestevent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view request event",
+      "content_type": 17,
+      "codename": "view_requestevent"
+    }
+  },
+  {
     "model": "contenttypes.contenttype",
     "pk": 1,
     "fields": { "app_label": "admin", "model": "logentry" }
@@ -1484,6 +1592,21 @@
     "fields": { "app_label": "rental_app", "model": "social_media" }
   },
   {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": { "app_label": "easyaudit", "model": "crudevent" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": { "app_label": "easyaudit", "model": "loginevent" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": { "app_label": "easyaudit", "model": "requestevent" }
+  },
+  {
     "model": "sessions.session",
     "pk": "40zo4i7dju3rjrt1jx5hjvl6owmoz471",
     "fields": {
@@ -1493,10 +1616,26 @@
   },
   {
     "model": "sessions.session",
+    "pk": "50bgedgnb7kyr7j70gd0nnxc0jlj9bxy",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hAoUKYu3XsGMjNMpWpoUtqV8e7apAvd_vfef6mE21rS1mRJU1Zn1anT70bID6k7yHest1nzXNdlIr0r-qBNX-csz8vh_h0UbOVbO8wcYk8UgbrgQxQ2OBprHGMAJ8AwiKBBa4GJTRgAxuigDwI-elHvD-5dN98:1rEAPv:E1n5jtKMaABK7-9X7FOpkZos3OQp2VRUMgmiWW8n-aA",
+      "expire_date": "2023-12-29T15:47:59.211Z"
+    }
+  },
+  {
+    "model": "sessions.session",
     "pk": "6is2tf3w24381oz81vdchewuvmq8xq2u",
     "fields": {
       "session_data": ".eJxVjDsOgzAQRO_iOrKMf7Ap03MGa_HuxiQRSBiqKHcPSBRJMc28N_NWCbe1pK3ykkZSV-XU5bcbMD95OgA9cLrPOs_TuoyDPhR90qr7mfh1O92_g4K17OvIWWwm7CgCW-MsshiANoozJJJByKOEPW1sPHdN9mCjCSCBERyozxcPFDiF:1r6qmq:GSEJAOuHOYlilOCeaP51zrVWEICafA6nCVeFnc45RTA",
       "expire_date": "2023-12-09T11:25:24.152Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "8xdvmri1u30x37n92gbdviy2vwus334g",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hAYaRlcuu8ZCAyMVA0kpV0Z765NutDtf-_9l_BhW4vfel78nMRFGHH63WKgR647SPdQb01Sq-syR7kr8qBdTi3l5_Vw_w5K6OVbkx0JEQ0DcYSBdY4qB4ionVGWEUiRg9EZo11EMmDRnpGVHYBBsRXvD-C9Ny0:1rIobG:H741ZE9pDHcXE4o2WJNAQyWU4d6-WaboT4LVyGA9cDM",
+      "expire_date": "2024-01-11T11:30:54.036Z"
     }
   },
   {
@@ -1513,6 +1652,14 @@
     "fields": {
       "session_data": ".eJxVjEEOwiAQRe_C2hCEQcCl-56BDMwgVUOT0q6Md7dNutDtf-_9t4i4LjWunec4krgKI06_W8L85LYDemC7TzJPbZnHJHdFHrTLYSJ-3Q7376Bir1utlSkaEmUi0GBdRgeXZJFdUeDBsLNUStAbUM4kbwECcfFnVRgpBfH5AuxeOG0:1r5stB:4CEFDkIMA70JZKtp-Sp3plo6iB3poj0hNwfTQzp_FfA",
       "expire_date": "2023-12-06T19:27:57.076Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "c5x0ct6e68q1avzyj8braiq4ryxig9ko",
+    "fields": {
+      "session_data": ".eJxVjM0OwiAQhN-FsyG0i_x49O4zkF0WpGogKe3J-O62SQ96mmS-b-YtAq5LCWtPc5hYXMQgTr8dYXymugN-YL03GVtd5onkrsiDdnlrnF7Xw_07KNjLtvYKPBpnElO2kYxTCOxctsaft2A0GiIlmwm8HkYwOtMYCVkRK8cgPl_u4Dh1:1rIoZJ:B3tXYl8810aM9WbOSF80It9oxNWoBl2oCqphY-WbF_o",
+      "expire_date": "2024-01-11T11:28:53.017Z"
     }
   },
   {
@@ -1596,11 +1743,960 @@
     }
   },
   {
+    "model": "easyaudit.crudevent",
+    "pk": 1,
+    "fields": {
+      "event_type": 2,
+      "object_id": "1",
+      "content_type": 6,
+      "object_repr": "test@test.com",
+      "object_json_repr": "[{\"model\": \"accounts.customuser\", \"pk\": 1, \"fields\": {\"password\": \"pbkdf2_sha256$260000$QdFWfHMBB2GR4WV0GDB6pW$GXxWJQohVcFhkbcTVHQfz7mSSXVAnWOQZ03Z7oOoQBc=\", \"last_login\": \"2023-12-28T11:28:52.902Z\", \"is_superuser\": true, \"username\": \"\", \"email\": \"test@test.com\", \"image\": \"\", \"gender\": \"\", \"full_name\": \"\", \"role\": \"Administrator\", \"phone\": \"\", \"is_active\": true, \"is_staff\": true, \"date_joined\": \"2023-11-22T07:23:21.123Z\", \"groups\": [], \"user_permissions\": []}}]",
+      "changed_fields": "{\"last_login\": [\"2023-12-01 04:42:14.740413\", \"2023-12-28 11:28:52.902123\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-28T11:28:52.988Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 2,
+    "fields": {
+      "event_type": 2,
+      "object_id": "4",
+      "content_type": 6,
+      "object_repr": "talia@jose.com",
+      "object_json_repr": "[{\"model\": \"accounts.customuser\", \"pk\": 4, \"fields\": {\"password\": \"pbkdf2_sha256$260000$0y7KMKmg0cK8e4au1OlXxj$0/8Df57xt31M8et9J5+68w8f/Kb//xvU/y41Oqb1aqI=\", \"last_login\": \"2023-12-28T11:30:53.838Z\", \"is_superuser\": false, \"username\": \"Talia\", \"email\": \"talia@jose.com\", \"image\": \"Users/IMG-20231206-WA0016.jpg\", \"gender\": \"Female\", \"full_name\": \"Talia Ann Jose\", \"role\": \"Landlord\", \"phone\": \"0758 051111\", \"is_active\": true, \"is_staff\": false, \"date_joined\": \"2023-11-22T07:28:59.160Z\", \"groups\": [], \"user_permissions\": []}}]",
+      "changed_fields": "{\"last_login\": [\"2023-12-15 15:30:32.119107\", \"2023-12-28 11:30:53.838811\"]}",
+      "user": 4,
+      "user_pk_as_string": "4",
+      "datetime": "2023-12-28T11:30:53.868Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 3,
+    "fields": {
+      "event_type": 1,
+      "object_id": "25",
+      "content_type": 11,
+      "object_repr": "Z-02",
+      "object_json_repr": "[{\"model\": \"rental_app.rooms\", \"pk\": 25, \"fields\": {\"room_number\": \"Z-02\", \"apartment\": 1, \"tenant\": null, \"size\": \"200sq m\", \"room_type\": \"Go Down\", \"booked\": false, \"rent\": 8500, \"rate\": \"Per Month\", \"image\": \"Rooms/room2_sX8z8n4.jpeg\", \"date_created\": \"2023-12-28T12:51:38.859Z\", \"date_updated\": \"2023-12-28T12:51:38.859Z\"}}]",
+      "changed_fields": null,
+      "user": 4,
+      "user_pk_as_string": "4",
+      "datetime": "2023-12-28T12:51:38.867Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 4,
+    "fields": {
+      "event_type": 1,
+      "object_id": "26",
+      "content_type": 11,
+      "object_repr": "M-23",
+      "object_json_repr": "[{\"model\": \"rental_app.rooms\", \"pk\": 26, \"fields\": {\"room_number\": \"M-23\", \"apartment\": 3, \"tenant\": null, \"size\": \"340sq feet\", \"room_type\": \"Studio\", \"booked\": false, \"rent\": 500, \"rate\": \"Per Day\", \"image\": \"Rooms/room4_dAzFToR.jpeg\", \"date_created\": \"2023-12-28T12:53:13.408Z\", \"date_updated\": \"2023-12-28T12:53:13.408Z\"}}]",
+      "changed_fields": null,
+      "user": 4,
+      "user_pk_as_string": "4",
+      "datetime": "2023-12-28T12:53:13.415Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 5,
+    "fields": {
+      "event_type": 1,
+      "object_id": "29",
+      "content_type": 11,
+      "object_repr": "Z-04",
+      "object_json_repr": "[{\"model\": \"rental_app.rooms\", \"pk\": 29, \"fields\": {\"room_number\": \"Z-04\", \"apartment\": 1, \"tenant\": null, \"size\": \"120sq m\", \"room_type\": \"Shared room\", \"booked\": false, \"rent\": 5500, \"rate\": \"Per Month\", \"image\": \"Rooms/room3_Lor2z7h.jpeg\", \"date_created\": \"2023-12-28T13:30:06.647Z\", \"date_updated\": \"2023-12-28T13:30:06.647Z\"}}]",
+      "changed_fields": null,
+      "user": 4,
+      "user_pk_as_string": "4",
+      "datetime": "2023-12-28T13:30:06.664Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 1,
+    "fields": {
+      "login_type": 0,
+      "username": "test@test.com",
+      "user": 1,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:53.000Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 2,
+    "fields": {
+      "login_type": 0,
+      "username": "talia@jose.com",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:53.968Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 1,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:27:59.748Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 2,
+    "fields": {
+      "url": "/media/Rooms/room1.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:03.868Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 3,
+    "fields": {
+      "url": "/media/Rooms/room4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:04.130Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 4,
+    "fields": {
+      "url": "/media/Rooms/room6_U0PPvd8.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:04.433Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 5,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:12.399Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 6,
+    "fields": {
+      "url": "/media/Rooms/room2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:14.868Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 7,
+    "fields": {
+      "url": "/media/Rooms/room3_okgsSd2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:14.959Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 8,
+    "fields": {
+      "url": "/media/Rooms/room6_ORu0vYp.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:15.257Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 9,
+    "fields": {
+      "url": "/media/Rooms/room4_bQFHsu2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:15.313Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 10,
+    "fields": {
+      "url": "/media/Rooms/room4_59WOLzQ.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:15.433Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 11,
+    "fields": {
+      "url": "/media/Rooms/room6.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:15.436Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 12,
+    "fields": {
+      "url": "/media/Rooms/room4_zTe5Cqd.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:17.092Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 13,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:28:28.169Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 14,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:30.192Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 15,
+    "fields": {
+      "url": "/media/Rooms/room2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:32.460Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 16,
+    "fields": {
+      "url": "/media/Rooms/room6_ORu0vYp.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:32.550Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 17,
+    "fields": {
+      "url": "/media/Rooms/room1.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:32.577Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 18,
+    "fields": {
+      "url": "/login_user/",
+      "method": "POST",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:53.460Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 19,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:56.200Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 20,
+    "fields": {
+      "url": "/media/Rooms/room6_U0PPvd8.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:58.481Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 21,
+    "fields": {
+      "url": "/media/Rooms/room4_zTe5Cqd.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:58.505Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 22,
+    "fields": {
+      "url": "/media/Rooms/room6.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:58.558Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 23,
+    "fields": {
+      "url": "/media/Users/IMG-20231206-WA0016.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:30:58.604Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 24,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:52:57.601Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 25,
+    "fields": {
+      "url": "/media/Appartments/main.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:52:59.754Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 26,
+    "fields": {
+      "url": "/media/Appartments/OIP.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:52:59.773Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 27,
+    "fields": {
+      "url": "/rentals/apartment/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:53:03.812Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 28,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T11:53:24.109Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 29,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:17:58.658Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 30,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:20:20.419Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 31,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:25:01.613Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 32,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:28:23.095Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 33,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:37:28.291Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 34,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:39:06.694Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 35,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:39:24.378Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 36,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:39:30.891Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 37,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:40:01.251Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 38,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:40:35.440Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 39,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:43:33.831Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 40,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:45:43.357Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 41,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:50:13.737Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 42,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:51:38.609Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 43,
+    "fields": {
+      "url": "/rentals/room/25/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:51:40.944Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 44,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:51:43.129Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 45,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:51:55.452Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 46,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:51:57.694Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 47,
+    "fields": {
+      "url": "/media/Rooms/room4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:51:57.695Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 48,
+    "fields": {
+      "url": "/media/Rooms/room3_okgsSd2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:51:57.696Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 49,
+    "fields": {
+      "url": "/media/Rooms/room4_bQFHsu2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:51:57.883Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 50,
+    "fields": {
+      "url": "/media/Rooms/room4_59WOLzQ.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:51:57.912Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 51,
+    "fields": {
+      "url": "/rentals/apartment/3/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:52:14.257Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 52,
+    "fields": {
+      "url": "/rentals/add-room/3/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:52:30.598Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 53,
+    "fields": {
+      "url": "/rentals/add-room/3/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:53:13.378Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 54,
+    "fields": {
+      "url": "/rentals/room/26/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:53:15.468Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 55,
+    "fields": {
+      "url": "/media/Rooms/room4_dAzFToR.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:53:17.577Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 56,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:53:31.462Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 57,
+    "fields": {
+      "url": "/media/Rooms/room4_dAzFToR.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:53:33.633Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 58,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:53:33.651Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 59,
+    "fields": {
+      "url": "/rentals/apartment/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:54:00.761Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 60,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:54:06.855Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 61,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T12:54:34.647Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 62,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T13:08:57.906Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 63,
+    "fields": {
+      "url": "/admin",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T13:19:13.153Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 64,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T13:29:27.453Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 65,
+    "fields": {
+      "url": "/rentals/add-room/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T13:30:06.607Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 66,
+    "fields": {
+      "url": "/rentals/room/29/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T13:30:08.731Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 67,
+    "fields": {
+      "url": "/media/Rooms/room3_Lor2z7h.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T13:30:10.892Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 68,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T13:30:17.381Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 69,
+    "fields": {
+      "url": "/media/Rooms/room3_Lor2z7h.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T13:30:19.817Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 70,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T13:30:19.864Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 71,
+    "fields": {
+      "url": "/media/Rooms/room4_dAzFToR.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-28T13:30:19.883Z"
+    }
+  },
+  {
     "model": "accounts.customuser",
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$260000$QdFWfHMBB2GR4WV0GDB6pW$GXxWJQohVcFhkbcTVHQfz7mSSXVAnWOQZ03Z7oOoQBc=",
-      "last_login": "2023-12-01T04:42:14.740Z",
+      "last_login": "2023-12-28T11:28:52.902Z",
       "is_superuser": true,
       "username": "",
       "email": "test@test.com",
@@ -1621,7 +2717,7 @@
     "pk": 2,
     "fields": {
       "password": "pbkdf2_sha256$260000$pUmJeWWQFd2LE9RdflVAC8$14DnaAgDCoHl4I8wegGi52Tb13gMt4lseUUQfkOMSBg=",
-      "last_login": "2023-11-27T12:11:21.664Z",
+      "last_login": "2023-12-15T15:47:59.211Z",
       "is_superuser": false,
       "username": "Manuel",
       "email": "manu@mail.com",
@@ -1663,11 +2759,11 @@
     "pk": 4,
     "fields": {
       "password": "pbkdf2_sha256$260000$0y7KMKmg0cK8e4au1OlXxj$0/8Df57xt31M8et9J5+68w8f/Kb//xvU/y41Oqb1aqI=",
-      "last_login": "2023-11-28T13:34:21.293Z",
+      "last_login": "2023-12-28T11:30:53.838Z",
       "is_superuser": false,
       "username": "Talia",
       "email": "talia@jose.com",
-      "image": "profile/person_4.jpg",
+      "image": "Users/IMG-20231206-WA0016.jpg",
       "gender": "Female",
       "full_name": "Talia Ann Jose",
       "role": "Landlord",
@@ -1823,7 +2919,7 @@
     "fields": {
       "user": 4,
       "bio": "Young lady",
-      "profile_picture": "profile/person_4.jpg"
+      "profile_picture": "profile/IMG-20231206-WA0016.jpg"
     }
   },
   {
@@ -2162,6 +3258,74 @@
       "image": "Rooms/room3_okgsSd2.jpeg",
       "date_created": "2023-11-28T09:14:05.399Z",
       "date_updated": "2023-11-28T09:14:05.399Z"
+    }
+  },
+  {
+    "model": "rental_app.rooms",
+    "pk": 24,
+    "fields": {
+      "room_number": "Z-05",
+      "apartment": 1,
+      "tenant": null,
+      "size": "200sq m",
+      "room_type": "Bedsitter",
+      "booked": false,
+      "rent": 1200,
+      "rate": "Per Day",
+      "image": "Rooms/room6_U0PPvd8.jpeg",
+      "date_created": "2023-12-15T15:33:34.086Z",
+      "date_updated": "2023-12-15T15:33:34.086Z"
+    }
+  },
+  {
+    "model": "rental_app.rooms",
+    "pk": 25,
+    "fields": {
+      "room_number": "Z-02",
+      "apartment": 1,
+      "tenant": null,
+      "size": "200sq m",
+      "room_type": "Go Down",
+      "booked": false,
+      "rent": 8500,
+      "rate": "Per Month",
+      "image": "Rooms/room2_sX8z8n4.jpeg",
+      "date_created": "2023-12-28T12:51:38.859Z",
+      "date_updated": "2023-12-28T12:51:38.859Z"
+    }
+  },
+  {
+    "model": "rental_app.rooms",
+    "pk": 26,
+    "fields": {
+      "room_number": "M-23",
+      "apartment": 3,
+      "tenant": null,
+      "size": "340sq feet",
+      "room_type": "Studio",
+      "booked": false,
+      "rent": 500,
+      "rate": "Per Day",
+      "image": "Rooms/room4_dAzFToR.jpeg",
+      "date_created": "2023-12-28T12:53:13.408Z",
+      "date_updated": "2023-12-28T12:53:13.408Z"
+    }
+  },
+  {
+    "model": "rental_app.rooms",
+    "pk": 29,
+    "fields": {
+      "room_number": "Z-04",
+      "apartment": 1,
+      "tenant": null,
+      "size": "120sq m",
+      "room_type": "Shared room",
+      "booked": false,
+      "rent": 5500,
+      "rate": "Per Month",
+      "image": "Rooms/room3_Lor2z7h.jpeg",
+      "date_created": "2023-12-28T13:30:06.647Z",
+      "date_updated": "2023-12-28T13:30:06.647Z"
     }
   },
   {
