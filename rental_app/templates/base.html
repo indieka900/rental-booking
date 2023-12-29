@@ -59,10 +59,10 @@
                     <a href="{% url 'accounts:update-profile' %}">Change Profile</a>
                 </li>
                 <li class="prnt"><a href="{% url 'accounts:change-password' %}">Change Password</a></li>
-                <li class="prnt"><a
+                <!-- <li class="prnt"><a
                         href="{% if user.role == 'Prospective tenant' %}{% url 'rentals:booking-history' %}{% else %}{% url 'rentals:landlords-rooms' %}{% endif %}">My
                         History</a>
-                </li>
+                </li> -->
                 {% if user.role == 'Landlord' %}
                 <li class="prnt">
                     <a href="{% url 'rentals:add-apartment' %}">Add Apartment</a>
@@ -127,9 +127,9 @@
 
             <div class="lock fadeInDown animated" data-wow-delay=".5s">
 
-                <li>
+                <li >
                     <form method="get" action="{% url 'rentals:result' %}" role="search"
-                        style="margin-right: 10px; width: 460px; display: flex; justify-content: space-between;">
+                        style="margin-right: 10px; width: 100%; display: flex; justify-content: space-between;">
                         <input class="form-control" type="search" name="query" placeholder="Search Vacant Rooms"
                             aria-label="Search">
                         <button class="btn btn-outline-success" type="submit" style="margin-left: 10px;">Search</button>
@@ -216,7 +216,7 @@
                 style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
                 <ul>
                     {% for media in medias %}
-                        <li><a class="{{media.icon}}" href="{{media.link}}"><span>{{media.name}}</span></a></li>
+                    <li><a class="{{media.icon}}" href="{{media.link}}"><span>{{media.name}}</span></a></li>
                     {% endfor %}
                 </ul>
             </div>

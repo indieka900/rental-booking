@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from accounts.confirmation_email import send_booking_confirmation_email
 from accounts.models import Prospectivetenant, Landlord
 from rental_app.models import Rooms, Apartments, Booking_History,Page, Social_media
-from rental_app.forms import RoomForm, ApartmentForm
+from rental_app.forms import RoomForm, ApartmentForm, UpdateRoomForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from accounts.decorators import landlord_required, tenant_required
@@ -113,13 +113,13 @@ def update_room(request, id):
     room = Rooms.objects.get(id=id)
     if request.user == room.apartment.landlord.user:
         if request.method == 'POST':
-            form = RoomForm(request.POST, request.FILES, instance=room)
+            form = UpdateRoomForm(request.POST, request.FILES, instance=room)
             if form.is_valid():
                 form.save()
                 return redirect(f'/rentals/room/{id}/')
                 
         else:
-            form = RoomForm(instance=room)
+            form = UpdateRoomForm(instance=room)
             
         context = {'form':form, 'mode':'room_u',**common_data(),}
         return render(request, 'app/add_room.html',context)

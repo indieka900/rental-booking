@@ -5,12 +5,22 @@ from django.utils.http import urlencode
 from django.utils.html import format_html
 
 
+@admin.action(description="book selected rooms")
+def book_rooms(modeladmin, request, queryset):
+    queryset.update(booked=True)
+
+
+@admin.action(description="Unbook selected rooms")
+def unbook_rooms(modeladmin, request, queryset):
+    queryset.update(booked=False)
+
 @admin.register(Rooms)
 class RoomsAdmin(admin.ModelAdmin):
     ordering = ('-date_created',)
     search_fields = ('apartment__apartment_name__icontains','room_type__icontains','rent__icontains','room_number__icontains')
     list_filter = ('date_created','room_type','booked','rent','rate')
     list_display = ('room_number','rent','rate','booked','room_type','size','apartment')
+    actions = [book_rooms, unbook_rooms]
 
 
 @admin.register(Apartments)   

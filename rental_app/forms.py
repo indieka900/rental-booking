@@ -30,6 +30,21 @@ class RoomForm(forms.ModelForm):
         '''widgets = {
                 'size': forms.TextInput(attrs={'style': 'width: 350px;'}),
             }'''
+class UpdateRoomForm(forms.ModelForm):
+    def __init__(self,  *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class': 'form-control'})
+            self.fields[field].widget.attrs.update({'style': 'width: 350px;'})
+            
+    
+    class Meta:
+        model = Rooms
+        fields = ("room_number","booked", "size", "room_type","rent","rate","image")
+        
+        '''widgets = {
+                'size': forms.TextInput(attrs={'style': 'width: 350px;'}),
+            }'''
         
 class ApartmentForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
