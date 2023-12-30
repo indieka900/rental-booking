@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'phonenumber_field',
     'easyaudit',
+    "import_export",
     #installed apps
     'accounts',
     'rental_app',
@@ -137,6 +138,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = 'static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
