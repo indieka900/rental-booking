@@ -103,7 +103,7 @@ def reset(request, uidb64, token, password):
 
 #display homepage  
 def home(request):
-    rooms = Rooms.objects.filter(booked=False).order_by('?')[:3]
+    rooms = Rooms.objects.filter(booked=False)[:3]
     is_must = True
     
     context = {

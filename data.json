@@ -1,4 +1,5 @@
 [
+  
   {
     "model": "admin.logentry",
     "pk": 1,
@@ -910,701 +911,173 @@
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 1,
+    "model": "admin.logentry",
+    "pk": 71,
     "fields": {
-      "name": "Can add log entry",
-      "content_type": 1,
-      "codename": "add_logentry"
+      "action_time": "2023-12-30T20:14:05.941Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "RBMS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Color\", \"Sticky pagination\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 2,
+    "model": "admin.logentry",
+    "pk": 72,
     "fields": {
-      "name": "Can change log entry",
-      "content_type": 1,
-      "codename": "change_logentry"
+      "action_time": "2023-12-30T20:15:26.799Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "RBMS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 3,
+    "model": "admin.logentry",
+    "pk": 73,
     "fields": {
-      "name": "Can delete log entry",
-      "content_type": 1,
-      "codename": "delete_logentry"
+      "action_time": "2023-12-30T20:15:42.071Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "3",
+      "object_repr": "Foundation",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 4,
+    "model": "admin.logentry",
+    "pk": 74,
     "fields": {
-      "name": "Can view log entry",
-      "content_type": 1,
-      "codename": "view_logentry"
+      "action_time": "2023-12-30T20:15:42.091Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "RBMS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 5,
+    "model": "admin.logentry",
+    "pk": 75,
     "fields": {
-      "name": "Can add permission",
-      "content_type": 2,
-      "codename": "add_permission"
+      "action_time": "2023-12-30T20:15:56.113Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "3",
+      "object_repr": "Foundation",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 6,
+    "model": "admin.logentry",
+    "pk": 76,
     "fields": {
-      "name": "Can change permission",
-      "content_type": 2,
-      "codename": "change_permission"
+      "action_time": "2023-12-30T20:15:56.128Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "2",
+      "object_repr": "Bootstrap",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 7,
+    "model": "admin.logentry",
+    "pk": 77,
     "fields": {
-      "name": "Can delete permission",
-      "content_type": 2,
-      "codename": "delete_permission"
+      "action_time": "2023-12-30T20:16:12.092Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "4",
+      "object_repr": "USWDS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 8,
+    "model": "admin.logentry",
+    "pk": 78,
     "fields": {
-      "name": "Can view permission",
-      "content_type": 2,
-      "codename": "view_permission"
+      "action_time": "2023-12-30T20:16:12.108Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "2",
+      "object_repr": "Bootstrap",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Active\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 9,
+    "model": "admin.logentry",
+    "pk": 79,
     "fields": {
-      "name": "Can add group",
-      "content_type": 3,
-      "codename": "add_group"
+      "action_time": "2023-12-30T20:18:49.480Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "4",
+      "object_repr": "USWDS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Favicon\", \"Background color\", \"Link hover color\", \"Use dropdown\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 10,
+    "model": "admin.logentry",
+    "pk": 80,
     "fields": {
-      "name": "Can change group",
-      "content_type": 3,
-      "codename": "change_group"
+      "action_time": "2023-12-30T20:19:50.018Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "4",
+      "object_repr": "USWDS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 11,
+    "model": "admin.logentry",
+    "pk": 81,
     "fields": {
-      "name": "Can delete group",
-      "content_type": 3,
-      "codename": "delete_group"
+      "action_time": "2023-12-30T20:46:46.562Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "4",
+      "object_repr": "USWDS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Logo\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 12,
+    "model": "admin.logentry",
+    "pk": 82,
     "fields": {
-      "name": "Can view group",
-      "content_type": 3,
-      "codename": "view_group"
+      "action_time": "2023-12-30T20:47:26.243Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "4",
+      "object_repr": "USWDS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Control\", \"Logo\"]}}]"
     }
   },
   {
-    "model": "auth.permission",
-    "pk": 13,
+    "model": "admin.logentry",
+    "pk": 83,
     "fields": {
-      "name": "Can add content type",
-      "content_type": 4,
-      "codename": "add_contenttype"
+      "action_time": "2023-12-30T20:49:13.514Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "4",
+      "object_repr": "USWDS",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Color\", \"Visible\", \"Background color\", \"Background selected color\"]}}]"
     }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 14,
-    "fields": {
-      "name": "Can change content type",
-      "content_type": 4,
-      "codename": "change_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 15,
-    "fields": {
-      "name": "Can delete content type",
-      "content_type": 4,
-      "codename": "delete_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 16,
-    "fields": {
-      "name": "Can view content type",
-      "content_type": 4,
-      "codename": "view_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 17,
-    "fields": {
-      "name": "Can add session",
-      "content_type": 5,
-      "codename": "add_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 18,
-    "fields": {
-      "name": "Can change session",
-      "content_type": 5,
-      "codename": "change_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 19,
-    "fields": {
-      "name": "Can delete session",
-      "content_type": 5,
-      "codename": "delete_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 20,
-    "fields": {
-      "name": "Can view session",
-      "content_type": 5,
-      "codename": "view_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 21,
-    "fields": {
-      "name": "Can add User",
-      "content_type": 6,
-      "codename": "add_customuser"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 22,
-    "fields": {
-      "name": "Can change User",
-      "content_type": 6,
-      "codename": "change_customuser"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 23,
-    "fields": {
-      "name": "Can delete User",
-      "content_type": 6,
-      "codename": "delete_customuser"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 24,
-    "fields": {
-      "name": "Can view User",
-      "content_type": 6,
-      "codename": "view_customuser"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 25,
-    "fields": {
-      "name": "Can add prospectivetenant",
-      "content_type": 7,
-      "codename": "add_prospectivetenant"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 26,
-    "fields": {
-      "name": "Can change prospectivetenant",
-      "content_type": 7,
-      "codename": "change_prospectivetenant"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 27,
-    "fields": {
-      "name": "Can delete prospectivetenant",
-      "content_type": 7,
-      "codename": "delete_prospectivetenant"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 28,
-    "fields": {
-      "name": "Can view prospectivetenant",
-      "content_type": 7,
-      "codename": "view_prospectivetenant"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 29,
-    "fields": {
-      "name": "Can add landlord",
-      "content_type": 8,
-      "codename": "add_landlord"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 30,
-    "fields": {
-      "name": "Can change landlord",
-      "content_type": 8,
-      "codename": "change_landlord"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 31,
-    "fields": {
-      "name": "Can delete landlord",
-      "content_type": 8,
-      "codename": "delete_landlord"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 32,
-    "fields": {
-      "name": "Can view landlord",
-      "content_type": 8,
-      "codename": "view_landlord"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 33,
-    "fields": {
-      "name": "Can add administrator",
-      "content_type": 9,
-      "codename": "add_administrator"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 34,
-    "fields": {
-      "name": "Can change administrator",
-      "content_type": 9,
-      "codename": "change_administrator"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 35,
-    "fields": {
-      "name": "Can delete administrator",
-      "content_type": 9,
-      "codename": "delete_administrator"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 36,
-    "fields": {
-      "name": "Can view administrator",
-      "content_type": 9,
-      "codename": "view_administrator"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 37,
-    "fields": {
-      "name": "Can add Apartment",
-      "content_type": 10,
-      "codename": "add_apartments"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 38,
-    "fields": {
-      "name": "Can change Apartment",
-      "content_type": 10,
-      "codename": "change_apartments"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 39,
-    "fields": {
-      "name": "Can delete Apartment",
-      "content_type": 10,
-      "codename": "delete_apartments"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 40,
-    "fields": {
-      "name": "Can view Apartment",
-      "content_type": 10,
-      "codename": "view_apartments"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 41,
-    "fields": {
-      "name": "Can add room",
-      "content_type": 11,
-      "codename": "add_rooms"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 42,
-    "fields": {
-      "name": "Can change room",
-      "content_type": 11,
-      "codename": "change_rooms"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 43,
-    "fields": {
-      "name": "Can delete room",
-      "content_type": 11,
-      "codename": "delete_rooms"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 44,
-    "fields": {
-      "name": "Can view room",
-      "content_type": 11,
-      "codename": "view_rooms"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 45,
-    "fields": {
-      "name": "Can add Booking History",
-      "content_type": 12,
-      "codename": "add_booking_history"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 46,
-    "fields": {
-      "name": "Can change Booking History",
-      "content_type": 12,
-      "codename": "change_booking_history"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 47,
-    "fields": {
-      "name": "Can delete Booking History",
-      "content_type": 12,
-      "codename": "delete_booking_history"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 48,
-    "fields": {
-      "name": "Can view Booking History",
-      "content_type": 12,
-      "codename": "view_booking_history"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 49,
-    "fields": {
-      "name": "Can add page",
-      "content_type": 13,
-      "codename": "add_page"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 50,
-    "fields": {
-      "name": "Can change page",
-      "content_type": 13,
-      "codename": "change_page"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 51,
-    "fields": {
-      "name": "Can delete page",
-      "content_type": 13,
-      "codename": "delete_page"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 52,
-    "fields": {
-      "name": "Can view page",
-      "content_type": 13,
-      "codename": "view_page"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 53,
-    "fields": {
-      "name": "Can add social_media",
-      "content_type": 14,
-      "codename": "add_social_media"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 54,
-    "fields": {
-      "name": "Can change social_media",
-      "content_type": 14,
-      "codename": "change_social_media"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 55,
-    "fields": {
-      "name": "Can delete social_media",
-      "content_type": 14,
-      "codename": "delete_social_media"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 56,
-    "fields": {
-      "name": "Can view social_media",
-      "content_type": 14,
-      "codename": "view_social_media"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 57,
-    "fields": {
-      "name": "Can add CRUD event",
-      "content_type": 15,
-      "codename": "add_crudevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 58,
-    "fields": {
-      "name": "Can change CRUD event",
-      "content_type": 15,
-      "codename": "change_crudevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 59,
-    "fields": {
-      "name": "Can delete CRUD event",
-      "content_type": 15,
-      "codename": "delete_crudevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 60,
-    "fields": {
-      "name": "Can view CRUD event",
-      "content_type": 15,
-      "codename": "view_crudevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 61,
-    "fields": {
-      "name": "Can add login event",
-      "content_type": 16,
-      "codename": "add_loginevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 62,
-    "fields": {
-      "name": "Can change login event",
-      "content_type": 16,
-      "codename": "change_loginevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 63,
-    "fields": {
-      "name": "Can delete login event",
-      "content_type": 16,
-      "codename": "delete_loginevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 64,
-    "fields": {
-      "name": "Can view login event",
-      "content_type": 16,
-      "codename": "view_loginevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 65,
-    "fields": {
-      "name": "Can add request event",
-      "content_type": 17,
-      "codename": "add_requestevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 66,
-    "fields": {
-      "name": "Can change request event",
-      "content_type": 17,
-      "codename": "change_requestevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 67,
-    "fields": {
-      "name": "Can delete request event",
-      "content_type": 17,
-      "codename": "delete_requestevent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 68,
-    "fields": {
-      "name": "Can view request event",
-      "content_type": 17,
-      "codename": "view_requestevent"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 1,
-    "fields": { "app_label": "admin", "model": "logentry" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 2,
-    "fields": { "app_label": "auth", "model": "permission" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 3,
-    "fields": { "app_label": "auth", "model": "group" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 4,
-    "fields": { "app_label": "contenttypes", "model": "contenttype" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 5,
-    "fields": { "app_label": "sessions", "model": "session" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 6,
-    "fields": { "app_label": "accounts", "model": "customuser" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 7,
-    "fields": { "app_label": "accounts", "model": "prospectivetenant" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 8,
-    "fields": { "app_label": "accounts", "model": "landlord" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 9,
-    "fields": { "app_label": "accounts", "model": "administrator" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 10,
-    "fields": { "app_label": "rental_app", "model": "apartments" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 11,
-    "fields": { "app_label": "rental_app", "model": "rooms" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 12,
-    "fields": { "app_label": "rental_app", "model": "booking_history" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 13,
-    "fields": { "app_label": "rental_app", "model": "page" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 14,
-    "fields": { "app_label": "rental_app", "model": "social_media" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 15,
-    "fields": { "app_label": "easyaudit", "model": "crudevent" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 16,
-    "fields": { "app_label": "easyaudit", "model": "loginevent" }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 17,
-    "fields": { "app_label": "easyaudit", "model": "requestevent" }
   },
   {
     "model": "sessions.session",
@@ -1632,18 +1105,18 @@
   },
   {
     "model": "sessions.session",
-    "pk": "8xdvmri1u30x37n92gbdviy2vwus334g",
-    "fields": {
-      "session_data": ".eJxVjEEOwiAQRe_C2hAYaRlcuu8ZCAyMVA0kpV0Z765NutDtf-_9l_BhW4vfel78nMRFGHH63WKgR647SPdQb01Sq-syR7kr8qBdTi3l5_Vw_w5K6OVbkx0JEQ0DcYSBdY4qB4ionVGWEUiRg9EZo11EMmDRnpGVHYBBsRXvD-C9Ny0:1rIobG:H741ZE9pDHcXE4o2WJNAQyWU4d6-WaboT4LVyGA9cDM",
-      "expire_date": "2024-01-11T11:30:54.036Z"
-    }
-  },
-  {
-    "model": "sessions.session",
     "pk": "9pyybkyibvn44cdomsxgn3xxodn22gds",
     "fields": {
       "session_data": ".eJxVjM0OwiAQhN-FsyG0i_x49O4zkF0WpGogKe3J-O62SQ96mmS-b-YtAq5LCWtPc5hYXMQgTr8dYXymugN-YL03GVtd5onkrsiDdnlrnF7Xw_07KNjLtvYKPBpnElO2kYxTCOxctsaft2A0GiIlmwm8HkYwOtMYCVkRK8cgPl_u4Dh1:1r6q9q:ke1m3a7SWVTArTDiFIpuhhl7KTLhyr6vmFBscUhPsPI",
       "expire_date": "2023-12-09T10:45:06.450Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "br45q83oatzklyas59v8fatpfk3djwt7",
+    "fields": {
+      "session_data": ".eJxVjM0OwiAQhN-FsyG0i_x49O4zkF0WpGogKe3J-O62SQ96mmS-b-YtAq5LCWtPc5hYXMQgTr8dYXymugN-YL03GVtd5onkrsiDdnlrnF7Xw_07KNjLtvYKPBpnElO2kYxTCOxctsaft2A0GiIlmwm8HkYwOtMYCVkRK8cgPl_u4Dh1:1rJF8W:c7FCDdbVxT1IQts-g7PIyF9Pil8rb5i7vGS1nM3hFSw",
+      "expire_date": "2024-01-12T15:51:00.651Z"
     }
   },
   {
@@ -1728,6 +1201,14 @@
   },
   {
     "model": "sessions.session",
+    "pk": "q0ztl3h0sgejf0saznq3wt7bkos44g8u",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hAYaRlcuu8ZCAyMVA0kpV0Z765NutDtf-_9l_BhW4vfel78nMRFGHH63WKgR647SPdQb01Sq-syR7kr8qBdTi3l5_Vw_w5K6OVbkx0JEQ0DcYSBdY4qB4ionVGWEUiRg9EZo11EMmDRnpGVHYBBsRXvD-C9Ny0:1rJEuL:lrl1fsNwqlJ29eyUFKYw2PgvK9Y3tN3DOyduuvMxLTQ",
+      "expire_date": "2024-01-12T15:36:21.566Z"
+    }
+  },
+  {
+    "model": "sessions.session",
     "pk": "r04vrefoh7wcouxouwdb6bo0713hzprk",
     "fields": {
       "session_data": ".eJxVjEEOwiAQRe_C2hAYaRlcuu8ZCAyMVA0kpV0Z765NutDtf-_9l_BhW4vfel78nMRFGHH63WKgR647SPdQb01Sq-syR7kr8qBdTi3l5_Vw_w5K6OVbkx0JEQ0DcYSBdY4qB4ionVGWEUiRg9EZo11EMmDRnpGVHYBBsRXvD-C9Ny0:1r7J3X:8-lP3XGCk5nbXV6XWUwWYBalnmzF4ne0304sZb91DTs",
@@ -1736,10 +1217,34 @@
   },
   {
     "model": "sessions.session",
+    "pk": "rej6bu69394oggbpns63cgcaqzbly1yk",
+    "fields": {
+      "session_data": ".eJxVjM0OwiAQhN-FsyG0i_x49O4zkF0WpGogKe3J-O62SQ96mmS-b-YtAq5LCWtPc5hYXMQgTr8dYXymugN-YL03GVtd5onkrsiDdnlrnF7Xw_07KNjLtvYKPBpnElO2kYxTCOxctsaft2A0GiIlmwm8HkYwOtMYCVkRK8cgPl_u4Dh1:1rJfgQ:NRQhK9P4S57fzsHU0iigCgsAH4XDzZmy28IUcwW2l6A",
+      "expire_date": "2024-01-13T20:11:46.281Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "sfe88cq5w53vxfd2q8b2b8l6oq2hs9u1",
+    "fields": {
+      "session_data": ".eJxVjM0OwiAQhN-FsyG0i_x49O4zkF0WpGogKe3J-O62SQ96mmS-b-YtAq5LCWtPc5hYXMQgTr8dYXymugN-YL03GVtd5onkrsiDdnlrnF7Xw_07KNjLtvYKPBpnElO2kYxTCOxctsaft2A0GiIlmwm8HkYwOtMYCVkRK8cgPl_u4Dh1:1rJdJb:A6dKVlKSGP3h3NQixpg_MnUPFuAAzKQbd5So06N7C88",
+      "expire_date": "2024-01-13T17:40:03.232Z"
+    }
+  },
+  {
+    "model": "sessions.session",
     "pk": "takjif427726q8uzo3tjn5st35j04op0",
     "fields": {
       "session_data": ".eJxVjM0OwiAQhN-FsyG0i_x49O4zkF0WpGogKe3J-O62SQ96mmS-b-YtAq5LCWtPc5hYXMQgTr8dYXymugN-YL03GVtd5onkrsiDdnlrnF7Xw_07KNjLtvYKPBpnElO2kYxTCOxctsaft2A0GiIlmwm8HkYwOtMYCVkRK8cgPl_u4Dh1:1r8vLy:CRcooUGzoCHB5_8gu95CBu-giK0aOEmA2bMWmx5B5nY",
       "expire_date": "2023-12-15T04:42:14.745Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "txawnfpb46ks0m5w9ugbnnvcdgdg9loq",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hAoUKYu3XsGMjNMpWpoUtqV8e7apAvd_vfef6mE21rS1mRJU1Zn1anT70bID6k7yHest1nzXNdlIr0r-qBNX-csz8vh_h0UbOVbO8wcYk8UgbrgQxQ2OBprHGMAJ8AwiKBBa4GJTRgAxuigDwI-elHvD-5dN98:1rJF0X:8O5sq92n4LoJitEoFIcQIrXXnOcZCwlJLrMYn7JP4sk",
+      "expire_date": "2024-01-12T15:42:45.211Z"
     }
   },
   {
@@ -1818,6 +1323,381 @@
     }
   },
   {
+    "model": "easyaudit.crudevent",
+    "pk": 6,
+    "fields": {
+      "event_type": 2,
+      "object_id": "4",
+      "content_type": 6,
+      "object_repr": "talia@jose.com",
+      "object_json_repr": "[{\"model\": \"accounts.customuser\", \"pk\": 4, \"fields\": {\"password\": \"pbkdf2_sha256$260000$0y7KMKmg0cK8e4au1OlXxj$0/8Df57xt31M8et9J5+68w8f/Kb//xvU/y41Oqb1aqI=\", \"last_login\": \"2023-12-29T15:18:29.383Z\", \"is_superuser\": false, \"username\": \"Talia\", \"email\": \"talia@jose.com\", \"image\": \"Users/IMG-20231206-WA0016.jpg\", \"gender\": \"Female\", \"full_name\": \"Talia Ann Jose\", \"role\": \"Landlord\", \"phone\": \"0758 051111\", \"is_active\": true, \"is_staff\": false, \"date_joined\": \"2023-11-22T07:28:59.160Z\", \"groups\": [], \"user_permissions\": []}}]",
+      "changed_fields": "{\"last_login\": [\"2023-12-28 11:30:53.838811\", \"2023-12-29 15:18:29.383440\"]}",
+      "user": 4,
+      "user_pk_as_string": "4",
+      "datetime": "2023-12-29T15:18:29.435Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 7,
+    "fields": {
+      "event_type": 2,
+      "object_id": "4",
+      "content_type": 6,
+      "object_repr": "talia@jose.com",
+      "object_json_repr": "[{\"model\": \"accounts.customuser\", \"pk\": 4, \"fields\": {\"password\": \"pbkdf2_sha256$260000$0y7KMKmg0cK8e4au1OlXxj$0/8Df57xt31M8et9J5+68w8f/Kb//xvU/y41Oqb1aqI=\", \"last_login\": \"2023-12-29T15:36:21.538Z\", \"is_superuser\": false, \"username\": \"Talia\", \"email\": \"talia@jose.com\", \"image\": \"Users/IMG-20231206-WA0016.jpg\", \"gender\": \"Female\", \"full_name\": \"Talia Ann Jose\", \"role\": \"Landlord\", \"phone\": \"0758 051111\", \"is_active\": true, \"is_staff\": false, \"date_joined\": \"2023-11-22T07:28:59.160Z\", \"groups\": [], \"user_permissions\": []}}]",
+      "changed_fields": "{\"last_login\": [\"2023-12-29 15:18:29.383440\", \"2023-12-29 15:36:21.538329\"]}",
+      "user": 4,
+      "user_pk_as_string": "4",
+      "datetime": "2023-12-29T15:36:21.552Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 8,
+    "fields": {
+      "event_type": 2,
+      "object_id": "6",
+      "content_type": 11,
+      "object_repr": "Z-13",
+      "object_json_repr": "[{\"model\": \"rental_app.rooms\", \"pk\": 6, \"fields\": {\"room_number\": \"Z-13\", \"apartment\": 1, \"tenant\": null, \"size\": \"120 sq cm\", \"room_type\": \"Bedsitter\", \"booked\": false, \"rent\": 4500, \"rate\": \"Per Month\", \"image\": \"Rooms/room6.jpeg\", \"date_created\": \"2023-11-22T08:30:15.342Z\", \"date_updated\": \"2023-11-24T18:07:23.376Z\"}}]",
+      "changed_fields": "{\"rent\": [\"5000\", \"4500\"]}",
+      "user": 4,
+      "user_pk_as_string": "4",
+      "datetime": "2023-12-29T15:42:00.795Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 9,
+    "fields": {
+      "event_type": 2,
+      "object_id": "2",
+      "content_type": 6,
+      "object_repr": "manu@mail.com",
+      "object_json_repr": "[{\"model\": \"accounts.customuser\", \"pk\": 2, \"fields\": {\"password\": \"pbkdf2_sha256$260000$pUmJeWWQFd2LE9RdflVAC8$14DnaAgDCoHl4I8wegGi52Tb13gMt4lseUUQfkOMSBg=\", \"last_login\": \"2023-12-29T15:42:45.111Z\", \"is_superuser\": false, \"username\": \"Manuel\", \"email\": \"manu@mail.com\", \"image\": \"Users/person_2.jpg\", \"gender\": \"Male\", \"full_name\": \"Emanuel Kongo\", \"role\": \"Landlord\", \"phone\": \"0712 457898\", \"is_active\": true, \"is_staff\": false, \"date_joined\": \"2023-11-22T07:25:46.807Z\", \"groups\": [], \"user_permissions\": []}}]",
+      "changed_fields": "{\"last_login\": [\"2023-12-15 15:47:59.211655\", \"2023-12-29 15:42:45.111689\"]}",
+      "user": 2,
+      "user_pk_as_string": "2",
+      "datetime": "2023-12-29T15:42:45.124Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 10,
+    "fields": {
+      "event_type": 1,
+      "object_id": "30",
+      "content_type": 11,
+      "object_repr": "W-05",
+      "object_json_repr": "[{\"model\": \"rental_app.rooms\", \"pk\": 30, \"fields\": {\"room_number\": \"W-05\", \"apartment\": 6, \"tenant\": null, \"size\": \"244 sq fr\", \"room_type\": \"One-Bedroom\", \"booked\": false, \"rent\": 6000, \"rate\": \"Per Month\", \"image\": \"Rooms/20231203_213544.jpg\", \"date_created\": \"2023-12-29T15:44:32.030Z\", \"date_updated\": \"2023-12-29T15:44:32.030Z\"}}]",
+      "changed_fields": null,
+      "user": 2,
+      "user_pk_as_string": "2",
+      "datetime": "2023-12-29T15:44:32.100Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 11,
+    "fields": {
+      "event_type": 2,
+      "object_id": "1",
+      "content_type": 6,
+      "object_repr": "test@test.com",
+      "object_json_repr": "[{\"model\": \"accounts.customuser\", \"pk\": 1, \"fields\": {\"password\": \"pbkdf2_sha256$260000$QdFWfHMBB2GR4WV0GDB6pW$GXxWJQohVcFhkbcTVHQfz7mSSXVAnWOQZ03Z7oOoQBc=\", \"last_login\": \"2023-12-29T15:51:00.625Z\", \"is_superuser\": true, \"username\": \"\", \"email\": \"test@test.com\", \"image\": \"\", \"gender\": \"\", \"full_name\": \"\", \"role\": \"Administrator\", \"phone\": \"\", \"is_active\": true, \"is_staff\": true, \"date_joined\": \"2023-11-22T07:23:21.123Z\", \"groups\": [], \"user_permissions\": []}}]",
+      "changed_fields": "{\"last_login\": [\"2023-12-28 11:28:52.902123\", \"2023-12-29 15:51:00.625412\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-29T15:51:00.632Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 12,
+    "fields": {
+      "event_type": 2,
+      "object_id": "1",
+      "content_type": 10,
+      "object_repr": "Zion",
+      "object_json_repr": "[{\"model\": \"rental_app.apartments\", \"pk\": 1, \"fields\": {\"apartment_name\": \"Zion\", \"landlord\": 2, \"description\": \"A very good and clean apartment\", \"facilities\": \"bed\\r\\nchair\\r\\nmattress\\r\\ntable\", \"image\": \"Appartments/main.jpg\", \"paid_for\": \"wifi, electricity\", \"location\": \"Taita Taveta University, Gate C\", \"date_created\": \"2023-11-22T07:56:46.719Z\", \"date_updated\": \"2023-11-22T07:56:46.719Z\"}}]",
+      "changed_fields": "{\"paid_for\": [\"wifi\", \"wifi, electricity\"]}",
+      "user": 4,
+      "user_pk_as_string": "4",
+      "datetime": "2023-12-29T20:43:27.470Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 13,
+    "fields": {
+      "event_type": 2,
+      "object_id": "1",
+      "content_type": 6,
+      "object_repr": "test@test.com",
+      "object_json_repr": "[{\"model\": \"accounts.customuser\", \"pk\": 1, \"fields\": {\"password\": \"pbkdf2_sha256$260000$QdFWfHMBB2GR4WV0GDB6pW$GXxWJQohVcFhkbcTVHQfz7mSSXVAnWOQZ03Z7oOoQBc=\", \"last_login\": \"2023-12-30T17:35:30.304Z\", \"is_superuser\": true, \"username\": \"\", \"email\": \"test@test.com\", \"image\": \"\", \"gender\": \"\", \"full_name\": \"\", \"role\": \"Administrator\", \"phone\": \"\", \"is_active\": true, \"is_staff\": true, \"date_joined\": \"2023-11-22T07:23:21.123Z\", \"groups\": [], \"user_permissions\": []}}]",
+      "changed_fields": "{\"last_login\": [\"2023-12-29 15:51:00.625412\", \"2023-12-30 17:35:30.304274\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T17:35:30.383Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 14,
+    "fields": {
+      "event_type": 2,
+      "object_id": "1",
+      "content_type": 6,
+      "object_repr": "test@test.com",
+      "object_json_repr": "[{\"model\": \"accounts.customuser\", \"pk\": 1, \"fields\": {\"password\": \"pbkdf2_sha256$260000$QdFWfHMBB2GR4WV0GDB6pW$GXxWJQohVcFhkbcTVHQfz7mSSXVAnWOQZ03Z7oOoQBc=\", \"last_login\": \"2023-12-30T17:40:03.197Z\", \"is_superuser\": true, \"username\": \"\", \"email\": \"test@test.com\", \"image\": \"\", \"gender\": \"\", \"full_name\": \"\", \"role\": \"Administrator\", \"phone\": \"\", \"is_active\": true, \"is_staff\": true, \"date_joined\": \"2023-11-22T07:23:21.123Z\", \"groups\": [], \"user_permissions\": []}}]",
+      "changed_fields": "{\"last_login\": [\"2023-12-30 17:35:30.304274\", \"2023-12-30 17:40:03.197289\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T17:40:03.222Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 15,
+    "fields": {
+      "event_type": 1,
+      "object_id": "1",
+      "content_type": 18,
+      "object_repr": "Django",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 1, \"fields\": {\"name\": \"Django\", \"active\": true, \"title\": \"Django administration\", \"title_color\": \"#F5DD5D\", \"title_visible\": true, \"logo\": \"\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"\", \"env_name\": \"\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#0C4B33\", \"css_header_text_color\": \"#44B78B\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#C9F0DD\", \"css_module_background_color\": \"#44B78B\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#C9F0DD\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#0C3C26\", \"css_generic_link_hover_color\": \"#156641\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#0C4B33\", \"css_save_button_background_hover_color\": \"#0C3C26\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#BA2121\", \"css_delete_button_background_hover_color\": \"#A41515\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.3\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": true, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": null,
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:07:57.787Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 16,
+    "fields": {
+      "event_type": 2,
+      "object_id": "1",
+      "content_type": 6,
+      "object_repr": "test@test.com",
+      "object_json_repr": "[{\"model\": \"accounts.customuser\", \"pk\": 1, \"fields\": {\"password\": \"pbkdf2_sha256$260000$QdFWfHMBB2GR4WV0GDB6pW$GXxWJQohVcFhkbcTVHQfz7mSSXVAnWOQZ03Z7oOoQBc=\", \"last_login\": \"2023-12-30T20:11:46.259Z\", \"is_superuser\": true, \"username\": \"\", \"email\": \"test@test.com\", \"image\": \"\", \"gender\": \"\", \"full_name\": \"\", \"role\": \"Administrator\", \"phone\": \"\", \"is_active\": true, \"is_staff\": true, \"date_joined\": \"2023-11-22T07:23:21.123Z\", \"groups\": [], \"user_permissions\": []}}]",
+      "changed_fields": "{\"last_login\": [\"2023-12-30 17:40:03.197289\", \"2023-12-30 20:11:46.259307\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:11:46.271Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 17,
+    "fields": {
+      "event_type": 2,
+      "object_id": "1",
+      "content_type": 18,
+      "object_repr": "RBMS",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 1, \"fields\": {\"name\": \"RBMS\", \"active\": false, \"title\": \"Django administration\", \"title_color\": \"#F5DD5D\", \"title_visible\": true, \"logo\": \"\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"\", \"env_name\": \"\", \"env_color\": \"#05E786\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#0C4B33\", \"css_header_text_color\": \"#44B78B\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#C9F0DD\", \"css_module_background_color\": \"#44B78B\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#C9F0DD\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#0C3C26\", \"css_generic_link_hover_color\": \"#156641\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#0C4B33\", \"css_save_button_background_hover_color\": \"#0C3C26\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#BA2121\", \"css_delete_button_background_hover_color\": \"#A41515\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.3\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": true, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": true}}]",
+      "changed_fields": "{\"name\": [\"Django\", \"RBMS\"], \"env_color\": [\"#E74C3C\", \"#05E786\"], \"form_pagination_sticky\": [\"False\", \"True\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:14:05.944Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 18,
+    "fields": {
+      "event_type": 2,
+      "object_id": "1",
+      "content_type": 18,
+      "object_repr": "RBMS",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 1, \"fields\": {\"name\": \"RBMS\", \"active\": true, \"title\": \"Django administration\", \"title_color\": \"#F5DD5D\", \"title_visible\": true, \"logo\": \"\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"\", \"env_name\": \"\", \"env_color\": \"#05E786\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#0C4B33\", \"css_header_text_color\": \"#44B78B\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#C9F0DD\", \"css_module_background_color\": \"#44B78B\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#C9F0DD\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#0C3C26\", \"css_generic_link_hover_color\": \"#156641\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#0C4B33\", \"css_save_button_background_hover_color\": \"#0C3C26\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#BA2121\", \"css_delete_button_background_hover_color\": \"#A41515\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.3\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": true, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": true}}]",
+      "changed_fields": "{\"active\": [\"False\", \"True\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:15:26.781Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 19,
+    "fields": {
+      "event_type": 2,
+      "object_id": "3",
+      "content_type": 18,
+      "object_repr": "Foundation",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 3, \"fields\": {\"name\": \"Foundation\", \"active\": true, \"title\": \"Django administration\", \"title_color\": \"#DDDDDD\", \"title_visible\": false, \"logo\": \"\", \"logo_color\": \"#CCCCCC\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"\", \"env_name\": \"\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#2C3840\", \"css_header_text_color\": \"#FFFFFF\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#DDDDDD\", \"css_module_background_color\": \"#074E68\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#DDDDDD\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#000000\", \"css_generic_link_hover_color\": \"#074E68\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#2199E8\", \"css_save_button_background_hover_color\": \"#1585CF\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#CC4B37\", \"css_delete_button_background_hover_color\": \"#BF4634\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.2\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": false, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": "{\"active\": [\"False\", \"True\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:15:42.055Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 20,
+    "fields": {
+      "event_type": 2,
+      "object_id": "1",
+      "content_type": 18,
+      "object_repr": "RBMS",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 1, \"fields\": {\"name\": \"RBMS\", \"active\": false, \"title\": \"Django administration\", \"title_color\": \"#F5DD5D\", \"title_visible\": true, \"logo\": \"\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"\", \"env_name\": \"\", \"env_color\": \"#05E786\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#0C4B33\", \"css_header_text_color\": \"#44B78B\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#C9F0DD\", \"css_module_background_color\": \"#44B78B\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#C9F0DD\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#0C3C26\", \"css_generic_link_hover_color\": \"#156641\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#0C4B33\", \"css_save_button_background_hover_color\": \"#0C3C26\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#BA2121\", \"css_delete_button_background_hover_color\": \"#A41515\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.3\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": true, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": true}}]",
+      "changed_fields": "null",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:15:42.077Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 21,
+    "fields": {
+      "event_type": 2,
+      "object_id": "3",
+      "content_type": 18,
+      "object_repr": "Foundation",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 3, \"fields\": {\"name\": \"Foundation\", \"active\": false, \"title\": \"Django administration\", \"title_color\": \"#DDDDDD\", \"title_visible\": false, \"logo\": \"\", \"logo_color\": \"#CCCCCC\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"\", \"env_name\": \"\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#2C3840\", \"css_header_text_color\": \"#FFFFFF\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#DDDDDD\", \"css_module_background_color\": \"#074E68\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#DDDDDD\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#000000\", \"css_generic_link_hover_color\": \"#074E68\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#2199E8\", \"css_save_button_background_hover_color\": \"#1585CF\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#CC4B37\", \"css_delete_button_background_hover_color\": \"#BF4634\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.2\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": false, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": "{\"active\": [\"True\", \"False\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:15:56.079Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 22,
+    "fields": {
+      "event_type": 2,
+      "object_id": "1",
+      "content_type": 18,
+      "object_repr": "RBMS",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 1, \"fields\": {\"name\": \"RBMS\", \"active\": true, \"title\": \"Django administration\", \"title_color\": \"#F5DD5D\", \"title_visible\": true, \"logo\": \"\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"\", \"env_name\": \"\", \"env_color\": \"#05E786\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#0C4B33\", \"css_header_text_color\": \"#44B78B\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#C9F0DD\", \"css_module_background_color\": \"#44B78B\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#C9F0DD\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#0C3C26\", \"css_generic_link_hover_color\": \"#156641\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#0C4B33\", \"css_save_button_background_hover_color\": \"#0C3C26\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#BA2121\", \"css_delete_button_background_hover_color\": \"#A41515\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.3\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": true, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": true}}]",
+      "changed_fields": "{\"active\": [\"False\", \"True\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:15:56.097Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 23,
+    "fields": {
+      "event_type": 2,
+      "object_id": "2",
+      "content_type": 18,
+      "object_repr": "Bootstrap",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 2, \"fields\": {\"name\": \"Bootstrap\", \"active\": true, \"title\": \"Django administration\", \"title_color\": \"#503873\", \"title_visible\": false, \"logo\": \"\", \"logo_color\": \"#503873\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"\", \"env_name\": \"\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#FFFFFF\", \"css_header_text_color\": \"#463265\", \"css_header_link_color\": \"#463265\", \"css_header_link_hover_color\": \"#7351A6\", \"css_module_background_color\": \"#7351A6\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#CDBFE3\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#FFFFFF\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#463265\", \"css_generic_link_hover_color\": \"#7351A6\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#5CB85C\", \"css_save_button_background_hover_color\": \"#449D44\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#D9534F\", \"css_delete_button_background_hover_color\": \"#C9302C\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#503873\", \"related_modal_background_opacity\": \"0.2\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": false, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": "{\"active\": [\"False\", \"True\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:15:56.120Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 24,
+    "fields": {
+      "event_type": 2,
+      "object_id": "4",
+      "content_type": 18,
+      "object_repr": "USWDS",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 4, \"fields\": {\"name\": \"USWDS\", \"active\": true, \"title\": \"Django administration\", \"title_color\": \"#FFFFFF\", \"title_visible\": false, \"logo\": \"\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"\", \"env_name\": \"\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#112E51\", \"css_header_text_color\": \"#FFFFFF\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#E1F3F8\", \"css_module_background_color\": \"#205493\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#E1F3F8\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#205493\", \"css_generic_link_hover_color\": \"#0071BC\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#205493\", \"css_save_button_background_hover_color\": \"#112E51\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#CD2026\", \"css_delete_button_background_hover_color\": \"#981B1E\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.8\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": false, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": "{\"active\": [\"False\", \"True\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:16:12.077Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 25,
+    "fields": {
+      "event_type": 2,
+      "object_id": "2",
+      "content_type": 18,
+      "object_repr": "Bootstrap",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 2, \"fields\": {\"name\": \"Bootstrap\", \"active\": false, \"title\": \"Django administration\", \"title_color\": \"#503873\", \"title_visible\": false, \"logo\": \"\", \"logo_color\": \"#503873\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"\", \"env_name\": \"\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#FFFFFF\", \"css_header_text_color\": \"#463265\", \"css_header_link_color\": \"#463265\", \"css_header_link_hover_color\": \"#7351A6\", \"css_module_background_color\": \"#7351A6\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#CDBFE3\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#FFFFFF\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#463265\", \"css_generic_link_hover_color\": \"#7351A6\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#5CB85C\", \"css_save_button_background_hover_color\": \"#449D44\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#D9534F\", \"css_delete_button_background_hover_color\": \"#C9302C\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#503873\", \"related_modal_background_opacity\": \"0.2\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": false, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": "null",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:16:12.098Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 26,
+    "fields": {
+      "event_type": 2,
+      "object_id": "4",
+      "content_type": 18,
+      "object_repr": "USWDS",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 4, \"fields\": {\"name\": \"USWDS\", \"active\": true, \"title\": \"Django administration\", \"title_color\": \"#FFFFFF\", \"title_visible\": false, \"logo\": \"\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"bowl-3.png\", \"env_name\": \"\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#13123F\", \"css_header_text_color\": \"#FFFFFF\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#E1F3F8\", \"css_module_background_color\": \"#205493\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#AFBDC1\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#205493\", \"css_generic_link_hover_color\": \"#0071BC\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#205493\", \"css_save_button_background_hover_color\": \"#112E51\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#CD2026\", \"css_delete_button_background_hover_color\": \"#981B1E\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.8\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": true, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": "{\"favicon\": [\"\", \"bowl-3.png\"], \"css_header_background_color\": [\"#112E51\", \"#13123F\"], \"css_module_link_hover_color\": [\"#E1F3F8\", \"#AFBDC1\"], \"list_filter_dropdown\": [\"False\", \"True\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:18:49.485Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 27,
+    "fields": {
+      "event_type": 2,
+      "object_id": "4",
+      "content_type": 18,
+      "object_repr": "USWDS",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 4, \"fields\": {\"name\": \"USWDS\", \"active\": true, \"title\": \"Django administration\", \"title_color\": \"#FFFFFF\", \"title_visible\": false, \"logo\": \"\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"admin-interface/favicon/bowl-3.png\", \"env_name\": \"RBMS\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#13123F\", \"css_header_text_color\": \"#FFFFFF\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#E1F3F8\", \"css_module_background_color\": \"#205493\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#AFBDC1\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#205493\", \"css_generic_link_hover_color\": \"#0071BC\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#205493\", \"css_save_button_background_hover_color\": \"#112E51\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#CD2026\", \"css_delete_button_background_hover_color\": \"#981B1E\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.8\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": true, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": "{\"env_name\": [\"\", \"RBMS\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:19:50.018Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 28,
+    "fields": {
+      "event_type": 2,
+      "object_id": "4",
+      "content_type": 18,
+      "object_repr": "USWDS",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 4, \"fields\": {\"name\": \"USWDS\", \"active\": true, \"title\": \"Django administration\", \"title_color\": \"#FFFFFF\", \"title_visible\": false, \"logo\": \"bowl-2.png\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"admin-interface/favicon/bowl-3.png\", \"env_name\": \"RBMS\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"default-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#13123F\", \"css_header_text_color\": \"#FFFFFF\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#E1F3F8\", \"css_module_background_color\": \"#205493\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#AFBDC1\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#205493\", \"css_generic_link_hover_color\": \"#0071BC\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#205493\", \"css_save_button_background_hover_color\": \"#112E51\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#CD2026\", \"css_delete_button_background_hover_color\": \"#981B1E\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.8\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": true, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": "{\"logo\": [\"\", \"bowl-2.png\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:46:46.562Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 29,
+    "fields": {
+      "event_type": 2,
+      "object_id": "4",
+      "content_type": 18,
+      "object_repr": "USWDS",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 4, \"fields\": {\"name\": \"USWDS\", \"active\": true, \"title\": \"Django administration\", \"title_color\": \"#FFFFFF\", \"title_visible\": false, \"logo\": \"\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"admin-interface/favicon/bowl-3.png\", \"env_name\": \"RBMS\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"minimal-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#13123F\", \"css_header_text_color\": \"#FFFFFF\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#E1F3F8\", \"css_module_background_color\": \"#205493\", \"css_module_background_selected_color\": \"#FFFFCC\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#AFBDC1\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#205493\", \"css_generic_link_hover_color\": \"#0071BC\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#205493\", \"css_save_button_background_hover_color\": \"#112E51\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#CD2026\", \"css_delete_button_background_hover_color\": \"#981B1E\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.8\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": true, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": "{\"logo\": [\"admin-interface/logo/bowl-2.png\", \"\"], \"language_chooser_control\": [\"default-select\", \"minimal-select\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:47:26.243Z"
+    }
+  },
+  {
+    "model": "easyaudit.crudevent",
+    "pk": 30,
+    "fields": {
+      "event_type": 2,
+      "object_id": "4",
+      "content_type": 18,
+      "object_repr": "USWDS",
+      "object_json_repr": "[{\"model\": \"admin_interface.theme\", \"pk\": 4, \"fields\": {\"name\": \"USWDS\", \"active\": true, \"title\": \"RBMS administration\", \"title_color\": \"#E5DFDE\", \"title_visible\": true, \"logo\": \"\", \"logo_color\": \"#FFFFFF\", \"logo_max_width\": 400, \"logo_max_height\": 100, \"logo_visible\": true, \"favicon\": \"admin-interface/favicon/bowl-3.png\", \"env_name\": \"RBMS\", \"env_color\": \"#E74C3C\", \"env_visible_in_header\": true, \"env_visible_in_favicon\": true, \"language_chooser_active\": true, \"language_chooser_control\": \"minimal-select\", \"language_chooser_display\": \"code\", \"css_header_background_color\": \"#13123F\", \"css_header_text_color\": \"#FFFFFF\", \"css_header_link_color\": \"#FFFFFF\", \"css_header_link_hover_color\": \"#E1F3F8\", \"css_module_background_color\": \"#21397A\", \"css_module_background_selected_color\": \"#E6FFC0\", \"css_module_text_color\": \"#FFFFFF\", \"css_module_link_color\": \"#FFFFFF\", \"css_module_link_selected_color\": \"#FFFFFF\", \"css_module_link_hover_color\": \"#AFBDC1\", \"css_module_rounded_corners\": true, \"css_generic_link_color\": \"#205493\", \"css_generic_link_hover_color\": \"#0071BC\", \"css_generic_link_active_color\": \"#29B864\", \"css_save_button_background_color\": \"#205493\", \"css_save_button_background_hover_color\": \"#112E51\", \"css_save_button_text_color\": \"#FFFFFF\", \"css_delete_button_background_color\": \"#CD2026\", \"css_delete_button_background_hover_color\": \"#981B1E\", \"css_delete_button_text_color\": \"#FFFFFF\", \"related_modal_active\": true, \"related_modal_background_color\": \"#000000\", \"related_modal_background_opacity\": \"0.8\", \"related_modal_rounded_corners\": true, \"related_modal_close_button_visible\": true, \"list_filter_highlight\": true, \"list_filter_dropdown\": true, \"list_filter_sticky\": true, \"list_filter_removal_links\": false, \"foldable_apps\": true, \"show_fieldsets_as_tabs\": false, \"show_inlines_as_tabs\": false, \"collapsible_stacked_inlines\": false, \"collapsible_stacked_inlines_collapsed\": true, \"collapsible_tabular_inlines\": false, \"collapsible_tabular_inlines_collapsed\": true, \"recent_actions_visible\": true, \"form_submit_sticky\": false, \"form_pagination_sticky\": false}}]",
+      "changed_fields": "{\"title\": [\"Django administration\", \"RBMS administration\"], \"title_color\": [\"#FFFFFF\", \"#E5DFDE\"], \"title_visible\": [\"False\", \"True\"], \"css_module_background_color\": [\"#205493\", \"#21397A\"], \"css_module_background_selected_color\": [\"#FFFFCC\", \"#E6FFC0\"]}",
+      "user": 1,
+      "user_pk_as_string": "1",
+      "datetime": "2023-12-30T20:49:13.517Z"
+    }
+  },
+  {
     "model": "easyaudit.loginevent",
     "pk": 1,
     "fields": {
@@ -1837,6 +1717,138 @@
       "user": 4,
       "remote_ip": "127.0.0.1",
       "datetime": "2023-12-28T11:30:53.968Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 3,
+    "fields": {
+      "login_type": 1,
+      "username": "talia@jose.com",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-29T14:09:51.145Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 4,
+    "fields": {
+      "login_type": 2,
+      "username": "talia@jose.com",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:16:57.525Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 5,
+    "fields": {
+      "login_type": 2,
+      "username": "talia@jose.com",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:18:04.451Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 6,
+    "fields": {
+      "login_type": 0,
+      "username": "talia@jose.com",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:18:29.454Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 7,
+    "fields": {
+      "login_type": 1,
+      "username": "talia@jose.com",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:33:45.047Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 8,
+    "fields": {
+      "login_type": 0,
+      "username": "talia@jose.com",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:36:21.563Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 9,
+    "fields": {
+      "login_type": 0,
+      "username": "manu@mail.com",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:42:45.173Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 10,
+    "fields": {
+      "login_type": 0,
+      "username": "test@test.com",
+      "user": 1,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:51:00.648Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 11,
+    "fields": {
+      "login_type": 0,
+      "username": "test@test.com",
+      "user": 1,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:35:30.400Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 12,
+    "fields": {
+      "login_type": 1,
+      "username": "test@test.com",
+      "user": 1,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:37:11.628Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 13,
+    "fields": {
+      "login_type": 0,
+      "username": "test@test.com",
+      "user": 1,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:40:03.232Z"
+    }
+  },
+  {
+    "model": "easyaudit.loginevent",
+    "pk": 14,
+    "fields": {
+      "login_type": 0,
+      "username": "test@test.com",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:11:46.281Z"
     }
   },
   {
@@ -2692,11 +2704,2639 @@
     }
   },
   {
+    "model": "easyaudit.requestevent",
+    "pk": 72,
+    "fields": {
+      "url": "/logout/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-29T14:09:51.081Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 73,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-29T14:09:53.284Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 74,
+    "fields": {
+      "url": "/media/Rooms/room4_dAzFToR.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-29T14:09:55.617Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 75,
+    "fields": {
+      "url": "/media/Rooms/room3_Lor2z7h.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-29T14:09:55.617Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 76,
+    "fields": {
+      "url": "/rentals/page/3/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-29T14:10:06.487Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 77,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-29T14:10:13.655Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 78,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "127.0.0.1",
+      "datetime": "2023-12-29T14:10:16.068Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 79,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.101",
+      "datetime": "2023-12-29T15:12:12.725Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 80,
+    "fields": {
+      "url": "/media/Rooms/room4_59WOLzQ.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.101",
+      "datetime": "2023-12-29T15:12:15.097Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 81,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.101",
+      "datetime": "2023-12-29T15:12:15.134Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 82,
+    "fields": {
+      "url": "/media/Rooms/room3_okgsSd2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.101",
+      "datetime": "2023-12-29T15:12:15.250Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 83,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.101",
+      "datetime": "2023-12-29T15:12:23.710Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 84,
+    "fields": {
+      "url": "/media/Rooms/room4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.101",
+      "datetime": "2023-12-29T15:12:25.877Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 85,
+    "fields": {
+      "url": "/signup/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.101",
+      "datetime": "2023-12-29T15:12:34.582Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 86,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:22.496Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 87,
+    "fields": {
+      "url": "/media/Rooms/room6.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:25.846Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 88,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:25.847Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 89,
+    "fields": {
+      "url": "/media/Rooms/room4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:25.847Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 90,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:46.269Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 91,
+    "fields": {
+      "url": "/media/Rooms/room4_dAzFToR.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:48.687Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 92,
+    "fields": {
+      "url": "/media/Rooms/room3_Lor2z7h.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:48.688Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 93,
+    "fields": {
+      "url": "/media/Rooms/room2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:48.690Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 94,
+    "fields": {
+      "url": "/media/Rooms/room6_ORu0vYp.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:48.705Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 95,
+    "fields": {
+      "url": "/media/Rooms/room6_U0PPvd8.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:48.706Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 96,
+    "fields": {
+      "url": "/media/Rooms/room3_okgsSd2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:48.705Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 97,
+    "fields": {
+      "url": "/media/Rooms/room1.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:50.919Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 98,
+    "fields": {
+      "url": "/media/Rooms/room4_bQFHsu2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:50.932Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 99,
+    "fields": {
+      "url": "/media/Rooms/room4_59WOLzQ.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:50.952Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 100,
+    "fields": {
+      "url": "/media/Rooms/room4_zTe5Cqd.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:15:51.039Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 101,
+    "fields": {
+      "url": "/rentals/room/21/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:16:12.331Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 102,
+    "fields": {
+      "url": "/rentals/apartment/6/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:16:20.131Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 103,
+    "fields": {
+      "url": "/media/Appartments/main_sQxPHQz.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:16:22.399Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 104,
+    "fields": {
+      "url": "/login_user/",
+      "method": "POST",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:16:57.269Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 105,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:16:59.750Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 106,
+    "fields": {
+      "url": "/login_user/",
+      "method": "POST",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:18:04.206Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 107,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:18:06.606Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 108,
+    "fields": {
+      "url": "/login_user/",
+      "method": "POST",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:18:29.166Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 109,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:18:31.804Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 110,
+    "fields": {
+      "url": "/media/Users/IMG-20231206-WA0016.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:18:34.214Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 111,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:19:15.683Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 112,
+    "fields": {
+      "url": "/media/Appartments/main.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:19:17.942Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 113,
+    "fields": {
+      "url": "/media/Appartments/OIP.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:19:17.942Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 114,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:22:00.172Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 115,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:23:14.012Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 116,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:23:59.585Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 117,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:25:19.410Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 118,
+    "fields": {
+      "url": "/media/Rooms/room4_zTe5Cqd.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:25:21.633Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 119,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:25:21.665Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 120,
+    "fields": {
+      "url": "/media/Rooms/room2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:25:21.802Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 121,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:26:25.971Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 122,
+    "fields": {
+      "url": "/media/Rooms/room4_bQFHsu2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:26:28.241Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 123,
+    "fields": {
+      "url": "/media/Rooms/room3_okgsSd2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:26:28.257Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 124,
+    "fields": {
+      "url": "/media/Rooms/room6.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:26:28.258Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 125,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:26:34.299Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 126,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:26:58.958Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 127,
+    "fields": {
+      "url": "/media/Rooms/room3_Lor2z7h.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:27:01.148Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 128,
+    "fields": {
+      "url": "/media/Rooms/room6_U0PPvd8.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:27:01.171Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 129,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:27:05.275Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 130,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:27:29.283Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 131,
+    "fields": {
+      "url": "/media/Rooms/room4_dAzFToR.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:27:31.458Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 132,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:27:33.989Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 133,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:28:03.923Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 134,
+    "fields": {
+      "url": "/media/Rooms/room1.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:28:06.079Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 135,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:28:09.080Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 136,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:28:41.265Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 137,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:29:00.189Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 138,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:29:10.013Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 139,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:29:56.993Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 140,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:30:11.796Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 141,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:31:33.295Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 142,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:31:52.357Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 143,
+    "fields": {
+      "url": "/media/Rooms/room4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:31:54.515Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 144,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:32:06.066Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 145,
+    "fields": {
+      "url": "/rentals/apartment/3/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:32:24.588Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 146,
+    "fields": {
+      "url": "/logout/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:33:45.031Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 147,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:33:47.283Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 148,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:34:06.258Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 149,
+    "fields": {
+      "url": "/media/Rooms/room3_okgsSd2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:34:10.580Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 150,
+    "fields": {
+      "url": "/media/Rooms/room2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:34:10.581Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 151,
+    "fields": {
+      "url": "/media/Rooms/room6_U0PPvd8.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:34:10.581Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 152,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:34:25.303Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 153,
+    "fields": {
+      "url": "/media/Rooms/room3_Lor2z7h.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:34:27.825Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 154,
+    "fields": {
+      "url": "/media/Rooms/room4_dAzFToR.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:34:27.825Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 155,
+    "fields": {
+      "url": "/media/Rooms/room6.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:34:27.868Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 156,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:34:34.559Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 157,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:34:51.817Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 158,
+    "fields": {
+      "url": "/signup/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:34:56.402Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 159,
+    "fields": {
+      "url": "/login_user/",
+      "method": "POST",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:36:21.297Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 160,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:36:23.707Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 161,
+    "fields": {
+      "url": "/media/Rooms/room4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:36:26.644Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 162,
+    "fields": {
+      "url": "/media/Rooms/room4_bQFHsu2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:36:26.660Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 163,
+    "fields": {
+      "url": "/media/Users/IMG-20231206-WA0016.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:36:27.688Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 164,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:37:05.928Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 165,
+    "fields": {
+      "url": "/media/Appartments/main.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:37:08.573Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 166,
+    "fields": {
+      "url": "/media/Appartments/OIP.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:37:08.592Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 167,
+    "fields": {
+      "url": "/update-profile/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:37:32.596Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 168,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:38:05.333Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 169,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:38:08.187Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 170,
+    "fields": {
+      "url": "/media/Rooms/room6_ORu0vYp.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:38:08.206Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 171,
+    "fields": {
+      "url": "/media/Rooms/room4_zTe5Cqd.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:38:08.207Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 172,
+    "fields": {
+      "url": "/media/Rooms/room1.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:38:08.224Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 173,
+    "fields": {
+      "url": "/media/Rooms/room4_59WOLzQ.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:38:08.214Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 174,
+    "fields": {
+      "url": "/rentals/room/11/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:38:45.846Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 175,
+    "fields": {
+      "url": "/rentals/search-results",
+      "method": "GET",
+      "query_string": "query=12",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:38:57.667Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 176,
+    "fields": {
+      "url": "/rentals/search-results",
+      "method": "GET",
+      "query_string": "query=Z",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:39:20.838Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 177,
+    "fields": {
+      "url": "/rentals/update-room/6/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:39:37.256Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 178,
+    "fields": {
+      "url": "/rentals/update-room/6/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:41:37.845Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 179,
+    "fields": {
+      "url": "/rentals/update-room/6/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:42:00.688Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 180,
+    "fields": {
+      "url": "/rentals/room/6/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T15:42:03.153Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 181,
+    "fields": {
+      "url": "/login_user/",
+      "method": "POST",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:42:44.799Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 182,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:42:47.401Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 183,
+    "fields": {
+      "url": "/media/Users/person_2.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:42:50.196Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 184,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:42:59.959Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 185,
+    "fields": {
+      "url": "/rentals/search-results",
+      "method": "GET",
+      "query_string": "query=R",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:43:17.762Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 186,
+    "fields": {
+      "url": "/rentals/apartment/6/",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:43:34.281Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 187,
+    "fields": {
+      "url": "/rentals/add-room/6/",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:43:44.053Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 188,
+    "fields": {
+      "url": "/rentals/add-room/6/",
+      "method": "POST",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:44:31.596Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 189,
+    "fields": {
+      "url": "/rentals/room/30/",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:44:34.287Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 190,
+    "fields": {
+      "url": "/media/Rooms/20231203_213544.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:44:36.508Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 191,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:45:42.969Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 192,
+    "fields": {
+      "url": "/media/Appartments/apartment2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:45:45.217Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 193,
+    "fields": {
+      "url": "/media/Appartments/R.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:45:45.232Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 194,
+    "fields": {
+      "url": "/rentals/apartment/2/",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:45:51.622Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 195,
+    "fields": {
+      "url": "/update-profile/",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:46:58.752Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 196,
+    "fields": {
+      "url": "/rentals/my-apartments/",
+      "method": "GET",
+      "query_string": "",
+      "user": 2,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-29T15:47:12.605Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 197,
+    "fields": {
+      "url": "//admin/easyaudit/loginevent/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T15:50:22.886Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 198,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T16:03:31.567Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 199,
+    "fields": {
+      "url": "/media/Rooms/20231203_213544.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T16:03:33.795Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 200,
+    "fields": {
+      "url": "/media/Rooms/room9.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T16:03:33.828Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 201,
+    "fields": {
+      "url": "/media/Rooms/room9_FtMGlEW.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T16:03:33.858Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 202,
+    "fields": {
+      "url": "/media/Rooms/room6_ORu0vYp.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T16:03:33.875Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 203,
+    "fields": {
+      "url": "/media/Rooms/room4_59WOLzQ.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.102",
+      "datetime": "2023-12-29T16:03:33.901Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 204,
+    "fields": {
+      "url": "/rentals/page/3/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:39:50.222Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 205,
+    "fields": {
+      "url": "/rentals/page/4/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:40:16.764Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 206,
+    "fields": {
+      "url": "/rentals/page/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:40:30.495Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 207,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:40:45.860Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 208,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:40:48.664Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 209,
+    "fields": {
+      "url": "/media/Rooms/room9.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:40:48.764Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 210,
+    "fields": {
+      "url": "/media/Rooms/room9_FtMGlEW.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:40:48.858Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 211,
+    "fields": {
+      "url": "/rentals/apartment/4/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:41:22.032Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 212,
+    "fields": {
+      "url": "/media/Appartments/apartment2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:41:24.238Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 213,
+    "fields": {
+      "url": "/rentals/apartment/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:41:50.302Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 214,
+    "fields": {
+      "url": "/rentals/update-apartment/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:42:38.368Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 215,
+    "fields": {
+      "url": "/rentals/update-apartment/1/",
+      "method": "POST",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:43:27.381Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 216,
+    "fields": {
+      "url": "/rentals/apartment/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:43:29.590Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 217,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": 4,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-29T20:43:52.943Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 218,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:27:46.478Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 219,
+    "fields": {
+      "url": "/media/Rooms/room1.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:27:49.029Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 220,
+    "fields": {
+      "url": "/media/Rooms/room9_FtMGlEW.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:27:49.063Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 221,
+    "fields": {
+      "url": "/media/Rooms/room2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:27:49.065Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 222,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:00.018Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 223,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:02.368Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 224,
+    "fields": {
+      "url": "/media/Rooms/room6.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:02.368Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 225,
+    "fields": {
+      "url": "/media/Rooms/room6_U0PPvd8.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:02.380Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 226,
+    "fields": {
+      "url": "/media/Rooms/room9.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:02.389Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 227,
+    "fields": {
+      "url": "/media/Rooms/room3_okgsSd2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:02.398Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 228,
+    "fields": {
+      "url": "/media/Rooms/room6_ORu0vYp.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:02.398Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 229,
+    "fields": {
+      "url": "/media/Rooms/room4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:04.688Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 230,
+    "fields": {
+      "url": "/media/Rooms/room4_59WOLzQ.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:04.752Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 231,
+    "fields": {
+      "url": "/media/Rooms/room4_bQFHsu2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:04.752Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 232,
+    "fields": {
+      "url": "/media/Rooms/room4_zTe5Cqd.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:28:04.752Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 233,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:31:15.331Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 234,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:31:32.129Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 235,
+    "fields": {
+      "url": "/rentals/room/25/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:32:20.858Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 236,
+    "fields": {
+      "url": "/rentals/apartment/1/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:32:31.549Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 237,
+    "fields": {
+      "url": "/media/Appartments/main.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:32:33.820Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 238,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:32:48.827Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 239,
+    "fields": {
+      "url": "/rentals/room/22/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:32:56.180Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 240,
+    "fields": {
+      "url": "/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T17:37:48.300Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 241,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:23.557Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 242,
+    "fields": {
+      "url": "/media/Rooms/room6.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:25.782Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 243,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:25.818Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 244,
+    "fields": {
+      "url": "/media/Rooms/room6_U0PPvd8.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:25.833Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 245,
+    "fields": {
+      "url": "/media/Rooms/room9.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:25.849Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 246,
+    "fields": {
+      "url": "/media/Rooms/room2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:25.867Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 247,
+    "fields": {
+      "url": "/media/Rooms/room3_okgsSd2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:25.883Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 248,
+    "fields": {
+      "url": "/media/Rooms/room6_ORu0vYp.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:27.901Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 249,
+    "fields": {
+      "url": "/media/Rooms/room4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:27.917Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 250,
+    "fields": {
+      "url": "/media/Rooms/room1.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:27.925Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 251,
+    "fields": {
+      "url": "/media/Rooms/room4_bQFHsu2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:27.936Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 252,
+    "fields": {
+      "url": "/media/Rooms/room4_59WOLzQ.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:27.954Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 253,
+    "fields": {
+      "url": "/media/Rooms/room9_FtMGlEW.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:27.954Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 254,
+    "fields": {
+      "url": "/media/Rooms/room4_zTe5Cqd.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T18:18:29.978Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 255,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:18:56.287Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 256,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T20:19:03.502Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 257,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:19:19.769Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 258,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:19:56.881Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 259,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:20:13.768Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 260,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:20:49.009Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 261,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:33:26.659Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 262,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:35:00.421Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 263,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:39:20.094Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 264,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:41:41.561Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 265,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T20:44:07.840Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 266,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:45:45.793Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 267,
+    "fields": {
+      "url": "/media/admin-interface/logo/bowl-2.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:46:51.083Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 268,
+    "fields": {
+      "url": "/media/admin-interface/logo/bowl-2.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:47:02.349Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 269,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:49:20.203Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 270,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T20:52:27.363Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 271,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T21:06:11.561Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 272,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-30T21:12:24.653Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 273,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.104",
+      "datetime": "2023-12-30T21:13:45.764Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 274,
+    "fields": {
+      "url": "/rentals/rooms/",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:09.593Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 275,
+    "fields": {
+      "url": "/media/Rooms/20231203_213544.jpg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:12.609Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 276,
+    "fields": {
+      "url": "/media/Rooms/room6.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:12.627Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 277,
+    "fields": {
+      "url": "/media/Rooms/room3_Lor2z7h.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:12.705Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 278,
+    "fields": {
+      "url": "/media/Rooms/room2_sX8z8n4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:12.736Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 279,
+    "fields": {
+      "url": "/media/Rooms/room6_U0PPvd8.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:12.776Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 280,
+    "fields": {
+      "url": "/media/Rooms/room9.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:12.844Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 281,
+    "fields": {
+      "url": "/media/Rooms/room2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:14.731Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 282,
+    "fields": {
+      "url": "/media/Rooms/room3_okgsSd2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:14.764Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 283,
+    "fields": {
+      "url": "/media/Rooms/room6_ORu0vYp.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:14.809Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 284,
+    "fields": {
+      "url": "/media/Rooms/room4.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:14.810Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 285,
+    "fields": {
+      "url": "/media/Rooms/room1.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:14.840Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 286,
+    "fields": {
+      "url": "/media/Rooms/room4_bQFHsu2.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:14.920Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 287,
+    "fields": {
+      "url": "/media/Rooms/room4_59WOLzQ.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:16.797Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 288,
+    "fields": {
+      "url": "/media/Rooms/room9_FtMGlEW.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:16.828Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 289,
+    "fields": {
+      "url": "/media/Rooms/room4_zTe5Cqd.jpeg",
+      "method": "GET",
+      "query_string": "",
+      "user": null,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:35:16.877Z"
+    }
+  },
+  {
+    "model": "easyaudit.requestevent",
+    "pk": 290,
+    "fields": {
+      "url": "/media/admin-interface/favicon/bowl-3.png",
+      "method": "GET",
+      "query_string": "",
+      "user": 1,
+      "remote_ip": "192.168.0.103",
+      "datetime": "2023-12-31T09:36:28.216Z"
+    }
+  },
+  {
     "model": "accounts.customuser",
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$260000$QdFWfHMBB2GR4WV0GDB6pW$GXxWJQohVcFhkbcTVHQfz7mSSXVAnWOQZ03Z7oOoQBc=",
-      "last_login": "2023-12-28T11:28:52.902Z",
+      "last_login": "2023-12-30T20:11:46.259Z",
       "is_superuser": true,
       "username": "",
       "email": "test@test.com",
@@ -2717,7 +5357,7 @@
     "pk": 2,
     "fields": {
       "password": "pbkdf2_sha256$260000$pUmJeWWQFd2LE9RdflVAC8$14DnaAgDCoHl4I8wegGi52Tb13gMt4lseUUQfkOMSBg=",
-      "last_login": "2023-12-15T15:47:59.211Z",
+      "last_login": "2023-12-29T15:42:45.111Z",
       "is_superuser": false,
       "username": "Manuel",
       "email": "manu@mail.com",
@@ -2759,7 +5399,7 @@
     "pk": 4,
     "fields": {
       "password": "pbkdf2_sha256$260000$0y7KMKmg0cK8e4au1OlXxj$0/8Df57xt31M8et9J5+68w8f/Kb//xvU/y41Oqb1aqI=",
-      "last_login": "2023-12-28T11:30:53.838Z",
+      "last_login": "2023-12-29T15:36:21.538Z",
       "is_superuser": false,
       "username": "Talia",
       "email": "talia@jose.com",
@@ -2941,10 +5581,10 @@
       "description": "A very good and clean apartment",
       "facilities": "bed\r\nchair\r\nmattress\r\ntable",
       "image": "Appartments/main.jpg",
-      "paid_for": "wifi",
+      "paid_for": "wifi, electricity",
       "location": "Taita Taveta University, Gate C",
       "date_created": "2023-11-22T07:56:46.719Z",
-      "date_updated": "2023-11-22T07:56:46.719Z"
+      "date_updated": "2023-12-29T20:43:27.474Z"
     }
   },
   {
@@ -3083,11 +5723,11 @@
       "size": "120 sq cm",
       "room_type": "Bedsitter",
       "booked": false,
-      "rent": 5000,
+      "rent": 4500,
       "rate": "Per Month",
       "image": "Rooms/room6.jpeg",
       "date_created": "2023-11-22T08:30:15.342Z",
-      "date_updated": "2023-11-24T18:07:23.376Z"
+      "date_updated": "2023-12-29T15:42:00.812Z"
     }
   },
   {
@@ -3099,7 +5739,7 @@
       "tenant": 4,
       "size": "250 sq ft",
       "room_type": "One-Bedroom",
-      "booked": true,
+      "booked": false,
       "rent": 7500,
       "rate": "Per Month",
       "image": "Rooms/room9.jpeg",
@@ -3116,7 +5756,7 @@
       "tenant": 3,
       "size": "250 sq ft",
       "room_type": "One-Bedroom",
-      "booked": true,
+      "booked": false,
       "rent": 7500,
       "rate": "Per Month",
       "image": "Rooms/room9_FtMGlEW.jpeg",
@@ -3303,7 +5943,7 @@
       "tenant": null,
       "size": "340sq feet",
       "room_type": "Studio",
-      "booked": false,
+      "booked": true,
       "rent": 500,
       "rate": "Per Day",
       "image": "Rooms/room4_dAzFToR.jpeg",
@@ -3326,6 +5966,23 @@
       "image": "Rooms/room3_Lor2z7h.jpeg",
       "date_created": "2023-12-28T13:30:06.647Z",
       "date_updated": "2023-12-28T13:30:06.647Z"
+    }
+  },
+  {
+    "model": "rental_app.rooms",
+    "pk": 30,
+    "fields": {
+      "room_number": "W-05",
+      "apartment": 6,
+      "tenant": null,
+      "size": "244 sq fr",
+      "room_type": "One-Bedroom",
+      "booked": false,
+      "rent": 6000,
+      "rate": "Per Month",
+      "image": "Rooms/20231203_213544.jpg",
+      "date_created": "2023-12-29T15:44:32.030Z",
+      "date_updated": "2023-12-29T15:44:32.030Z"
     }
   },
   {
