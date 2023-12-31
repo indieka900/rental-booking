@@ -4,6 +4,10 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path,include
 
+admin.site.site_title = "RBMS site admin (DEV)"
+admin.site.site_header = "RBMS administration"
+admin.site.index_title = "Site administration"
+
 urlpatterns = [
     path('',include('accounts.urls')),
     path('admin/', admin.site.urls),

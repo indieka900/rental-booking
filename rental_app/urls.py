@@ -5,6 +5,7 @@ from rental_app.views import (viewRoom,viewRooms,
                               add_room,add_apartment,pages,
                               update_apartment,update_room,
                               delete_apartment,delete_room,
+                              my_appartments,
                               )
 
 app_name = 'rentals'
@@ -20,6 +21,7 @@ urlpatterns = [
     path('update-room/<id>/',update_room, name='update-room'),
     path('delete-room/<id>/',delete_room, name='delete-room'),
     path('add-apartment/',add_apartment, name='add-apartment'),
+    path('my-apartments/',my_appartments, name='my-apartments'),
     path('update-apartment/<id>/',update_apartment, name='update-apartment'),
     path('delete-apartment/<id>/',delete_apartment, name='delete-apartment'),
     path('search-results', result, name='result' ),

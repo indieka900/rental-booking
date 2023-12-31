@@ -111,5 +111,13 @@ class Page(models.Model):
     
     def __str__(self):
         return self.type
+    
+class Social_media(models.Model):
+    name = models.CharField( max_length=50)
+    link = models.CharField(_("The actual link"), max_length=250)
+    icon = models.CharField(_("Icon"), max_length=10)
+    
+    def __str__(self):
+        return self.name
         
 # Create your models here.

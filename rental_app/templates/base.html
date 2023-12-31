@@ -40,6 +40,10 @@
             border: 2px solid #fdfbfb;
             background-size: cover;
         }
+
+        .active {
+            color: #4CFF00 !important;
+        }
     </style>
     <script src="{% static 'js/jquery-ui.js' %}"></script>
     <!--//end-animate-->
@@ -55,14 +59,18 @@
                     <a href="{% url 'accounts:update-profile' %}">Change Profile</a>
                 </li>
                 <li class="prnt"><a href="{% url 'accounts:change-password' %}">Change Password</a></li>
-                <li class="prnt"><a
+                <!-- <li class="prnt"><a
                         href="{% if user.role == 'Prospective tenant' %}{% url 'rentals:booking-history' %}{% else %}{% url 'rentals:landlords-rooms' %}{% endif %}">My
-                        History</a></li>
+                        History</a>
+                </li> -->
+                {% if user.role == 'Landlord' %}
                 <li class="prnt">
-                    {% if user.role == 'Landlord' %}
                     <a href="{% url 'rentals:add-apartment' %}">Add Apartment</a>
-                    {% endif %}
                 </li>
+                <li class="prnt">
+                    <a href="{% url 'rentals:my-apartments' %}">My Apartments</a>
+                </li>
+                {% endif %}
             </ul>
             <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
                 <li class="tol">Welcome :</li>
@@ -95,7 +103,7 @@
                 <li class="hm"><a href="/admin/">Admin Login</a></li>
             </ul>
             <ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
-                <li class="tol">Toll Number : 123-4568790</li>
+                <li class="tol">Toll Number : +254 758 053 542</li>
                 <li class="sig"><a href="{% url 'accounts:signup' %}">Sign Up</a></li>
                 <li class="sigi"><a href="#" data-toggle="modal" data-target="#myModal4">Sign In</a></li>
             </ul>
@@ -119,9 +127,9 @@
 
             <div class="lock fadeInDown animated" data-wow-delay=".5s">
 
-                <li>
+                <li >
                     <form method="get" action="{% url 'rentals:result' %}" role="search"
-                        style="margin-right: 10px; width: 460px; display: flex; justify-content: space-between;">
+                        style="margin-right: 10px; width: 100%; display: flex; justify-content: space-between;">
                         <input class="form-control" type="search" name="query" placeholder="Search Vacant Rooms"
                             aria-label="Search">
                         <button class="btn btn-outline-success" type="submit" style="margin-left: 10px;">Search</button>
@@ -159,16 +167,19 @@
                     <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                         <nav class="cl-effect-1">
                             <ul class="nav navbar-nav">
-                                <li><a href="{% url 'accounts:home' %}">Home</a></li>
-                                <li><a href="{% url 'rentals:rooms' %}">Vaccant Rooms</a></li>
+                                <li class="{% if nav == 'home' %} active {% endif %}"><a
+                                        href="{% url 'accounts:home' %}">Home</a></li>
+                                <li class="{% if nav == 'rooms' %} active {% endif %}"><a
+                                        href="{% url 'rentals:rooms' %}">Vaccant Rooms</a></li>
                                 {% for page in pages %}
-                                <li><a href="{% url 'rentals:page' page.id %}">{{page.type}}</a></li>
+                                <li class="{% if nav == page.type %} active {% endif %}"><a
+                                        href="{% url 'rentals:page' page.id %}">{{page.type}}</a></li>
                                 {% endfor %}
                                 {% if user.is_authenticated %}
-                                <li>Need Help?<a href="#" data-toggle="modal" data-target="#myModal3"> / Write Us </a>
-                                </li>
+                                <!-- <li>Need Help?<a href="#" data-toggle="modal" data-target="#myModal3"> / Write Us </a>
+                                </li> -->
                                 {% else %}
-                                <li><a href="#"> Enquiry </a> </li>
+                                <!-- <li><a href="#"> Enquiry </a> </li> -->
                                 {% endif %}
                                 <div class="clearfix"></div>
 
@@ -200,15 +211,14 @@
 
     <div class="copy-right">
         <div class="container">
+            
 
             <div class="footer-social-icons wow fadeInDown animated animated" data-wow-delay=".5s"
                 style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
                 <ul>
-                    <li><a class="facebook" href="#"><span>Facebook</span></a></li>
-                    <li><a class="twitter" href="#"><span>Twitter</span></a></li>
-                    <li><a class="flickr" href="#"><span>Flickr</span></a></li>
-                    <li><a class="googleplus" href="#"><span>Google+</span></a></li>
-                    <li><a class="dribbble" href="#"><span>Dribbble</span></a></li>
+                    {% for media in medias %}
+                    <li><a class="{{media.icon}}" href="{{media.link}}"><span>{{media.name}}</span></a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <p class="wow zoomIn animated animated" data-wow-delay=".5s"
