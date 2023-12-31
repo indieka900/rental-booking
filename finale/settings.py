@@ -85,6 +85,15 @@ WSGI_APPLICATION = 'finale.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+    
+
+
+'''
+'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'final_project',
         'USER': 'root',
@@ -97,10 +106,6 @@ DATABASES = {
                 "autocommit": True,
             }
     },
-}
-
-'''
-
 
 '''
 
