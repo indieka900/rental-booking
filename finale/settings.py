@@ -89,6 +89,19 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE' : 'djongo',
+#         "CLIENT": {
+#            "name": os.getenv('DB_NAME'),
+#            "host": os.getenv('DB_STRING'),
+#            "username": os.getenv('DB_USERNAME'),
+#            "password": 'joseph900',
+#            "authMechanism": "SCRAM-SHA-1",
+#         },
+#     } 
+# }
     
 
 
@@ -159,6 +172,20 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
 
 
 EMAIL_USE_TLS = True  
