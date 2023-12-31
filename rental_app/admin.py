@@ -35,7 +35,7 @@ class ApartmentsAdmin(ImportExportActionModelAdmin, admin.ModelAdmin):
     ordering = ('-date_created',)
     search_fields = ('apartment_name__icontains','location__icontains','landlord__user__username__icontains')
     list_filter = ('date_created','date_updated')
-    list_display = ('apartment_name','location','facilities','description','landlord','view_rooms_link')
+    list_display = ('apartment_name','location','facilities','description','view_landlord_link','view_rooms_link')
     
     def view_rooms_link(self, obj):
         count = obj.rooms_set.count()
@@ -47,6 +47,17 @@ class ApartmentsAdmin(ImportExportActionModelAdmin, admin.ModelAdmin):
         return format_html('<a href="{}">{}</a>', url, count)
 
     view_rooms_link.short_description = "Rooms"
+    
+    def view_landlord_link(self, obj):
+        count = obj.landlord
+        url = (
+            reverse("admin:accounts_customuser_changelist")
+            + "?"
+            + urlencode({"id": f"{obj.landlord.user.id}"})
+        )
+        return format_html('<a href="{}">{}</a>', url, count)
+
+    view_landlord_link.short_description = "Landlord"
     
 
 admin.site.register(Booking_History)
