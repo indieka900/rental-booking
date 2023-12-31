@@ -22,10 +22,16 @@ class RoomsAdmin(ImportExportActionModelAdmin, admin.ModelAdmin):
     list_filter = ('date_created','room_type','booked','rent','rate')
     list_display = ('room_number','rent','rate','booked','room_type','size','apartment')
     actions = [book_rooms, unbook_rooms]
+    # fieldsets = [
+    #     ("New-room", {
+    #         "classes": ("collapse", "expanded"),
+    #         "fields": ('room_number','rent','rate','booked','room_type','size','apartment'),
+    #     }),
+    # ]
 
 
 @admin.register(Apartments)   
-class ApartmentsAdmin(admin.ModelAdmin):
+class ApartmentsAdmin(ImportExportActionModelAdmin, admin.ModelAdmin):
     ordering = ('-date_created',)
     search_fields = ('apartment_name__icontains','location__icontains','landlord__user__username__icontains')
     list_filter = ('date_created','date_updated')
@@ -42,20 +48,6 @@ class ApartmentsAdmin(admin.ModelAdmin):
 
     view_rooms_link.short_description = "Rooms"
     
-    '''
-    list_display = ("name", "year", "view_students_link")
-
-    def view_students_link(self, obj):
-        count = obj.person_set.count()
-        url = (
-            reverse("admin:core_person_changelist")
-            + "?"
-            + urlencode({"courses__id": f"{obj.id}"})
-        )
-        return format_html('<a href="{}">{} Students</a>', url, count)
-
-    view_students_link.short_description = "Students"
-    '''
 
 admin.site.register(Booking_History)
 admin.site.register(Page)
