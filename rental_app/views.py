@@ -50,8 +50,11 @@ def viewRoom(request, id):
 #view all rooms
 # @permission_required('user.is_active',login_url='/')
 def viewRooms(request):
-    rooms = Rooms.objects.filter(booked=False)
-    return render(request, 'app/rooms.html', {'rooms': rooms,**common_data(pageName='rooms'),})
+    all_rooms = Rooms.objects.all()
+
+    # Manually filter rooms based on the condition (e.g., booked=False)
+    filtered_rooms = [room for room in all_rooms if not room.booked]
+    return render(request, 'app/rooms.html', {'rooms': filtered_rooms,**common_data(pageName='rooms'),})
 
 #view one apartment
 def viewApartment(request, id):
