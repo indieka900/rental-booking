@@ -86,9 +86,15 @@ WSGI_APPLICATION = 'finale.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE' : 'djongo',
+        "CLIENT": {
+           "name": 'mine',
+           "host": 'mongodb+srv://room-booking:joseph900@mine.5khgva7.mongodb.net/',
+           "username": 'room-booking',
+           "password": 'joseph900',
+           "authMechanism": "SCRAM-SHA-1",
+        },
+    } 
 }
 
 '''
