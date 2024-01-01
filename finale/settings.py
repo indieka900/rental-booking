@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'easyaudit',
     "import_export",
-    'django_mongoengine_filter',
     #installed apps
     'accounts',
     'rental_app',
