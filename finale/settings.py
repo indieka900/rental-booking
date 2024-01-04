@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-4e8_4(g0ro9017g3n9jn6rwiwx7pxwe7*y4^b3g%gehx$ekk71'
+SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -83,22 +83,8 @@ WSGI_APPLICATION = 'finale.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
-        'ENGINE' : 'djongo',
-        "CLIENT": {
-           "name": 'mine',
-           "host": 'mongodb+srv://room-booking:joseph900@mine.5khgva7.mongodb.net/',
-           "username": 'room-booking',
-           "password": 'joseph900',
-           "authMechanism": "SCRAM-SHA-1",
-        },
-    } 
-}
-
-'''
-'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': "postgres",
         "USER": "postgres",
@@ -106,8 +92,7 @@ DATABASES = {
         "HOST": "db", # set in docker-compose.yml
         "PORT": 5432, # default postgres port
     }
-'''
-
+}
 
 # DATABASES = {
 #     'default': {
@@ -177,7 +162,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+
 
 STATIC_URL = 'static/'
 
@@ -187,24 +172,26 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'handlers': {
-#         'console': {
-#             'class': 'logging.StreamHandler',
-#         },
-#     },
-#     'root': {
-#         'handlers': ['console'],
-#         'level': 'DEBUG',
-#     },
-# }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
 
 
 EMAIL_USE_TLS = True  

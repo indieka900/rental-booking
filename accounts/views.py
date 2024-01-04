@@ -103,21 +103,15 @@ def reset(request, uidb64, token, password):
 
 #display homepage  
 def home(request):
-    # Get all rooms
-    all_rooms = Rooms.objects.all()
-
-    # Manually filter rooms based on the condition (e.g., booked=False)
-    filtered_rooms = [room for room in all_rooms if not room.booked][:3]
-
+    rooms = Rooms.objects.filter(booked=False)[:3]
     is_must = True
-
+    
     context = {
-        'rooms': filtered_rooms,
-        'must': is_must,
+        'rooms' : rooms,
+        'must' : is_must,
         **common_data('home'),
     }
-
-    return render(request, 'app/index.html', context)  
+    return render(request, 'app/index.html', context)   
 
 #logout the logged in user   
 def log_out(request):
