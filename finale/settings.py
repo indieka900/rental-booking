@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -85,13 +85,15 @@ WSGI_APPLICATION = 'finale.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "postgres",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "db", # set in docker-compose.yml
-        "PORT": 5432, # default postgres port
-    }
+        'ENGINE' : 'djongo',
+        "CLIENT": {
+           "name": 'mine',
+           "host": 'mongodb+srv://room-booking:joseph900@mine.5khgva7.mongodb.net/',
+           "username": 'room-booking',
+           "password": 'joseph900',
+           "authMechanism": "SCRAM-SHA-1",
+        },
+    } 
 }
 
 # DATABASES = {
