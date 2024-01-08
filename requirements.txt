@@ -6,7 +6,7 @@ charset-normalizer==3.3.2
 defusedxml==0.7.1
 diff-match-patch==20230430
 dill==0.3.7
-Django==3.2.23
+Django==4.1.9
 django-admin-interface==0.28.1
 django-admin-rangefilter==0.11.2
 django-colorfield==0.11.0
