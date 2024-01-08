@@ -63,8 +63,7 @@ class Rooms(models.Model):
     class Meta:
         verbose_name = 'room'
         verbose_name_plural = 'rooms'
-        get_latest_by = 'date_updated'
-        ordering = ['-date_updated']
+        # get_latest_by = 'date_updated'
         
         unique_together = ('room_number', 'apartment')
     
@@ -91,8 +90,7 @@ class Booking_History(models.Model):
     class Meta:
         verbose_name = 'Booking History'
         verbose_name_plural = 'Booking Histories'
-        get_latest_by = 'date_booked'
-        ordering = ['-date_booked']
+        #get_latest_by = 'date_booked'
         
         
 # @receiver(post_save, sender=CustomUser)

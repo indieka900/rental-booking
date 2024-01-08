@@ -15,6 +15,7 @@ from accounts.forms import UserSignUpForm,ProfileForm, ForgotPasswordForm
 from rental_app.models import Rooms
 from rental_app.views import common_data
 from django.contrib.auth import authenticate, login, logout
+from django.db.models import Q
 
 #create new account
 class SignupView(CreateView):
@@ -103,21 +104,19 @@ def reset(request, uidb64, token, password):
 
 #display homepage  
 def home(request):
-    # Get all rooms
-    all_rooms = Rooms.objects.all()
-
-    # Manually filter rooms based on the condition (e.g., booked=False)
-    filtered_rooms = [room for room in all_rooms if not room.booked][:3]
-
+    rooms = Rooms.objects.all()
     is_must = True
-
+    
+    # Using slice notation
+    available_rooms = rooms.filter(booked=False)[:3]
+    
     context = {
-        'rooms': filtered_rooms,
-        'must': is_must,
+        'rooms' : available_rooms,
+        'must' : is_must,
         **common_data('home'),
     }
-
-    return render(request, 'app/index.html', context)  
+    return render(request, 'app/index.html', context)
+  
 
 #logout the logged in user   
 def log_out(request):
