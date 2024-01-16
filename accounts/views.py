@@ -1,4 +1,4 @@
-
+import random
 from accounts.confirmation_email import send_activation_email, send_reset_password_email
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from accounts.models import CustomUser,Landlord, Prospectivetenant
+from rental_app.models import RoomType
 from django.views.generic import CreateView,View
 from django.utils.encoding import force_str  
 from django.utils.http import urlsafe_base64_decode 
@@ -104,14 +105,12 @@ def reset(request, uidb64, token, password):
 
 #display homepage  
 def home(request):
-    rooms = Rooms.objects.all()
+    rooms = Rooms.objects.filter(booked=False).order_by('?')[:3]
     is_must = True
     
-    # Using slice notation
-    available_rooms = rooms.filter(booked=False)[:3]
     
     context = {
-        'rooms' : available_rooms,
+        'rooms' : rooms,
         'must' : is_must,
         **common_data('home'),
     }

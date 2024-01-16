@@ -1,5 +1,5 @@
 from django.contrib import admin
-from rental_app.models import (Apartments, Rooms, Booking_History,Page,Social_media)
+from rental_app.models import (Apartments, Rooms, Booking_History,Page,Social_media,RoomType)
 from django.urls import reverse
 from django.utils.http import urlencode
 from django.utils.html import format_html
@@ -63,6 +63,6 @@ class ApartmentsAdmin(ImportExportActionModelAdmin, admin.ModelAdmin):
 admin.site.register(Booking_History)
 admin.site.register(Page)
 admin.site.register(Social_media)
-
+admin.site.register(RoomType)
 
 # Register your models here.
