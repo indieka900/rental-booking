@@ -172,7 +172,7 @@ def login_user(request):
             return redirect('/')
 
 #edit profile
-@login_required(login_url='/')
+@login_required
 def edit_profile(request):
     r_user = CustomUser.objects.get(id=request.user.id)
     if request.user.role == 'Landlord':
