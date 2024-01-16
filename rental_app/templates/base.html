@@ -50,7 +50,7 @@
 </head>
 
 <body>
-    {% if user.is_authenticated %}
+    {% if user.is_authenticated and not user.is_staff %}
     <div class="top-header">
         <div class="container">
             <ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">

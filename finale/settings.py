@@ -89,15 +89,18 @@ WSGI_APPLICATION = 'finale.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE' : 'djongo',
-        "CLIENT": {
-           "name": 'room-booking',
-           "host": 'mongodb+srv://joseph:joseph123@room-booking.430etwx.mongodb.net/',
-           "username": 'joseph',
-           "password": 'joseph123',
-           "authMechanism": "SCRAM-SHA-1",
-        },
-    } 
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'final_project',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST':'localhost',
+        'PORT':'3306',
+        "OPTIONS": {
+                'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
+                'charset': 'utf8mb4',
+                "autocommit": True,
+            }
+    },
 }
 
 # DATABASES = {
