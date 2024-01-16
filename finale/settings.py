@@ -61,6 +61,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'finale.urls'
 
+LOGOUT_REDIRECT_URL = '/'
+# LOGIN_REDIRECT_URL = '/'
+# LOGIN_URL = '/accounts/login/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -87,10 +91,10 @@ DATABASES = {
     'default': {
         'ENGINE' : 'djongo',
         "CLIENT": {
-           "name": 'mine',
-           "host": 'mongodb+srv://room-booking:joseph900@mine.5khgva7.mongodb.net/',
-           "username": 'room-booking',
-           "password": 'joseph900',
+           "name": 'room-booking',
+           "host": 'mongodb+srv://joseph:joseph123@room-booking.430etwx.mongodb.net/',
+           "username": 'joseph',
+           "password": 'joseph123',
            "authMechanism": "SCRAM-SHA-1",
         },
     } 

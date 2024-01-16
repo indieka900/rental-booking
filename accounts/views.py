@@ -14,7 +14,7 @@ from accounts.tokens import account_activation_token
 from accounts.forms import UserSignUpForm,ProfileForm, ForgotPasswordForm
 from rental_app.models import Rooms
 from rental_app.views import common_data
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login
 from django.db.models import Q
 
 #create new account
@@ -117,11 +117,6 @@ def home(request):
     }
     return render(request, 'app/index.html', context)
   
-
-#logout the logged in user   
-def log_out(request):
-    logout(request)
-    return redirect('/')
 
 #change password functionality
 @login_required(login_url='/')
